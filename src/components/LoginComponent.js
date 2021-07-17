@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Form, Row } from 'reactstrap';
+import { Row } from 'reactstrap';
 import {
-    MDBInput,
-    MDBCheckbox,
     MDBBtn,
     MDBIcon
-} from 'mdb-react-ui-kit'
+} from 'mdb-react-ui-kit';
+import { TextField, Checkbox, FormControlLabel } from '@material-ui/core';
 class Login extends Component {
     constructor (props) {
         super(props);
@@ -46,14 +45,14 @@ class Login extends Component {
                 <div className='container'>
                     <div className='row'>
                         <form className='col-12 col-md-6 border-end pe-5'>
-                            <MDBInput label='Email' name='email' type='email' size='lg' className='mb-3' value={this.state.email}
-                                      onChange={(event) => this.handleUserInput(event)}/>
-                            <MDBInput label='Password' name='password' type='password' size='lg' className='mb-3' value={this.state.password}
-                                      onChange={(event) => this.handleUserInput(event)}/>
+                            <TextField name='email' label='Email' type='email' className='mb-3' value={this.state.email} variant='standard'
+                                       fullWidth onChange={(event) => this.handleUserInput(event)}/>
+                            <TextField label='Password' name='password' type='password' className='mb-3' value={this.state.password} variant='standard'
+                                       fullWidth onChange={(event) => this.handleUserInput(event)}/>
                             <Row className='mb-3'>
                                 <div className='col-5'>
-                                    <MDBCheckbox name='rememberMe' value={this.state.rememberMe} id='rememberMe' label='Remember Me' className='col-5'
-                                                 onChange={() => this.handleUserToggle()}/>
+                                    <FormControlLabel control={<Checkbox name='rememberMe' checked={this.state.rememberMe}
+                                                                         onChange={() => this.handleUserToggle()}/>} label="Remember Me"/>
                                 </div>
                                 <div className='col-7'>
                                     <Link className='text-body' to='#'>Forgot Password or Email?</Link>
