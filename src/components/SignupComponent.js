@@ -83,7 +83,7 @@ class Signup extends Component {
                 <p className='subtitle text-center text-black'>Already have an account? <Link to='/login'>Log In</Link></p>
                 <div className='container'>
                     <div className='row'>
-                        <Box component='form' className='col-12 col-md-6 border-end pe-5' noValidate>
+                        <Box component='form' className='col-12 col-md-6 border-end border-sm-right-none pe-5' noValidate>
                             <Row className='mb-3'>
                                 <div className='col-6'>
                                     <TextField name='firstname' label='Firstname' type='text' value={this.state.firstname} variant='standard'

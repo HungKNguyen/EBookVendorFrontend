@@ -44,7 +44,7 @@ class Login extends Component {
                 <p className='subtitle text-center text-black'>Don't have an account? <Link to='/signup'>Sign Up</Link></p>
                 <div className='container'>
                     <div className='row'>
-                        <form className='col-12 col-md-6 border-end pe-5'>
+                        <form className='col-12 col-md-6 border-end border-sm-right-none pe-5'>
                             <TextField name='email' label='Email' type='email' className='mb-3' value={this.state.email} variant='standard'
                                        fullWidth onChange={(event) => this.handleUserInput(event)}/>
                             <TextField label='Password' name='password' type='password' className='mb-3' value={this.state.password} variant='standard'
