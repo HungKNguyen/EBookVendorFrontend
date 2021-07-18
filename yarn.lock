@@ -348,7 +348,7 @@
     "@types/yargs" "^15.0.0"
     "chalk" "^4.0.0"
 
-"@material-ui/core@^5.0.0-beta.1":
+"@material-ui/core@^5.0.0-alpha.36", "@material-ui/core@^5.0.0-beta.1":
   "integrity" "sha512-54NejmECo/q3n3/bAqJFDEu4sK72d1QUBzKQUItYuJypNmTtjYS0ONxEXmDOZBhfK21HwrO3wHpvARFUTLeHWQ=="
   "resolved" "https://registry.npmjs.org/@material-ui/core/-/core-5.0.0-beta.1.tgz"
   "version" "5.0.0-beta.1"
@@ -366,6 +366,13 @@
     "prop-types" "^15.7.2"
     "react-is" "^17.0.0"
     "react-transition-group" "^4.4.0"
+
+"@material-ui/icons@^5.0.0-beta.1":
+  "integrity" "sha512-HMxEXok46a5xAr+26LpJUX+bX7WfaPi5Yi3Bbh1Agskw0nD5SHUbZizNxxuB8QbHhRNOZF9y9viEDNbSf+r+yg=="
+  "resolved" "https://registry.npmjs.org/@material-ui/icons/-/icons-5.0.0-beta.1.tgz"
+  "version" "5.0.0-beta.1"
+  dependencies:
+    "@babel/runtime" "^7.4.4"
 
 "@material-ui/private-theming@5.0.0-beta.1":
   "integrity" "sha512-iilGWRRlLX2DOXz06SIanhiMVBgMAZivxyBC3mPOOSjH0P7jQ6hVOvgoUdXzt9h54Y1gZkdUPzUe+iMTd+zKRw=="

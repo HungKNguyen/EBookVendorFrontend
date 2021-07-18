@@ -9,6 +9,13 @@
   font-size: 2vw;
 }
 
+.three-line-para {
+  overflow: hidden;
+  display: -webkit-box;
+  line-height: 1.5em;
+  max-height: 4.5em;
+}
+
 @media (max-width: 575px) {
   .border-xs-left-none {
     border-left: none !important; }

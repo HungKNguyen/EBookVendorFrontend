@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Row } from 'reactstrap';
-import {
-    MDBBtn,
-    MDBIcon
-} from 'mdb-react-ui-kit';
-import { TextField, Checkbox, FormControlLabel, Box, FormHelperText } from '@material-ui/core';
+import {MDBBtn, MDBIcon} from 'mdb-react-ui-kit';
+import {TextField, Checkbox, FormControlLabel, Box, FormHelperText, Button} from '@material-ui/core';
+import {Home} from "@material-ui/icons";
 class Signup extends Component {
     constructor (props) {
         super(props);
@@ -78,7 +76,9 @@ class Signup extends Component {
     render() {
         return (
             <div>
-                <div className='mt-3'/>
+                <Link to='/home'>
+                    <Button variant='text' startIcon={<Home />} sx={{ml:3, mt:1, color: '#272727'}}>Home</Button>
+                </Link>
                 <p className='title text-center text-black'>Sign Up</p>
                 <p className='subtitle text-center text-black'>Already have an account? <Link to='/login'>Log In</Link></p>
                 <div className='container'>
