@@ -5,6 +5,7 @@ import {Switch, Route, Redirect} from "react-router-dom";
 import Home from './HomeComponent';
 import Login from './LoginComponent';
 import Signup from './SignupComponent';
+import AdminDashboard from './AdminDasboard/AdminDashboard';
 
 const mapStateToProps = state => {
     return {
@@ -42,6 +43,7 @@ class Main extends Component {
                     {/* Hung 16/7 */}
                     <Route path='/login' component={() => <Login />} />
                     <Route path='/signup' component={() => <Signup />} />
+                    <Route path='/admin' component={() => <AdminDashboard/>} />
                     <Redirect to="/home" />
                 </Switch>
             </div>
