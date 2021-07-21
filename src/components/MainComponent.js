@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchComments, fetchEbooks, fetchOrders, fetchUsers, fetchReviews } from "../redux/ActionCreators";
+import { fetchComments, fetchEbooks, fetchOrders, fetchUsers, fetchReviews, fetchSales } from "../redux/ActionCreators";
 import {Switch, Route, Redirect} from "react-router-dom";
 import Home from './HomeComponent';
 import Login from './LoginComponent';
@@ -13,7 +13,8 @@ const mapStateToProps = state => {
         comments: state.comments,
         ebooks: state.ebooks,
         orders: state.orders,
-        reviews: state.reviews
+        reviews: state.reviews,
+        sales: state.sales,
     }
 }
 
@@ -22,7 +23,8 @@ const mapDispatchToProps = (dispatch) => ({
     fetchComments: () => {dispatch(fetchComments())},
     fetchEbooks: () => {dispatch(fetchEbooks())},
     fetchOrders: () => {dispatch(fetchOrders())},
-    fetchReviews: () => {dispatch(fetchReviews())}
+    fetchReviews: () => {dispatch(fetchReviews())},
+    fetchSales: () => {dispatch(fetchSales())}
 })
 
 class Main extends Component {
@@ -37,10 +39,8 @@ class Main extends Component {
         return (
             <div>
                 <Switch location={this.props.location}>
-                    {/* To be developed later */}
                     <Route path='/home' component={() => <Home ebooks={this.props.ebooks}
                     comments={this.props.comments} reviews={this.props.reviews}/>} />
-                    {/* Hung 16/7 */}
                     <Route path='/login' component={() => <Login />} />
                     <Route path='/signup' component={() => <Signup />} />
                     <Route path='/admin' component={() => <AdminDashboard/>} />

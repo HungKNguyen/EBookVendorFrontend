@@ -36,3 +36,7 @@ export const _GET_ORDERS_FAILED = '_GET_ORDERS_FAILED';
 export const _GET_REVIEWS = '_GET_REVIEWS';
 export const _GET_REVIEWS_LOADING = '_GET_REVIEWS_LOADING';
 export const _GET_REVIEWS_FAILED = '_GET_REVIEWS_FAILED';
+
+export const _GET_SALES = '_GET_SALES';
+export const _GET_SALES_LOADING = '_GET_SALES_LOADING';
+export const _GET_SALES_FAILED = '_GET_SALES_FAILED';
