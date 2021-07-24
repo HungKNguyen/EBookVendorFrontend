@@ -4,6 +4,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import {styled} from "@material-ui/core/styles";
 import {Divider, Grid, Link} from "@material-ui/core";
+
 const useStyles = styled((theme) => ({
     title: {
         fontSize: "1.25rem",
