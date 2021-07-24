@@ -71,7 +71,7 @@ const AppBar = styled(MuiAppBar, {
 
   const MainBoard = styled('grid')(({ theme }) => ({
     display: 'flex',
-    padding: theme.spacing(10),
+    padding: theme.spacing(0, 20),
   }));
 
 export default function AdminDashboard() {
