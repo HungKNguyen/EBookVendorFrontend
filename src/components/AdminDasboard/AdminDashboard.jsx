@@ -1,171 +1,164 @@
-import React from 'react';
-import { styled, useTheme } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
-import Drawer from '@material-ui/core/Drawer';
+import * as React from 'react';
+import { experimentalStyled as styled } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import MuiDrawer from '@material-ui/core/Drawer';
+import Box from '@material-ui/core/Box';
 import MuiAppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
+import Badge from '@material-ui/core/Badge';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import Grid from '@material-ui/core/Grid';
-
+import NotificationsIcon from '@material-ui/icons/Notifications';
 import MySite from './MySite';
-import Orders from './RecentOrders';
 import Availables from './Availables';
-import Sales from './Sales';
+
 
 const drawerWidth = 240;
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-    ({ theme, open }) => ({
-      flexGrow: 1,
-      padding: theme.spacing(3),
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
-      marginLeft: `-${drawerWidth}px`,
-      ...(open && {
-        transition: theme.transitions.create('margin', {
-          easing: theme.transitions.easing.easeOut,
-          duration: theme.transitions.duration.enteringScreen,
-        }),
-        marginLeft: 0,
-      }),
-    }),
-  );
-
 const AppBar = styled(MuiAppBar, {
-    shouldForwardProp: (prop) => prop !== 'open',
-  })(({ theme, open }) => ({
-    transition: theme.transitions.create(['margin', 'width'], {
+  shouldForwardProp: (prop) => prop !== 'open',
+})(({ theme, open }) => ({
+  zIndex: theme.zIndex.drawer + 1,
+  transition: theme.transitions.create(['width', 'margin'], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    marginLeft: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
+      duration: theme.transitions.duration.enteringScreen,
     }),
-    ...(open && {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: `${drawerWidth}px`,
-      transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.easeOut,
+  }),
+}));
+
+const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
+  ({ theme, open }) => ({
+    '& .MuiDrawer-paper': {
+      position: 'relative',
+      whiteSpace: 'nowrap',
+      width: drawerWidth,
+      transition: theme.transitions.create('width', {
+        easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen,
       }),
-    }),
-  }));
-  
-  const DrawerHeader = styled('div')(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
-  }));
-
-  const MainBoard = styled('grid')(({ theme }) => ({
-    display: 'flex',
-    padding: theme.spacing(0, 20),
-  }));
+      ...(!open && {
+        overflowX: 'hidden',
+        transition: theme.transitions.create('width', {
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.leavingScreen,
+        }),
+        width: theme.spacing(7),
+        [theme.breakpoints.up('sm')]: {
+          width: theme.spacing(9),
+        },
+      }),
+    },
+  }),
+);
 
 export default function AdminDashboard() {
-    const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
+  const toggleDrawer = () => {
+    setOpen(!open);
+  };
 
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-
-    const handleDrawerClose = () => {
-        setOpen(false);
-    };
-
-    return (
-        <Box sx={{ display: 'flex' }}>
-          <CssBaseline />
-          <AppBar position="fixed" open={open}>
-            <Toolbar>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={handleDrawerOpen}
-                edge="start"
-                sx={{ mr: 2, ...(open && { display: 'none' }) }}
-              >
-                <MenuIcon />
-              </IconButton>
-            </Toolbar>
-          </AppBar>
-        <Drawer
-            sx={{  
-              width: drawerWidth,
-              flexShrink: 0,
-              '& .MuiDrawer-paper': {
-                width: drawerWidth,
-                boxSizing: 'border-box',
-              },
+  return (
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <AppBar position="absolute" open={open}>
+        <Toolbar
+          bgcolor = "text.primary"
+          sx={{
+            pr: '24px', // keep right padding when drawer closed
+          }}
+        >
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            onClick={toggleDrawer}
+            sx={{
+              marginRight: '36px',
+              ...(open && { display: 'none' }),
             }}
-            variant="persistent"
-            anchor="left"
-            open={open}
           >
-            <DrawerHeader>
-              <IconButton onClick={handleDrawerClose}>
-                {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-              </IconButton>
-            </DrawerHeader>
-            <Divider />
-            <List>
-              {['Store Products', 'Store Orders', 'Analystics & Reports', 'Finance'].map((text, index) => (
-                <ListItem button key={text}>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItem>
-              ))}
-            </List>
-            </Drawer>
-            <Main open={open}>
-                <DrawerHeader />
-                <MainBoard>
-                    <Grid container spacing={3} >
-                        <Grid item xs={8}>
-                            <Grid container>
-                                <Grid item xs={12}><MySite/></Grid>
-                                <Divider/>
-                                <h2>Your Business Overview</h2>
-                                <Divider/>
-                                <Grid container spacing={3}>
-                                    <Grid item xs={6}>
-                                        <Grid container spacing={3}>
-                                            <Grid item xs={12}>
-                                                <Orders/>
-                                            </Grid>
-                                            <Grid item xs={12}>
-                                                <Sales/>
-                                            </Grid>
-                                        </Grid>
-                                    </Grid>
-                                    <Grid item xs={6}>
-                                        <Grid container spacing={3}>
-                                            <Grid item xs={12}>
-                                                <Availables/>
-                                            </Grid>
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </MainBoard>
-            </Main>
-        </Box>
-    );
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            component="h1"
+            variant="h6"
+            color="inherit"
+            noWrap
+            sx={{ flexGrow: 1 }}
+          >
+            Dashboard
+          </Typography>
+          <IconButton color="inherit">
+            <Badge badgeContent={4} color="error">
+              <NotificationsIcon />
+            </Badge>
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Drawer variant="permanent" open={open}>
+        <Toolbar
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+            px: [1],
+          }}
+        >
+          <IconButton onClick={toggleDrawer}>
+            <ChevronLeftIcon />
+          </IconButton>
+        </Toolbar>
+        <Divider />
+       
+        <Divider />
+        
+      </Drawer>
+      <Box
+        component="main"
+        sx={{
+          backgroundColor: (theme) =>
+            theme.palette.mode === 'light'
+              ? theme.palette.grey[100]
+              : theme.palette.grey[900],
+          flexGrow: 1,
+          height: '100vh',
+          overflow: 'auto',
+        }}
+      >
+        <Toolbar />
+        <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={8} lg={9}>
+              <Grid container spacing={3}>
+                <Grid item xs={12}>
+                  <MySite/>
+                </Grid>
+                <Grid item xs={12}>
+                  <Availables/>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+              <Availables/>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+    </Box>
+  );
 }

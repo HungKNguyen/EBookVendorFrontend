@@ -34,7 +34,8 @@ const useStyles = styled((theme) => ({
         margin: "0 12px"
     },
     img: {
-        width: "100%"
+        height: "5px",
+        width: "10%"
     },
     ebookItem: {
         margin: "6px 0px"
