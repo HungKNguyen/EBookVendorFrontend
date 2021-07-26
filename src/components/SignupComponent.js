@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Row } from 'reactstrap';
 import {MDBBtn, MDBIcon} from 'mdb-react-ui-kit';
-import {TextField, Checkbox, FormControlLabel, Box, FormHelperText, Button} from '@material-ui/core';
+import {TextField, Checkbox, FormControlLabel, Box, FormHelperText, Button, Typography} from '@material-ui/core';
 import {Home} from "@material-ui/icons";
 class Signup extends Component {
     constructor (props) {
@@ -119,7 +119,7 @@ class Signup extends Component {
                             </Row>
                             <Row className='mb-3'>
                                 <FormControlLabel control={<Checkbox name='agree' checked={this.state.agree} onChange={() => this.handleUserToggle()} />}
-                                                  label={<p>By signing up, you agree to our <a href='#'>Terms of Use</a> and <a href='#'>Privacy Policy</a>.</p>}/>
+                                                  label={<Typography variant='body1'>By signing up, you agree to our <a href='#'>Terms of Use</a> and <a href='#'>Privacy Policy</a>.</Typography>}/>
                                 <FormHelperText hidden={this.state.agreeValid} error={!this.state.agreeValid}>You must agree to our agreement</FormHelperText>
                             </Row>
                             <div className='m-0' onClick={() => this.handleUserSubmit()}>

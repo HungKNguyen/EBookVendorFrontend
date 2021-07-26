@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Row } from 'reactstrap';
 import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
-import {TextField, Checkbox, FormControlLabel, Button} from '@material-ui/core';
+import {TextField, Checkbox, FormControlLabel, Button, Typography, Stack} from '@material-ui/core';
 import {Home} from "@material-ui/icons";
 class Login extends Component {
     constructor (props) {
@@ -49,15 +49,11 @@ class Login extends Component {
                                        fullWidth onChange={(event) => this.handleUserInput(event)}/>
                             <TextField label='Password' name='password' type='password' className='mb-3' value={this.state.password} variant='standard'
                                        fullWidth onChange={(event) => this.handleUserInput(event)}/>
-                            <Row className='mb-3'>
-                                <div className='col-5'>
-                                    <FormControlLabel control={<Checkbox name='rememberMe' checked={this.state.rememberMe}
-                                                                         onChange={() => this.handleUserToggle()}/>} label="Remember Me"/>
-                                </div>
-                                <div className='col-7'>
-                                    <Link className='text-body' to='#'>Forgot Password or Email?</Link>
-                                </div>
-                            </Row>
+                            <Stack direction='row' alignItems='center' sx={{mb: 2}}>
+                                <FormControlLabel control={<Checkbox name='rememberMe' checked={this.state.rememberMe}
+                                                                     onChange={() => this.handleUserToggle()}/>} label="Remember Me"/>
+                                <Typography variant='body1'><Link to='#'>Forgot Password or Email?</Link></Typography>
+                            </Stack>
                             <div className='m-0' onClick={() => this.handleUserSubmit()}>
                                 <MDBBtn outline rounded size='lg' className='col-4' href='#'>Log In</MDBBtn>
                             </div>

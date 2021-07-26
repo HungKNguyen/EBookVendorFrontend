@@ -4,6 +4,7 @@ import { USERS } from "../shared/users";
 import { EBOOKS } from "../shared/ebooks";
 import { ORDERS } from "../shared/orders";
 import { REVIEWS } from "../shared/reviews";
+import { SALES } from "../shared/sales";
 
 const addComments = (comments) => ({
     type: ActionTypes._GET_COMMENTS,
@@ -62,9 +63,9 @@ export const fetchEbooks = () => (dispatch) => {
     dispatch(addEbooks(EBOOKS))
 }
 
-const addOrders = () => ({
+const addOrders = (orders) => ({
     type: ActionTypes._GET_ORDERS,
-    payload: ORDERS
+    payload: orders
 })
 
 const ordersLoading = () => ({
@@ -81,9 +82,9 @@ export const fetchOrders = () => (dispatch) => {
     dispatch(addOrders(ORDERS))
 }
 
-const addReviews = () => ({
+const addReviews = (reviews) => ({
     type: ActionTypes._GET_REVIEWS,
-    payload: REVIEWS
+    payload: reviews
 })
 
 const reviewsLoading = () => ({
@@ -98,4 +99,24 @@ const reviewsFailed = (errmess) => ({
 export const fetchReviews = () => (dispatch) => {
     dispatch(reviewsLoading());
     dispatch(addReviews(REVIEWS))
+}
+
+
+const addSales = (sales) => ({
+    type: ActionTypes._GET_SALES,
+    payload: sales
+})
+
+const salesLoading = () => ({
+    type: ActionTypes._GET_SALES_LOADING
+});
+
+const saleFailed = (errmess) => ({
+    type: ActionTypes._GET_REVIEWS_FAILED,
+    payload: errmess
+})
+
+export const fetchSales = () => (dispatch) => {
+    dispatch(salesLoading());
+    dispatch(addSales(SALES))
 }
