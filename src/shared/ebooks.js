@@ -49,9 +49,7 @@ export const EBOOKS =
             image: '/assets/images/donquixote.jpg',
             price: 22.49,
             sold: 30,
-            description: "The canonical Spanish classic, now in a beautiful hardcover edition designed by Coralie Bickford-Smith\n" +
-                "\n" +
-                "Don Quixote has become so entranced reading tales of chivalry that he decides to turn knight errant himself. In the company of his faithful squire, Sancho Panza, these exploits blossom in all sorts of wonderful ways. While Quixote's fancy often leads him astray--he tilts at windmills, imagining them to be giants--Sancho acquires cunning and a certain sagacity. Sane madman and wise fool, they roam the world together-and together they have haunted readers' imaginations for nearly four hundred years.\n" +
+            description: "The canonical Spanish classic, now in a beautiful hardcover edition designed by Coralie Bickford-Smith. Don Quixote has become so entranced reading tales of chivalry that he decides to turn knight errant himself. In the company of his faithful squire, Sancho Panza, these exploits blossom in all sorts of wonderful ways. While Quixote's fancy often leads him astray--he tilts at windmills, imagining them to be giants--Sancho acquires cunning and a certain sagacity. Sane madman and wise fool, they roam the world together-and together they have haunted readers' imaginations for nearly four hundred years." +
                 "\n" +
                 "With its experimental form and literary playfulness, Don Quixote has been generally recognized as the first modern novel. This Penguin Classics edition includes John Rutherford's masterly translation, which does full justice to the energy and wit of Cervantes's prose.",
             ISBN: '978-0241347768',
