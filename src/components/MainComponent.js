@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchComments, fetchEbooks, fetchOrders, fetchUsers, fetchReviews, fetchSales } from "../redux/ActionCreators";
+import { fetchComments, fetchEbooks, fetchReviews } from "../redux/ActionCreators";
 import {Switch, Route, Redirect} from "react-router-dom";
 import Home from './HomeComponent';
 import Login from './LoginComponent';
@@ -9,22 +9,16 @@ import AdminComponent from './AdminComponent';
 
 const mapStateToProps = state => {
     return {
-        users: state.users,
         comments: state.comments,
         ebooks: state.ebooks,
-        orders: state.orders,
-        reviews: state.reviews,
-        sales: state.sales,
+        reviews: state.reviews
     }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchUsers: () => {dispatch(fetchUsers())},
     fetchComments: () => {dispatch(fetchComments())},
     fetchEbooks: () => {dispatch(fetchEbooks())},
-    fetchOrders: () => {dispatch(fetchOrders())},
-    fetchReviews: () => {dispatch(fetchReviews())},
-    fetchSales: () => {dispatch(fetchSales())}
+    fetchReviews: () => {dispatch(fetchReviews())}
 })
 
 class Main extends Component {
@@ -43,7 +37,8 @@ class Main extends Component {
                     comments={this.props.comments} reviews={this.props.reviews}/>} />
                     <Route path='/login' component={() => <Login />} />
                     <Route path='/signup' component={() => <Signup />} />
-                    <Route path='/admin' component={() => <AdminComponent />} />
+                    <Route path='/admin' component={() => <AdminComponent ebooks={this.props.ebooks}/>}
+                    />
                     <Redirect to="/home" />
                 </Switch>
             </div>

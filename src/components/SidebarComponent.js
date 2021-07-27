@@ -56,7 +56,7 @@ export default function SidebarComponent(props){
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div" sx={{flexGrow:1}}>
-                        EBookVendor Adminitration
+                        EBookVendor Administration
                     </Typography>
                     <Stack direction='row' spacing={3} mx={2}>
                         <IconButton>
@@ -97,42 +97,42 @@ export default function SidebarComponent(props){
                 </DrawerHeader>
                 <Divider variant="middle" />
                 <List>
-                    <ListItemButton selected={props.selectedIndex === 0} button key={0}
+                    <ListItemButton selected={props.selectedIndex === 0} key={0}
                                     component={Link} to="/admin" sx={{'&:hover, &:focus': {
                                     background: '#424242',
                                     color: '#FFFFFF'
                     }}}>
                         <ListItemText primary='Dashboard' />
                     </ListItemButton>
-                    <ListItemButton selected={props.selectedIndex === 1} button key={1}
+                    <ListItemButton selected={props.selectedIndex === 1} key={1}
                                     component={Link} to="/admin" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'
                         }}}>
                         <ListItemText primary='Store Products' />
                     </ListItemButton>
-                    <ListItemButton selected={props.selectedIndex === 2} button key={2}
+                    <ListItemButton selected={props.selectedIndex === 2} key={2}
                                     component={Link} to="/admin" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'
                         }}}>
                         <ListItemText primary='Store Orders' />
                     </ListItemButton>
-                    <ListItemButton selected={props.selectedIndex === 3} button key={3}
+                    <ListItemButton selected={props.selectedIndex === 3} key={3}
                                     component={Link} to="/admin" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'
                         }}}>
                         <ListItemText primary='Analytics & Reports' />
                     </ListItemButton>
-                    <ListItemButton selected={props.selectedIndex === 4} button key={4}
+                    <ListItemButton selected={props.selectedIndex === 4} key={4}
                                     component={Link} to="/admin" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'
                         }}}>
                         <ListItemText primary='Finances' />
                     </ListItemButton>
-                    <ListItemButton selected={props.selectedIndex === 5} button key={5}
+                    <ListItemButton selected={props.selectedIndex === 5} key={5}
                                     component={Link} to="/admin" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'

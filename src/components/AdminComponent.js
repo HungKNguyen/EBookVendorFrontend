@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import { styled, useTheme, ThemeProvider, createTheme } from '@material-ui/core/styles';
+import { styled, ThemeProvider, createTheme } from '@material-ui/core/styles';
 import {Box, CssBaseline, Typography, Grid, Divider, Paper, Stack} from '@material-ui/core';
 import SidebarCompoment from './SidebarComponent';
+import {fetchOrders, fetchSales, fetchUsers} from "../redux/ActionCreators";
+import {connect} from "react-redux";
 
 const drawerWidth = 240;
 
@@ -40,7 +42,43 @@ const theme = createTheme({
     }
 });
 
-export default class AdminComponent extends Component {
+const OrdersList = (props) => {
+    return(
+        <div />
+    )
+}
+
+const EbooksList = (props) => {
+    return(
+        <div />
+    )
+}
+
+const RevenuesList = (props) => {
+    return(
+        <div />
+    )
+}
+
+const CampaignsList = (props) => {
+    return(
+        <div />
+    )
+}
+
+const mapStateToProps = state => {
+    return {
+        orders: state.orders,
+        sales: state.sales
+    }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+    fetchOrders: () => {dispatch(fetchOrders())},
+    fetchSales: () => {dispatch(fetchSales())}
+})
+
+class AdminComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -48,15 +86,21 @@ export default class AdminComponent extends Component {
         }
     }
 
+    componentDidMount() {
+        this.props.fetchOrders();
+        this.props.fetchSales();
+        console.log(this.props);
+    }
+
     handleDrawerOpen = () => {
         this.setState({
-            open: true,
+            open: true
         })
     };
 
     handleDrawerClose = () => {
         this.setState({
-            open: false,
+            open: false
         })
     };
 
@@ -80,30 +124,34 @@ export default class AdminComponent extends Component {
                                 <Grid container spacing={2} mb={2}>
                                     <Grid item md={6}>
                                         <Paper sx={{padding: 2}}>
-                                            <Typography variant='h6'>
+                                            <Typography variant='h6' sx={{mb: 2}}>
                                                 Recent Orders
                                             </Typography>
+                                            <OrdersList />
                                         </Paper>
                                     </Grid>
                                     <Grid item md={6}>
                                         <Paper sx={{padding: 2}}>
-                                            <Typography variant='h6'>
+                                            <Typography variant='h6' sx={{mb: 2}}>
                                                 Ebooks Sold
                                             </Typography>
+                                            <EbooksList />
                                         </Paper>
                                     </Grid>
                                     <Grid item md={6}>
                                         <Paper sx={{padding: 2}}>
-                                            <Typography variant='h6'>
+                                            <Typography variant='h6' sx={{mb: 2}}>
                                                 Monthly Revenue
                                             </Typography>
+                                            <RevenuesList />
                                         </Paper>
                                     </Grid>
                                     <Grid item md={6}>
                                         <Paper sx={{padding: 2}}>
-                                            <Typography variant='h6'>
-                                                Lastest Email Campaign
+                                            <Typography variant='h6' sx={{mb: 2}}>
+                                                Latest Email Campaign
                                             </Typography>
+                                            <CampaignsList />
                                         </Paper>
                                     </Grid>
                                 </Grid>
@@ -111,7 +159,7 @@ export default class AdminComponent extends Component {
                             </Grid>
                             <Grid item sm={4}>
                                 <Paper  sx={{padding: 2}}>
-                                    <Typography variant='h6'>
+                                    <Typography variant='h6' sx={{mb: 2}}>
                                         Analytics
                                     </Typography>
                                 </Paper>
@@ -123,3 +171,5 @@ export default class AdminComponent extends Component {
         );
     }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdminComponent);
