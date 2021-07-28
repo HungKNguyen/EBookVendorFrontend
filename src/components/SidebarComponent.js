@@ -106,35 +106,35 @@ export default function SidebarComponent(props){
                         <ListItemText primary='Dashboard' />
                     </ListItemButton>
                     <ListItemButton selected={props.selectedIndex === 1} key={1}
-                                    component={Link} to="/admin" sx={{'&:hover, &:focus': {
+                                    component={Link} to="/admin/ebooks" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'
                         }}}>
                         <ListItemText primary='Store Products' />
                     </ListItemButton>
                     <ListItemButton selected={props.selectedIndex === 2} key={2}
-                                    component={Link} to="/admin" sx={{'&:hover, &:focus': {
+                                    component={Link} to="/admin/orders" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'
                         }}}>
                         <ListItemText primary='Store Orders' />
                     </ListItemButton>
                     <ListItemButton selected={props.selectedIndex === 3} key={3}
-                                    component={Link} to="/admin" sx={{'&:hover, &:focus': {
+                                    component={Link} to="/admin/analytic" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'
                         }}}>
                         <ListItemText primary='Analytics & Reports' />
                     </ListItemButton>
                     <ListItemButton selected={props.selectedIndex === 4} key={4}
-                                    component={Link} to="/admin" sx={{'&:hover, &:focus': {
+                                    component={Link} to="/admin/finance" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'
                         }}}>
                         <ListItemText primary='Finances' />
                     </ListItemButton>
                     <ListItemButton selected={props.selectedIndex === 5} key={5}
-                                    component={Link} to="/admin" sx={{'&:hover, &:focus': {
+                                    component={Link} to="/admin/campaign" sx={{'&:hover, &:focus': {
                             background: '#424242',
                             color: '#FFFFFF'
                         }}}>

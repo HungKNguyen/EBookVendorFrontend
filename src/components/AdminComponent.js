@@ -11,7 +11,6 @@ import {
     Button,
     Avatar
 } from '@material-ui/core';
-import DraftsIcon from '@material-ui/icons/Drafts';
 import SidebarComponent from './SidebarComponent';
 import {fetchOrders, fetchSales} from "../redux/ActionCreators";
 import {connect} from "react-redux";
@@ -227,7 +226,6 @@ class AdminComponent extends Component {
     componentDidMount() {
         this.props.fetchOrders();
         this.props.fetchSales();
-        console.log(this.props);
     }
 
     handleDrawerOpen = () => {
