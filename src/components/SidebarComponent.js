@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled, useTheme} from '@material-ui/core/styles';
 import {Drawer, AppBar, Toolbar, List, Typography, Badge, Stack,
-Divider, IconButton, ListItemButton, ListItemText} from '@material-ui/core';
+Divider, IconButton, ListItemButton, ListItemText, useMediaQuery} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -42,6 +42,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 export default function SidebarComponent(props){
     const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('sm'));
     return (
         <React.Fragment>
             <StyledAppBar position="fixed" open={props.open}>
@@ -86,7 +87,7 @@ export default function SidebarComponent(props){
                         color: '#FFFFFF',
                     }
                 }}
-                variant="persistent"
+                variant={matches ? 'persistent' : 'temporary'}
                 anchor="left"
                 open={props.open}
             >

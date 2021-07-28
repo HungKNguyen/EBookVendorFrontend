@@ -8,7 +8,7 @@ import {
     Button,
     Typography,
     Modal,
-    TextField, Rating, Stack, Container
+    TextField, Rating, Stack
 } from "@material-ui/core";
 
 const theme = createTheme({
