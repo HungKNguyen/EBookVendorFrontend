@@ -1,30 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchComments, fetchEbooks, fetchOrders, fetchUsers, fetchReviews, fetchSales } from "../redux/ActionCreators";
+import { fetchComments, fetchEbooks, fetchReviews } from "../redux/ActionCreators";
 import {Switch, Route, Redirect} from "react-router-dom";
 import Home from './HomeComponent';
 import Login from './LoginComponent';
 import Signup from './SignupComponent';
-import AdminDashboard from './AdminDasboard/AdminDashboard';
+import AdminComponent from './AdminComponent';
+import EbookStoreComponent from "./EbookStoreComponent";
+import OrderStoreComponent from "./OrderStoreComponent";
+import FinanceComponent from "./FinanceComponent";
+import AnalyticComponent from "./AnalyticComponent";
+import CampaignComponent from "./CampaignComponent";
 
 const mapStateToProps = state => {
     return {
-        users: state.users,
         comments: state.comments,
         ebooks: state.ebooks,
-        orders: state.orders,
-        reviews: state.reviews,
-        sales: state.sales,
+        reviews: state.reviews
     }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchUsers: () => {dispatch(fetchUsers())},
     fetchComments: () => {dispatch(fetchComments())},
     fetchEbooks: () => {dispatch(fetchEbooks())},
-    fetchOrders: () => {dispatch(fetchOrders())},
-    fetchReviews: () => {dispatch(fetchReviews())},
-    fetchSales: () => {dispatch(fetchSales())}
+    fetchReviews: () => {dispatch(fetchReviews())}
 })
 
 class Main extends Component {
@@ -43,7 +42,12 @@ class Main extends Component {
                     comments={this.props.comments} reviews={this.props.reviews}/>} />
                     <Route path='/login' component={() => <Login />} />
                     <Route path='/signup' component={() => <Signup />} />
-                    <Route path='/admin' component={() => <AdminDashboard/>} />
+                    <Route path='/admin' exact component={() => <AdminComponent ebooks={this.props.ebooks}/>}/>
+                    <Route path='/admin/ebooks' component={() => <EbookStoreComponent ebooks={this.props.ebooks}/>}/>
+                    <Route path='/admin/orders' component={() => <OrderStoreComponent/>}/>
+                    <Route path='/admin/finance' component={() => <FinanceComponent/>}/>
+                    <Route path='/admin/analytic' component={() => <AnalyticComponent/>}/>
+                    <Route path='/admin/campaign' component={() => <CampaignComponent/>}/>
                     <Redirect to="/home" />
                 </Switch>
             </div>
