@@ -86,44 +86,44 @@ class Signup extends Component {
                         <Box component='form' className='col-12 col-md-6 border-end border-sm-right-none pe-5' noValidate>
                             <Row className='mb-3'>
                                 <div className='col-6'>
-                                    <TextField name='firstname' label='Firstname' type='text' value={this.state.firstname} variant='standard'
+                                    <TextField name='firstname' label='Firstname' type='text' inputProps={{ "role": "firstname" }} value={this.state.firstname} variant='standard'
                                                fullWidth onChange={(event) => this.handleUserInput(event)}
                                                 error={!this.state.firstnameValid} helperText={this.state.firstnameValid ? '' : 'Firstname must not be empty'}/>
                                 </div>
                                 <div className='col-6'>
-                                    <TextField label='Lastname' name='lastname' type='text' value={this.state.lastname} variant='standard'
+                                    <TextField label='Lastname' name='lastname' type='text' inputProps={{ "role": "lastname" }} value={this.state.lastname} variant='standard'
                                                fullWidth onChange={(event) => this.handleUserInput(event)}
                                                error={!this.state.lastnameValid} helperText={this.state.lastnameValid ? '' : 'Lastname must not be empty'}/>
                                 </div>
                             </Row>
                             <Row className='mb-3'>
                                 <div className='col-12'>
-                                    <TextField label='Email' name='email' type='email' value={this.state.email} variant='standard'
+                                    <TextField label='Email' name='email' type='email' inputProps={{ "role": "email" }} value={this.state.email} variant='standard'
                                                fullWidth onChange={(event) => this.handleUserInput(event)}
                                                error={!this.state.emailValid} helperText={this.state.emailValid ? '' : 'Please provide a valid email'}/>
                                 </div>
                             </Row>
                             <Row className='mb-3'>
                                 <div className='col-12'>
-                                    <TextField label='Password' name='password' type='password' value={this.state.password} variant='standard'
+                                    <TextField label='Password' name='password' type='password' inputProps={{ "role": "password" }} value={this.state.password} variant='standard'
                                                fullWidth onChange={(event) => this.handleUserInput(event)}
                                                error={!this.state.passwordValid} helperText={this.state.passwordValid ? '' : 'Password must include a number, a capital letter, and at least 8 characters'}/>
                                 </div>
                             </Row>
                             <Row className='mb-3'>
                                 <div className='col-12'>
-                                    <TextField label='Type your password again' name='passwordRetype' type='password' value={this.state.passwordRetype} variant='standard'
+                                    <TextField label='Type your password again' name='passwordRetype' type='password' inputProps={{ "role": "passwordRetype" }} value={this.state.passwordRetype} variant='standard'
                                                fullWidth onChange={(event) => this.handleUserInput(event)}
                                                error={!this.state.passwordRetypeValid} helperText={this.state.passwordRetypeValid ? '' : 'Retype password must match'}/>
                                 </div>
                             </Row>
                             <Row className='mb-3'>
-                                <FormControlLabel control={<Checkbox name='agree' checked={this.state.agree} onChange={() => this.handleUserToggle()} />}
+                                <FormControlLabel control={<Checkbox name='agree' checked={this.state.agree} inputProps={{ "role": "agree" }} onChange={() => this.handleUserToggle()} />}
                                                   label={<Typography variant='body1'>By signing up, you agree to our <a href='#'>Terms of Use</a> and <a href='#'>Privacy Policy</a>.</Typography>}/>
                                 <FormHelperText hidden={this.state.agreeValid} error={!this.state.agreeValid}>You must agree to our agreement</FormHelperText>
                             </Row>
                             <div className='m-0' onClick={() => this.handleUserSubmit()}>
-                                <MDBBtn outline rounded size='lg' className='col-4' href='#'>Sign Up</MDBBtn>
+                                <MDBBtn outline rounded size='lg' className='col-4' href='#' role='submitButton'>Sign Up</MDBBtn>
                             </div>
                         </Box>
                         <div className='col-12 col-md-6 my-5 text-center'>
