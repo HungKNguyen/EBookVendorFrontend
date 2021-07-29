@@ -25,14 +25,24 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
-        marginLeft: `-${drawerWidth}px`,
+        [theme.breakpoints.up('sm')]: {
+            marginLeft: `-${drawerWidth}px`
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: 0
+        },
         ...(open && {
             padding: theme.spacing(3),
             transition: theme.transitions.create('margin', {
                 easing: theme.transitions.easing.easeOut,
                 duration: theme.transitions.duration.enteringScreen,
             }),
-            marginLeft: 0,
+            [theme.breakpoints.up('sm')]: {
+                marginLeft: 0
+            },
+            [theme.breakpoints.up('sm')]: {
+                marginLeft: 0
+            },
         }),
     }),
 );
@@ -125,11 +135,11 @@ const EbooksList = (props) => {
     const ebooks = props.ebooks.content.slice(0,5).map((ebook) => {
         return (
             <Grid container item key={ebook._id}>
-                <Grid item md={2} xs={12}>
+                <Grid item lg={2} xs={12}>
                     <Avatar alt={ebook.name} src={ebook.image} variant="square"
                             sx={{ width: 50, height: 80}}/>
                 </Grid>
-                <Grid item md={10} xs={12}>
+                <Grid item lg={10} xs={12}>
                     <Typography noWrap fontWeight='fontWeightMedium'>
                         {ebook.name}
                     </Typography>
