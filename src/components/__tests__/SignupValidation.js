@@ -2,7 +2,7 @@ import React from 'react'
 import {render, fireEvent, screen} from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect'
 import { StaticRouter } from 'react-router-dom'
-import SignupComponent from "../SignupComponent";
+import Signup from "../otherpages/SignupComponent";
 
 const errorRE = new RegExp([
     '(Firstname must not be empty)|',
@@ -15,7 +15,7 @@ const errorRE = new RegExp([
 const signUpCombo = (firstname, lastname, email, password, passwordRetype, agree) => {
     render(
         <StaticRouter>
-            <SignupComponent/>
+            <Signup/>
         </StaticRouter>
     )
     fireEvent.change(screen.getByRole("firstname"), {target: {value: firstname}})

@@ -1,16 +1,46 @@
-import React from 'react';
-import { styled, useTheme} from '@material-ui/core/styles';
-import {Drawer, AppBar, Toolbar, List, Typography, Badge, Stack,
-Divider, IconButton, ListItemButton, ListItemText, useMediaQuery} from '@material-ui/core';
+import React, {Component} from 'react';
+import {styled, ThemeProvider, createTheme, useTheme} from '@material-ui/core/styles';
+import {
+    AppBar,
+    Badge,
+    Box,
+    CssBaseline, Divider, Drawer,
+    IconButton, List, ListItemButton, ListItemText,
+    Stack,
+    Toolbar,
+    Typography,
+    useMediaQuery
+} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import { Link } from 'react-router-dom';
+import {Link} from "react-router-dom";
+
 
 const drawerWidth = 240;
+
+const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
+    ({ theme, open }) => ({
+        flexGrow: 1,
+        padding: theme.spacing(3, 15),
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+        marginLeft: `-${drawerWidth}px`,
+        ...(open && {
+            padding: theme.spacing(3),
+            transition: theme.transitions.create('margin', {
+                easing: theme.transitions.easing.easeOut,
+                duration: theme.transitions.duration.enteringScreen,
+            }),
+            marginLeft: 0,
+        }),
+    }),
+);
 
 const StyledAppBar = styled(AppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
@@ -36,11 +66,18 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     alignItems: 'center',
     padding: theme.spacing(0, 1),
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
 }));
 
+const theme = createTheme({
+    palette: {
+        background: {
+            default: "#E1E5E9"
+        }
+    }
+});
 
-export default function SidebarComponent(props){
+const SidebarComponent = (props) => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
     return (
@@ -100,9 +137,9 @@ export default function SidebarComponent(props){
                 <List>
                     <ListItemButton selected={props.selectedIndex === 0} key={0}
                                     component={Link} to="/admin" sx={{'&:hover, &:focus': {
-                                    background: '#424242',
-                                    color: '#FFFFFF'
-                    }}}>
+                            background: '#424242',
+                            color: '#FFFFFF'
+                        }}}>
                         <ListItemText primary='Dashboard' />
                     </ListItemButton>
                     <ListItemButton selected={props.selectedIndex === 1} key={1}
@@ -146,3 +183,44 @@ export default function SidebarComponent(props){
         </React.Fragment>
     )
 }
+
+class AdminTemplate extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            open: false
+        }
+        this.handleDrawerClose = this.handleDrawerClose.bind(this);
+        this.handleDrawerOpen = this.handleDrawerOpen.bind(this);
+    }
+
+    handleDrawerOpen = () => {
+        this.setState({
+            open: true
+        })
+    };
+
+    handleDrawerClose = () => {
+        this.setState({
+            open: false
+        })
+    };
+
+    render() {
+        return (
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <Box sx={{display: 'flex'}}>
+                    <SidebarComponent open={this.state.open} handleDrawerOpen={this.handleDrawerOpen}
+                                      handleDrawerClose={this.handleDrawerClose} selectedIndex={this.props.selectedIndex}/>
+                    <Main open={this.state.open}>
+                        <DrawerHeader/>
+                        {this.props.children}
+                    </Main>
+                </Box>
+            </ThemeProvider>
+        );
+    }
+}
+
+export default AdminTemplate;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from "./HeaderComponent";
 import {
     Typography,
     Box,
@@ -9,9 +8,10 @@ import {
     CardContent,
     CardActionArea, Stack, Rating, Modal, Divider
 } from "@material-ui/core";
-import Footer from "./FooterComponent";
+import {connect} from "react-redux";
+import UserTemplate from "../templates/UserTemplate";
 
-function ReviewModal(props) {
+export const ReviewModal = (props) => {
     const style = {
         position: 'absolute',
         top: '40%',
@@ -42,28 +42,9 @@ function ReviewModal(props) {
     )
 }
 
-class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isOpen: false,
-            selectedReview: null
-        }
-    }
-    handleOpen(review) {
-        this.setState({
-            isOpen: true,
-            selectedReview: review
-        })
-    }
-    handleClose() {
-        this.setState({
-            isOpen: false,
-            selectedReview: null
-        })
-    }
-    render() {
-        const ebooks = this.props.ebooks.isLoading ? <div /> : this.props.ebooks.content.map((ebook) => {
+export const HomeDisplay = (props) => {
+    const EbooksDisplay = (props) => {
+        const ebooks = props.ebooks.isLoading ? <div /> : props.ebooks.content.map((ebook) => {
             return (
                 <Grid item key={ebook._id}>
                     <CardActionArea>
@@ -86,10 +67,23 @@ class Home extends Component {
                 </Grid>
             )
         })
-        const reviews = this.props.reviews.isLoading ? <div /> : this.props.reviews.content.map((review) => {
+        return (
+            <Box sx={{ mx: "auto", textAlign: 'center', py: 5}}>
+                <Typography variant='h4' component='div' sx={{ mb: 3 }}>
+                    <b>Our Listing</b>
+                </Typography>
+                <Grid container spacing={5} justifyContent='center'>
+                    {ebooks}
+                </Grid>
+            </Box>
+        )
+    }
+
+    const ReviewsDisplay = (props) => {
+        const reviews = props.reviews.isLoading ? <div /> : props.reviews.content.map((review) => {
             return (
                 <div key={review._id}>
-                    <CardActionArea onClick={() => this.handleOpen(review)}>
+                    <CardActionArea onClick={() => props.handleOpen(review)}>
                         <Card sx={{ width: 300}} variant="outlined">
                             <CardContent>
                                 <Typography gutterBottom variant="body1" component="div" className='three-line-para' align='left'>
@@ -105,29 +99,64 @@ class Home extends Component {
             )
         })
         return (
-            <div>
-                <Header />
-                <ReviewModal content={this.state.selectedReview} isOpen={this.state.isOpen} handleClose={() => this.handleClose()}/>
-                <Box sx={{ mx: "auto", textAlign: 'center', py: 5}}>
-                    <Typography variant='h4' component='div' sx={{ mb: 3 }}>
-                        <b>Our Listing</b>
-                    </Typography>
-                    <Grid container spacing={5} justifyContent='center'>
-                        {ebooks}
-                    </Grid>
-                </Box>
-                <Box sx={{ mx: "auto", py: 5, textAlign: 'center', background: '#F6F6F6'}}>
-                    <Typography variant='h4' component='div' sx={{ mb: 3 }}>
-                        <b>Customers' Feedback</b>
-                    </Typography>
-                    <Stack spacing={5} direction={{ xs: 'column', md: 'row' }} justifyContent='center' alignItems='center'>
-                        {reviews}
-                    </Stack>
-                </Box>
-                <Footer/>
-            </div>
+            <Box sx={{ mx: "auto", py: 5, textAlign: 'center', background: '#F6F6F6'}}>
+                <Typography variant='h4' component='div' sx={{ mb: 3 }}>
+                    <b>Customers' Feedback</b>
+                </Typography>
+                <Stack spacing={5} direction={{ xs: 'column', md: 'row' }} justifyContent='center' alignItems='center'>
+                    {reviews}
+                </Stack>
+            </Box>
+        )
+    }
+
+    return (
+        <div>
+            <ReviewModal content={props.selectedReview} isOpen={props.isOpen} handleClose={props.handleClose}/>
+            <EbooksDisplay ebooks={props.ebooks} />
+            <ReviewsDisplay reviews={props.reviews} handleOpen={props.handleOpen}/>
+        </div>
+    )
+}
+
+const mapStateToProps = state => {
+    return {
+        ebooks : state.ebooks,
+        reviews : state.reviews
+    }
+}
+
+class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen: false,
+            selectedReview: null
+        }
+        this.handleOpen = this.handleOpen.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+    }
+    handleOpen(review) {
+        this.setState({
+            isOpen: true,
+            selectedReview: review
+        })
+    }
+    handleClose() {
+        this.setState({
+            isOpen: false,
+            selectedReview: null
+        })
+    }
+    render() {
+        return (
+            <UserTemplate>
+                <HomeDisplay selectedReview={this.state.selectedReview} isOpen={this.state.isOpen}
+                ebooks={this.props.ebooks} reviews={this.props.reviews} handleOpen={this.handleOpen}
+                handleClose={this.handleClose}/>
+            </UserTemplate>
         )
     }
 }
 
-export default Home
+export const HomePage = connect(mapStateToProps)(Home);

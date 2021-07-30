@@ -1,0 +1,1606 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-rrppy3-MuiGrid-root"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-cyie08-MuiGrid-root"
+  >
+    <div
+      className="css-glq608-Stack-root"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+      >
+        Business Overview
+      </h6>
+      <hr
+        className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        role={undefined}
+      />
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-7wg87z-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1tp3ba8-MuiGrid-root"
+      >
+        <div
+          className="css-1gnw4iv-Stack-root"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+          >
+            <h6
+              className="MuiTypography-root MuiTypography-h6 css-1mo68eo-MuiTypography-root"
+            >
+              Recent Orders
+            </h6>
+            <div
+              className="MuiBox-root css-0"
+            >
+              <div
+                className="css-60pehs-Stack-root"
+              >
+                <div
+                  className="MuiBox-root css-0"
+                >
+                  <div
+                    className="css-dmjbmw-Stack-root"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-eflgtu-MuiTypography-root"
+                    >
+                      John Doe
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                    >
+                      January 1st 2019
+                    </p>
+                  </div>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1wb9x25-MuiTypography-root"
+                  >
+                    $
+                    2.99
+                    <span
+                      className="MuiBox-root css-18fk3ag"
+                    >
+                      •
+                    </span>
+                    Nineteen Eighty-Four, The Fault in Our Stars
+                  </p>
+                </div>
+                <div
+                  className="MuiBox-root css-0"
+                >
+                  <div
+                    className="css-dmjbmw-Stack-root"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-eflgtu-MuiTypography-root"
+                    >
+                      John Doe
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                    >
+                      January 1st 2019
+                    </p>
+                  </div>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1wb9x25-MuiTypography-root"
+                  >
+                    $
+                    24.00
+                    <span
+                      className="MuiBox-root css-18fk3ag"
+                    >
+                      •
+                    </span>
+                    Don Quixote
+                  </p>
+                </div>
+                <div
+                  className="MuiBox-root css-0"
+                >
+                  <div
+                    className="css-dmjbmw-Stack-root"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-eflgtu-MuiTypography-root"
+                    >
+                      John Doe
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                    >
+                      January 1st 2019
+                    </p>
+                  </div>
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1wb9x25-MuiTypography-root"
+                  >
+                    $
+                    250.00
+                    <span
+                      className="MuiBox-root css-18fk3ag"
+                    >
+                      •
+                    </span>
+                    Macroeconomics
+                  </p>
+                </div>
+              </div>
+              <button
+                className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={undefined}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                See all(
+                6
+                )
+              </button>
+            </div>
+          </div>
+          <div
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+          >
+            <h6
+              className="MuiTypography-root MuiTypography-h6 css-1mo68eo-MuiTypography-root"
+            >
+              Monthly Sales
+            </h6>
+            <div
+              className="css-60pehs-Stack-root"
+            >
+              <div
+                className="MuiBox-root css-0"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-eflgtu-MuiTypography-root"
+                >
+                  May 2021
+                </p>
+                <p
+                  className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1wb9x25-MuiTypography-root"
+                >
+                  $
+                  470.00
+                  <span
+                    className="MuiBox-root css-18fk3ag"
+                  >
+                    •
+                  </span>
+                  52
+                   ebooks sold
+                </p>
+              </div>
+              <div
+                className="MuiBox-root css-0"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-eflgtu-MuiTypography-root"
+                >
+                  April 2021
+                </p>
+                <p
+                  className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1wb9x25-MuiTypography-root"
+                >
+                  $
+                  350.00
+                  <span
+                    className="MuiBox-root css-18fk3ag"
+                  >
+                    •
+                  </span>
+                  41
+                   ebooks sold
+                </p>
+              </div>
+              <div
+                className="MuiBox-root css-0"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-eflgtu-MuiTypography-root"
+                >
+                  March 2021
+                </p>
+                <p
+                  className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1wb9x25-MuiTypography-root"
+                >
+                  $
+                  410.00
+                  <span
+                    className="MuiBox-root css-18fk3ag"
+                  >
+                    •
+                  </span>
+                  47
+                   ebooks sold
+                </p>
+              </div>
+            </div>
+            <button
+              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={undefined}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              See all(
+              3
+              )
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1tp3ba8-MuiGrid-root"
+      >
+        <div
+          className="css-1gnw4iv-Stack-root"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+          >
+            <div
+              className="css-4gyw0p-Stack-root"
+            >
+              <h6
+                className="MuiTypography-root MuiTypography-h6 css-1juivf6-MuiTypography-root"
+              >
+                Ebooks Sold
+              </h6>
+              <button
+                className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={undefined}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                Add new ebook
+              </button>
+            </div>
+            <div
+              className="MuiBox-root css-0"
+            >
+              <div
+                className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-7wg87z-MuiGrid-root"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-undefined css-1f064cs-MuiGrid-root"
+                >
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-2 css-1hx9ayd-MuiGrid-root"
+                  >
+                    <div
+                      className="MuiAvatar-root MuiAvatar-square css-1f58xjy-MuiAvatar-root"
+                    >
+                      <img
+                        alt="Nineteen Eighty-Four"
+                        className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                        sizes={undefined}
+                        src="/assets/images/1984.jpg"
+                        srcSet={undefined}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-10 css-2l2prr-MuiGrid-root"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-v94kdt-MuiTypography-root"
+                    >
+                      Nineteen Eighty-Four
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      10
+                       copies sold
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      $
+                      1.99
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-undefined css-1f064cs-MuiGrid-root"
+                >
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-2 css-1hx9ayd-MuiGrid-root"
+                  >
+                    <div
+                      className="MuiAvatar-root MuiAvatar-square css-1f58xjy-MuiAvatar-root"
+                    >
+                      <img
+                        alt="The Fault in Our Stars"
+                        className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                        sizes={undefined}
+                        src="/assets/images/TFIOS.jpg"
+                        srcSet={undefined}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-10 css-2l2prr-MuiGrid-root"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-v94kdt-MuiTypography-root"
+                    >
+                      The Fault in Our Stars
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      5
+                       copies sold
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      $
+                      6.10
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-undefined css-1f064cs-MuiGrid-root"
+                >
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-2 css-1hx9ayd-MuiGrid-root"
+                  >
+                    <div
+                      className="MuiAvatar-root MuiAvatar-square css-1f58xjy-MuiAvatar-root"
+                    >
+                      <img
+                        alt="Don Quixote"
+                        className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                        sizes={undefined}
+                        src="/assets/images/donquixote.jpg"
+                        srcSet={undefined}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-10 css-2l2prr-MuiGrid-root"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-v94kdt-MuiTypography-root"
+                    >
+                      Don Quixote
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      30
+                       copies sold
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      $
+                      22.49
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-undefined css-1f064cs-MuiGrid-root"
+                >
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-2 css-1hx9ayd-MuiGrid-root"
+                  >
+                    <div
+                      className="MuiAvatar-root MuiAvatar-square css-1f58xjy-MuiAvatar-root"
+                    >
+                      <img
+                        alt="Macroeconomics"
+                        className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                        sizes={undefined}
+                        src="/assets/images/macro.jpg"
+                        srcSet={undefined}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-10 css-2l2prr-MuiGrid-root"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-v94kdt-MuiTypography-root"
+                    >
+                      Macroeconomics
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      20
+                       copies sold
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      $
+                      234.49
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-undefined css-1f064cs-MuiGrid-root"
+                >
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-2 css-1hx9ayd-MuiGrid-root"
+                  >
+                    <div
+                      className="MuiAvatar-root MuiAvatar-square css-1f58xjy-MuiAvatar-root"
+                    >
+                      <img
+                        alt="Finance for Executives: Managing for Value Creation"
+                        className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                        sizes={undefined}
+                        src="/assets/images/FFE.jpg"
+                        srcSet={undefined}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-10 css-2l2prr-MuiGrid-root"
+                  >
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-v94kdt-MuiTypography-root"
+                    >
+                      Finance for Executives: Managing for Value Creation
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      5
+                       copies sold
+                    </p>
+                    <p
+                      className="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+                    >
+                      $
+                      84.34
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={undefined}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                See all(
+                5
+                )
+              </button>
+            </div>
+          </div>
+          <div
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+          >
+            <div
+              className="css-4gyw0p-Stack-root"
+            >
+              <h6
+                className="MuiTypography-root MuiTypography-h6 css-1juivf6-MuiTypography-root"
+              >
+                Latest Email Campaign
+              </h6>
+              <button
+                className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={undefined}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                Create new
+              </button>
+            </div>
+            <p
+              className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1ypfif-MuiTypography-root"
+            >
+              You can write and send email campaigns to users
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr
+      className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      role={undefined}
+    />
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-1mhtw2e-MuiGrid-root"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 css-1mo68eo-MuiTypography-root"
+      >
+        Analytics
+      </h6>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Testing snapshots Admin Dashboard: Loading 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-rrppy3-MuiGrid-root"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-cyie08-MuiGrid-root"
+  >
+    <div
+      className="css-glq608-Stack-root"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+      >
+        Business Overview
+      </h6>
+      <hr
+        className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        role={undefined}
+      />
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-7wg87z-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1tp3ba8-MuiGrid-root"
+      >
+        <div
+          className="css-1gnw4iv-Stack-root"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+          >
+            <h6
+              className="MuiTypography-root MuiTypography-h6 css-1mo68eo-MuiTypography-root"
+            >
+              Recent Orders
+            </h6>
+            <p
+              className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1ypfif-MuiTypography-root"
+            >
+              Loading...
+            </p>
+          </div>
+          <div
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+          >
+            <h6
+              className="MuiTypography-root MuiTypography-h6 css-1mo68eo-MuiTypography-root"
+            >
+              Monthly Sales
+            </h6>
+            <p
+              className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1ypfif-MuiTypography-root"
+            >
+              Loading...
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1tp3ba8-MuiGrid-root"
+      >
+        <div
+          className="css-1gnw4iv-Stack-root"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+          >
+            <div
+              className="css-4gyw0p-Stack-root"
+            >
+              <h6
+                className="MuiTypography-root MuiTypography-h6 css-1juivf6-MuiTypography-root"
+              >
+                Ebooks Sold
+              </h6>
+              <button
+                className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={undefined}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                Add new ebook
+              </button>
+            </div>
+            <p
+              className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1ypfif-MuiTypography-root"
+            >
+              Loading...
+            </p>
+          </div>
+          <div
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+          >
+            <div
+              className="css-4gyw0p-Stack-root"
+            >
+              <h6
+                className="MuiTypography-root MuiTypography-h6 css-1juivf6-MuiTypography-root"
+              >
+                Latest Email Campaign
+              </h6>
+              <button
+                className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={undefined}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                Create new
+              </button>
+            </div>
+            <p
+              className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1ypfif-MuiTypography-root"
+            >
+              You can write and send email campaigns to users
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr
+      className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      role={undefined}
+    />
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-1mhtw2e-MuiGrid-root"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-i0bk1x-MuiPaper-root"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 css-1mo68eo-MuiTypography-root"
+      >
+        Analytics
+      </h6>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Testing snapshots Admin Page Template 1`] = `
+<div
+  className="MuiBox-root css-k008qs"
+>
+  <header
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-oul4a7-MuiPaper-root-MuiAppBar-root"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+    >
+      <button
+        aria-label="open drawer"
+        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-134qg7o-MuiButtonBase-root-MuiIconButton-root"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          color={undefined}
+          data-testid="MenuIcon"
+          focusable="false"
+          role={undefined}
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+        <span
+          className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <div
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-1dvstpp-MuiTypography-root"
+      >
+        EBookVendor Administration
+      </div>
+      <div
+        className="css-ythryh-Stack-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={undefined}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiBadge-root css-1c32n2y-MuiBadge-root"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeMedium css-11pbyhm-MuiSvgIcon-root"
+              color={undefined}
+              data-testid="MailIcon"
+              focusable="false"
+              role={undefined}
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            <span
+              className="MuiBadge-colorError MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRightRectangular css-to4x1n-MuiBadge-badge"
+            >
+              4
+            </span>
+          </span>
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={undefined}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiBadge-root css-1c32n2y-MuiBadge-root"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeMedium css-11pbyhm-MuiSvgIcon-root"
+              color={undefined}
+              data-testid="NotificationsIcon"
+              focusable="false"
+              role={undefined}
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+              />
+            </svg>
+            <span
+              className="MuiBadge-colorError MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRightRectangular css-to4x1n-MuiBadge-badge"
+            >
+              4
+            </span>
+          </span>
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={undefined}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeMedium css-11pbyhm-MuiSvgIcon-root"
+            color={undefined}
+            data-testid="AccountCircleIcon"
+            focusable="false"
+            role={undefined}
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+            />
+          </svg>
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+  <main
+    className="css-plyuun"
+  >
+    <div
+      className="css-19eix6g"
+    />
+  </main>
+</div>
+`;
+
+exports[`Testing snapshots Home Page: Loaded 1`] = `
+<div>
+  <div />
+  <div
+    className="MuiBox-root css-p9plch"
+  >
+    <div
+      className="MuiTypography-root MuiTypography-h4 css-shgr9c-MuiTypography-root"
+    >
+      <b>
+        Our Listing
+      </b>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-17y8th3-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={undefined}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-161mswp-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
+              src={undefined}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"/assets/images/1984.jpg\\")",
+                }
+              }
+              title="Nineteen Eighty-Four"
+            />
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            >
+              <div
+                className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-noWrap css-1tqvnak-MuiTypography-root"
+              >
+                <b>
+                  Nineteen Eighty-Four
+                </b>
+              </div>
+              <h6
+                className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignLeft MuiTypography-noWrap css-cycgd5-MuiTypography-root"
+              >
+                George Orwell
+              </h6>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={undefined}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-161mswp-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
+              src={undefined}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"/assets/images/TFIOS.jpg\\")",
+                }
+              }
+              title="The Fault in Our Stars"
+            />
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            >
+              <div
+                className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-noWrap css-1tqvnak-MuiTypography-root"
+              >
+                <b>
+                  The Fault in Our Stars
+                </b>
+              </div>
+              <h6
+                className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignLeft MuiTypography-noWrap css-cycgd5-MuiTypography-root"
+              >
+                John Green
+              </h6>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={undefined}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-161mswp-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
+              src={undefined}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"/assets/images/donquixote.jpg\\")",
+                }
+              }
+              title="Don Quixote"
+            />
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            >
+              <div
+                className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-noWrap css-1tqvnak-MuiTypography-root"
+              >
+                <b>
+                  Don Quixote
+                </b>
+              </div>
+              <h6
+                className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignLeft MuiTypography-noWrap css-cycgd5-MuiTypography-root"
+              >
+                Miguel De Cervantes Saavedra
+              </h6>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={undefined}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-161mswp-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
+              src={undefined}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"/assets/images/macro.jpg\\")",
+                }
+              }
+              title="Macroeconomics"
+            />
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            >
+              <div
+                className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-noWrap css-1tqvnak-MuiTypography-root"
+              >
+                <b>
+                  Macroeconomics
+                </b>
+              </div>
+              <h6
+                className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignLeft MuiTypography-noWrap css-cycgd5-MuiTypography-root"
+              >
+                N. Gregory Mankiw
+              </h6>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={undefined}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-161mswp-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
+              src={undefined}
+              style={
+                Object {
+                  "backgroundImage": "url(\\"/assets/images/FFE.jpg\\")",
+                }
+              }
+              title="Finance for Executives: Managing for Value Creation"
+            />
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            >
+              <div
+                className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-noWrap css-1tqvnak-MuiTypography-root"
+              >
+                <b>
+                  Finance for Executives: Managing for Value Creation
+                </b>
+              </div>
+              <h6
+                className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-alignLeft MuiTypography-noWrap css-cycgd5-MuiTypography-root"
+              >
+                Gabriel Hawawini
+              </h6>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiBox-root css-1mnun9w"
+  >
+    <div
+      className="MuiTypography-root MuiTypography-h4 css-shgr9c-MuiTypography-root"
+    >
+      <b>
+        Customers' Feedback
+      </b>
+    </div>
+    <div
+      className="css-fcwrlf-Stack-root"
+    >
+      <div>
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-158bph7-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            >
+              <div
+                className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft MuiTypography-gutterBottom three-line-para css-k21izb-MuiTypography-root"
+              >
+                Always affordable, and makes preparing for the semester that much easier and stress free.
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-alignRight css-p1kxsa-MuiTypography-root"
+              >
+                <i>
+                  John Doe
+                </i>
+              </p>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+      <div>
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-158bph7-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            >
+              <div
+                className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft MuiTypography-gutterBottom three-line-para css-k21izb-MuiTypography-root"
+              >
+                I'm thrilled with my purchase. The process was easy and user-friendly. No hassles just took a few minutes to order my book.
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-alignRight css-p1kxsa-MuiTypography-root"
+              >
+                <i>
+                  Jane Doe
+                </i>
+              </p>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+      <div>
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-158bph7-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            >
+              <div
+                className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft MuiTypography-gutterBottom three-line-para css-k21izb-MuiTypography-root"
+              >
+                I've purchased two textbooks now on vitalsource, and both times it has been an easy process (also much cheaper than buying the books outright). I also like that I can buy them for 180 days rather than forever.
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-alignRight css-p1kxsa-MuiTypography-root"
+              >
+                <i>
+                  Admin Doe
+                </i>
+              </p>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Testing snapshots Home Page: Loading 1`] = `
+<div>
+  <div />
+  <div
+    className="MuiBox-root css-p9plch"
+  >
+    <div
+      className="MuiTypography-root MuiTypography-h4 css-shgr9c-MuiTypography-root"
+    >
+      <b>
+        Our Listing
+      </b>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-17y8th3-MuiGrid-root"
+    >
+      <div />
+    </div>
+  </div>
+  <div
+    className="MuiBox-root css-1mnun9w"
+  >
+    <div
+      className="MuiTypography-root MuiTypography-h4 css-shgr9c-MuiTypography-root"
+    >
+      <b>
+        Customers' Feedback
+      </b>
+    </div>
+    <div
+      className="css-fcwrlf-Stack-root"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Testing snapshots User Page Template 1`] = `
+<div>
+  <div
+    className="MuiBox-root css-i9gxme"
+  >
+    <header
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorBlack MuiAppBar-positionStatic css-1bxzzev-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular px-md-5 css-1t29gy6-MuiToolbar-root"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-h6 css-1juivf6-MuiTypography-root"
+        >
+          <a
+            className="text-white"
+            href="/home"
+            onClick={[Function]}
+          >
+            EBookVendor
+          </a>
+        </div>
+        <div
+          className="css-1o0xye9"
+        >
+          <div
+            className="css-6hxhsf"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              color={undefined}
+              data-testid="SearchIcon"
+              focusable="false"
+              role={undefined}
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              />
+            </svg>
+          </div>
+          <div
+            className="MuiInputBase-root MuiInputBase-colorPrimary css-1b8pt5q-MuiInputBase-root"
+            onClick={[Function]}
+          >
+            <input
+              aria-describedby={undefined}
+              aria-invalid={undefined}
+              autoComplete={undefined}
+              autoFocus={undefined}
+              className="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+              defaultValue={undefined}
+              disabled={undefined}
+              id={undefined}
+              name="search"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder="Search EBooks..."
+              readOnly={undefined}
+              required={undefined}
+              rows={undefined}
+              type="text"
+              value={undefined}
+            />
+          </div>
+        </div>
+        <a
+          href="/login"
+          onClick={[Function]}
+        >
+          <button
+            className="MuiButton-root MuiButton-outlined MuiButton-outlinedWhite MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-1tl8f8k-MuiButtonBase-root-MuiButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={undefined}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                color={undefined}
+                data-testid="LoginIcon"
+                focusable="false"
+                role={undefined}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M11 7 9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"
+                />
+              </svg>
+            </span>
+            Login
+          </button>
+        </a>
+      </div>
+    </header>
+  </div>
+  <div
+    className="MuiBox-root css-i9gxme"
+  >
+    <header
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorBlack MuiAppBar-positionStatic css-1bxzzev-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1xpbrfe-MuiToolbar-root"
+      >
+        <button
+          className="MuiButton-root MuiButton-text MuiButton-textWhite MuiButton-sizeLarge MuiButton-textSizeLarge MuiButtonBase-root css-yvg5cj-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          Write us a review
+        </button>
+      </div>
+    </header>
+  </div>
+</div>
+`;

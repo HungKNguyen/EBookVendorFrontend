@@ -2,23 +2,10 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { fetchComments, fetchEbooks, fetchReviews } from "../redux/ActionCreators";
 import {Switch, Route, Redirect} from "react-router-dom";
-import Home from './HomeComponent';
-import Login from './LoginComponent';
-import Signup from './SignupComponent';
-import AdminComponent from './AdminComponent';
-import EbookStoreComponent from "./EbookStoreComponent";
-import OrderStoreComponent from "./OrderStoreComponent";
-import FinanceComponent from "./FinanceComponent";
-import AnalyticComponent from "./AnalyticComponent";
-import CampaignComponent from "./CampaignComponent";
-
-const mapStateToProps = state => {
-    return {
-        comments: state.comments,
-        ebooks: state.ebooks,
-        reviews: state.reviews
-    }
-}
+import {HomePage} from './userpages/HomeComponent';
+import Login from './otherpages/LoginComponent';
+import Signup from './otherpages/SignupComponent';
+import {AdminDashboardPage} from './adminpages/AdminComponent';
 
 const mapDispatchToProps = (dispatch) => ({
     fetchComments: () => {dispatch(fetchComments())},
@@ -38,16 +25,13 @@ class Main extends Component {
         return (
             <div>
                 <Switch location={this.props.location}>
-                    <Route path='/home' component={() => <Home ebooks={this.props.ebooks}
-                    comments={this.props.comments} reviews={this.props.reviews}/>} />
+                    {/* dir otherpages */}
                     <Route path='/login' component={() => <Login />} />
                     <Route path='/signup' component={() => <Signup />} />
-                    <Route path='/admin' exact component={() => <AdminComponent ebooks={this.props.ebooks}/>}/>
-                    <Route path='/admin/ebooks' component={() => <EbookStoreComponent ebooks={this.props.ebooks}/>}/>
-                    <Route path='/admin/orders' component={() => <OrderStoreComponent/>}/>
-                    <Route path='/admin/finance' component={() => <FinanceComponent/>}/>
-                    <Route path='/admin/analytic' component={() => <AnalyticComponent/>}/>
-                    <Route path='/admin/campaign' component={() => <CampaignComponent/>}/>
+                    {/* dir userpages */}
+                    <Route path='/home' component={() => <HomePage/>} />
+                    {/* dir adminpages */}
+                    <Route path='/admin' exact component={() => <AdminDashboardPage/>}/>
                     <Redirect to="/home" />
                 </Switch>
             </div>
@@ -55,4 +39,4 @@ class Main extends Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(null, mapDispatchToProps)(Main);
