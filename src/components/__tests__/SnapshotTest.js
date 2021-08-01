@@ -11,6 +11,8 @@ import {DashBoard} from "../adminpages/AdminComponent";
 import {StaticRouter} from "react-router-dom";
 import UserTemplate from "../templates/UserTemplate";
 import AdminTemplate from "../templates/AdminTemplate";
+import Login from "../otherpages/LoginComponent";
+import Signup from "../otherpages/SignupComponent";
 
 //Mock Data General Function
 const mockData = (loading, content) => ({
@@ -31,6 +33,20 @@ const staticRender = (component) => {
 //NOTE: react-test-renderer doesn't want to create snapshot for modal, issue still open on Github
 
 describe('Testing snapshots', () => {
+    test('Login Page', () => {
+        const component = staticRender(
+            <Login />
+        )
+        let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+    test('Sign Up Page', () => {
+        const component = staticRender(
+            <Signup />
+        )
+        let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
     test('User Page Template', () => {
         const component = staticRender(
             <UserTemplate />
