@@ -2149,13 +2149,15 @@ exports[`Testing snapshots Sign Up Page 1`] = `
             <p
               className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
             >
-              By signing up, you agree to our 
+              By signing up, you agree to our
+               
               <a
                 href="#"
               >
                 Terms of Use
               </a>
-               and 
+               and
+               
               <a
                 href="#"
               >

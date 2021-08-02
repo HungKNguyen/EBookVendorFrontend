@@ -1,4 +1,4 @@
-import {createStore, combineReducers, applyMiddleware} from 'redux';
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import { Comments } from "./comments";
 import { Ebooks } from "./ebooks";
 import { Orders } from "./orders";
@@ -8,17 +8,17 @@ import { Sales } from "./sales";
 import thunk from "redux-thunk";
 
 export const ConfigureStore = () => {
-    const store = createStore(
-        combineReducers({
-            comments: Comments,
-            ebooks: Ebooks,
-            orders: Orders,
-            users: Users,
-            reviews: Reviews,
-            sales: Sales
-        }),
-        applyMiddleware(thunk)
-    );
+  const store = createStore(
+    combineReducers({
+      comments: Comments,
+      ebooks: Ebooks,
+      orders: Orders,
+      users: Users,
+      reviews: Reviews,
+      sales: Sales,
+    }),
+    applyMiddleware(thunk)
+  );
 
-    return store;
-}
+  return store;
+};
