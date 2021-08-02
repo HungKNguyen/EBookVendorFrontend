@@ -1452,6 +1452,818 @@ exports[`Testing snapshots Home Page: Loading 1`] = `
 </div>
 `;
 
+exports[`Testing snapshots Login Page 1`] = `
+<div>
+  <a
+    href="/home"
+    onClick={[Function]}
+  >
+    <button
+      className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1v0zbei-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={undefined}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          color={undefined}
+          data-testid="HomeIcon"
+          focusable="false"
+          role={undefined}
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+          />
+        </svg>
+      </span>
+      Home
+    </button>
+  </a>
+  <p
+    className="title text-center text-black"
+  >
+    Log In
+  </p>
+  <p
+    className="subtitle text-center text-black"
+  >
+    Don't have an account? 
+    <a
+      href="/signup"
+      onClick={[Function]}
+    >
+      Sign Up
+    </a>
+  </p>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <form
+        className="col-12 col-md-6 border-end border-sm-right-none pe-5"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root mb-3 css-wb57ya-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink={false}
+            htmlFor={undefined}
+            id={undefined}
+          >
+            Email
+          </label>
+          <div
+            className="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
+            onClick={[Function]}
+          >
+            <input
+              aria-describedby={undefined}
+              aria-invalid={false}
+              autoComplete={undefined}
+              autoFocus={false}
+              className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              defaultValue={undefined}
+              disabled={false}
+              id={undefined}
+              name="email"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              readOnly={undefined}
+              required={false}
+              rows={undefined}
+              type="email"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root mb-3 css-wb57ya-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink={false}
+            htmlFor={undefined}
+            id={undefined}
+          >
+            Password
+          </label>
+          <div
+            className="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
+            onClick={[Function]}
+          >
+            <input
+              aria-describedby={undefined}
+              aria-invalid={false}
+              autoComplete={undefined}
+              autoFocus={false}
+              className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              defaultValue={undefined}
+              disabled={false}
+              id={undefined}
+              name="password"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={undefined}
+              onKeyUp={undefined}
+              placeholder={undefined}
+              readOnly={undefined}
+              required={false}
+              rows={undefined}
+              type="password"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="css-1ukg4gc-Stack-root"
+        >
+          <label
+            className="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+          >
+            <span
+              className="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-ncoufy-MuiButtonBase-root-MuiCheckbox-root"
+              onBlur={[Function]}
+              onClick={undefined}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role={undefined}
+              tabIndex={null}
+              type={undefined}
+            >
+              <input
+                autoFocus={undefined}
+                checked={false}
+                className="PrivateSwitchBase-input css-mraihx"
+                data-indeterminate={false}
+                defaultChecked={undefined}
+                disabled={undefined}
+                id={undefined}
+                name="rememberMe"
+                onChange={[Function]}
+                readOnly={undefined}
+                required={undefined}
+                tabIndex={undefined}
+                type="checkbox"
+                value={undefined}
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                color={undefined}
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                role={undefined}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            >
+              Remember Me
+            </span>
+          </label>
+          <p
+            className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Forgot Password or Email?
+            </a>
+          </p>
+        </div>
+        <div
+          className="m-0"
+          onClick={[Function]}
+        >
+          <a
+            className="ripple ripple-surface btn btn-outline-primary btn-rounded btn-lg col-4"
+            disabled={undefined}
+            href="#"
+            onClick={[Function]}
+            role="button"
+          >
+            Log In
+          </a>
+        </div>
+      </form>
+      <div
+        className="col-12 col-md-6 my-5 text-center"
+      >
+        <div
+          className="m-0"
+          onClick={[Function]}
+        >
+          <a
+            className="ripple ripple-surface btn btn-primary btn-lg col-8"
+            disabled={undefined}
+            href="#"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "backgroundColor": "#3b5998",
+              }
+            }
+          >
+            <i
+              className="fab fa-facebook-f me-2"
+            />
+             Continue with Facebook
+          </a>
+        </div>
+        <div
+          className="m-0"
+          onClick={[Function]}
+        >
+          <a
+            className="ripple ripple-surface btn btn-primary btn-lg my-3 col-8"
+            disabled={undefined}
+            href="#"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "backgroundColor": "#dd4b39",
+              }
+            }
+          >
+            <i
+              className="fab fa-google me-2"
+            />
+             Continue with Google
+          </a>
+        </div>
+        <div
+          className="m-0"
+          onClick={[Function]}
+        >
+          <a
+            className="ripple ripple-surface btn btn-primary btn-lg col-8"
+            disabled={undefined}
+            href="#"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "backgroundColor": "#000000",
+              }
+            }
+          >
+            <i
+              className="fab fa-apple me-2"
+            />
+             Continue with Apple
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3"
+  />
+</div>
+`;
+
+exports[`Testing snapshots Sign Up Page 1`] = `
+<div>
+  <a
+    href="/home"
+    onClick={[Function]}
+  >
+    <button
+      className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1v0zbei-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={undefined}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          color={undefined}
+          data-testid="HomeIcon"
+          focusable="false"
+          role={undefined}
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+          />
+        </svg>
+      </span>
+      Home
+      <span
+        className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </a>
+  <p
+    className="title text-center text-black"
+  >
+    Sign Up
+  </p>
+  <p
+    className="subtitle text-center text-black"
+  >
+    Already have an account? 
+    <a
+      href="/login"
+      onClick={[Function]}
+    >
+      Log In
+    </a>
+  </p>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <form
+        className="col-12 col-md-6 border-end border-sm-right-none pe-5 MuiBox-root css-0"
+        noValidate={true}
+      >
+        <div
+          className="mb-3 row"
+        >
+          <div
+            className="col-6"
+          >
+            <div
+              className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+            >
+              <label
+                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink={false}
+                htmlFor={undefined}
+                id={undefined}
+              >
+                Firstname
+              </label>
+              <div
+                className="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby={undefined}
+                  aria-invalid={false}
+                  autoComplete={undefined}
+                  autoFocus={false}
+                  className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                  defaultValue={undefined}
+                  disabled={false}
+                  id={undefined}
+                  name="firstname"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={undefined}
+                  onKeyUp={undefined}
+                  placeholder={undefined}
+                  readOnly={undefined}
+                  required={false}
+                  role="firstname"
+                  rows={undefined}
+                  type="text"
+                  value=""
+                />
+              </div>
+              
+            </div>
+          </div>
+          <div
+            className="col-6"
+          >
+            <div
+              className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+            >
+              <label
+                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink={false}
+                htmlFor={undefined}
+                id={undefined}
+              >
+                Lastname
+              </label>
+              <div
+                className="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby={undefined}
+                  aria-invalid={false}
+                  autoComplete={undefined}
+                  autoFocus={false}
+                  className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                  defaultValue={undefined}
+                  disabled={false}
+                  id={undefined}
+                  name="lastname"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={undefined}
+                  onKeyUp={undefined}
+                  placeholder={undefined}
+                  readOnly={undefined}
+                  required={false}
+                  role="lastname"
+                  rows={undefined}
+                  type="text"
+                  value=""
+                />
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="mb-3 row"
+        >
+          <div
+            className="col-12"
+          >
+            <div
+              className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+            >
+              <label
+                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink={false}
+                htmlFor={undefined}
+                id={undefined}
+              >
+                Email
+              </label>
+              <div
+                className="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby={undefined}
+                  aria-invalid={false}
+                  autoComplete={undefined}
+                  autoFocus={false}
+                  className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                  defaultValue={undefined}
+                  disabled={false}
+                  id={undefined}
+                  name="email"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={undefined}
+                  onKeyUp={undefined}
+                  placeholder={undefined}
+                  readOnly={undefined}
+                  required={false}
+                  role="email"
+                  rows={undefined}
+                  type="email"
+                  value=""
+                />
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="mb-3 row"
+        >
+          <div
+            className="col-12"
+          >
+            <div
+              className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+            >
+              <label
+                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink={false}
+                htmlFor={undefined}
+                id={undefined}
+              >
+                Password
+              </label>
+              <div
+                className="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby={undefined}
+                  aria-invalid={false}
+                  autoComplete={undefined}
+                  autoFocus={false}
+                  className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                  defaultValue={undefined}
+                  disabled={false}
+                  id={undefined}
+                  name="password"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={undefined}
+                  onKeyUp={undefined}
+                  placeholder={undefined}
+                  readOnly={undefined}
+                  required={false}
+                  role="password"
+                  rows={undefined}
+                  type="password"
+                  value=""
+                />
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="mb-3 row"
+        >
+          <div
+            className="col-12"
+          >
+            <div
+              className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+            >
+              <label
+                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink={false}
+                htmlFor={undefined}
+                id={undefined}
+              >
+                Type your password again
+              </label>
+              <div
+                className="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby={undefined}
+                  aria-invalid={false}
+                  autoComplete={undefined}
+                  autoFocus={false}
+                  className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                  defaultValue={undefined}
+                  disabled={false}
+                  id={undefined}
+                  name="passwordRetype"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={undefined}
+                  onKeyUp={undefined}
+                  placeholder={undefined}
+                  readOnly={undefined}
+                  required={false}
+                  role="passwordRetype"
+                  rows={undefined}
+                  type="password"
+                  value=""
+                />
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="mb-3 row"
+        >
+          <label
+            className="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+          >
+            <span
+              className="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-ncoufy-MuiButtonBase-root-MuiCheckbox-root"
+              onBlur={[Function]}
+              onClick={undefined}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role={undefined}
+              tabIndex={null}
+              type={undefined}
+            >
+              <input
+                autoFocus={undefined}
+                checked={false}
+                className="PrivateSwitchBase-input css-mraihx"
+                data-indeterminate={false}
+                defaultChecked={undefined}
+                disabled={undefined}
+                id={undefined}
+                name="agree"
+                onChange={[Function]}
+                readOnly={undefined}
+                required={undefined}
+                role="agree"
+                tabIndex={undefined}
+                type="checkbox"
+                value={undefined}
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                color={undefined}
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                role={undefined}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </span>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            >
+              By signing up, you agree to our 
+              <a
+                href="#"
+              >
+                Terms of Use
+              </a>
+               and 
+              <a
+                href="#"
+              >
+                Privacy Policy
+              </a>
+              .
+            </p>
+          </label>
+          <p
+            className="MuiFormHelperText-root css-1d1r5q-MuiFormHelperText-root"
+            hidden={true}
+          >
+            You must agree to our agreement
+          </p>
+        </div>
+        <div
+          className="m-0"
+          onClick={[Function]}
+        >
+          <a
+            className="ripple ripple-surface btn btn-outline-primary btn-rounded btn-lg col-4"
+            disabled={undefined}
+            href="#"
+            onClick={[Function]}
+            role="submitButton"
+          >
+            Sign Up
+          </a>
+        </div>
+      </form>
+      <div
+        className="col-12 col-md-6 my-5 text-center"
+      >
+        <div
+          className="m-0"
+          onClick={[Function]}
+        >
+          <a
+            className="ripple ripple-surface btn btn-primary btn-lg col-8"
+            disabled={undefined}
+            href="#"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "backgroundColor": "#3b5998",
+              }
+            }
+          >
+            <i
+              className="fab fa-facebook-f me-2"
+            />
+             Continue with Facebook
+          </a>
+        </div>
+        <div
+          className="m-0"
+          onClick={[Function]}
+        >
+          <a
+            className="ripple ripple-surface btn btn-primary btn-lg my-3 col-8"
+            disabled={undefined}
+            href="#"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "backgroundColor": "#dd4b39",
+              }
+            }
+          >
+            <i
+              className="fab fa-google me-2"
+            />
+             Continue with Google
+          </a>
+        </div>
+        <div
+          className="m-0"
+          onClick={[Function]}
+        >
+          <a
+            className="ripple ripple-surface btn btn-primary btn-lg col-8"
+            disabled={undefined}
+            href="#"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "backgroundColor": "#000000",
+              }
+            }
+          >
+            <i
+              className="fab fa-apple me-2"
+            />
+             Continue with Apple
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-3"
+  />
+</div>
+`;
+
 exports[`Testing snapshots User Page Template 1`] = `
 <div>
   <div
