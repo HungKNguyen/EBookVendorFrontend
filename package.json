@@ -25,13 +25,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.{js, jsx}'",
-    "lint-fix": "eslint --fix 'src/**/*.{js, jsx}'",
+    "lint": "eslint 'src/**/*.{js, jsx}' && stylelint 'src/**/*.css",
+    "lint-fix": "eslint --fix 'src/**/*.{js, jsx}' && stylelint --fix 'src/**/*.css",
     "pre-commit-test": "react-scripts test --watchAll=false"
   },
   "lint-staged": {
     "src/**/*.{js, jsx}": [
       "eslint . --fix"
+    ],
+    "src/**/*.css": [
+      "stylelint . --fix"
     ]
   },
   "proxy": "http://localhost:3001/",
@@ -62,6 +65,8 @@
     "eslint-plugin-react": "^7.24.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.1",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   }
 }
