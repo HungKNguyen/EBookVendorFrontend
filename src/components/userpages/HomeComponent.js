@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import {
   Typography,
   Box,
@@ -10,52 +10,55 @@ import {
   Stack,
   Rating,
   Modal,
-  Divider,
-} from "@material-ui/core";
-import { connect } from "react-redux";
-import UserTemplate from "../templates/UserTemplate";
+  Divider
+} from '@material-ui/core'
+import { connect } from 'react-redux'
+import UserTemplate from '../templates/UserTemplate'
+import { fetchEbooks, fetchReviews } from '../../redux/ActionCreators'
 
 export const ReviewModal = (props) => {
   const style = {
-    position: "absolute",
-    top: "40%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+    position: 'absolute',
+    top: '40%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
     width: 400,
-    background: "#fff",
-    border: "2px solid #272727",
+    background: '#fff',
+    border: '2px solid #272727',
     p: 4,
-    textAlign: "center",
-  };
-  if (props.content === null) return <div />;
+    textAlign: 'center'
+  }
+  if (props.content === null) return <div />
   return (
     <Modal open={props.isOpen} onClose={() => props.handleClose()}>
       <Stack sx={style} spacing={2}>
         <Rating readOnly value={props.content.rating} />
         <Stack direction="row" justifyContent="space-between">
-          <Typography variant="body2" sx={{ textAlign: "left" }}>
-            {props.content.user.firstname + " " + props.content.user.lastname}
+          <Typography variant="body2" sx={{ textAlign: 'left' }}>
+            {props.content.user.firstname + ' ' + props.content.user.lastname}
           </Typography>
-          <Typography variant="body2" sx={{ textAlign: "left" }}>
+          <Typography variant="body2" sx={{ textAlign: 'left' }}>
             {props.content.date}
           </Typography>
         </Stack>
         <Divider />
-        <Typography variant="body1" sx={{ textAlign: "left" }}>
+        <Typography variant="body1" sx={{ textAlign: 'left' }}>
           {props.content.review}
         </Typography>
       </Stack>
     </Modal>
-  );
-};
+  )
+}
 
 export const HomeDisplay = (props) => {
   const EbooksDisplay = (props) => {
-    const ebooks = props.ebooks.isLoading ? (
+    const ebooks = props.ebooks.isLoading
+      ? (
       <div />
-    ) : (
-      props.ebooks.content.map((ebook) => {
-        return (
+        )
+      : (
+          props.ebooks.content.map((ebook) => {
+            return (
           <Grid item key={ebook._id}>
             <CardActionArea>
               <Card sx={{ width: 200 }} variant="outlined">
@@ -85,11 +88,11 @@ export const HomeDisplay = (props) => {
               </Card>
             </CardActionArea>
           </Grid>
-        );
-      })
-    );
+            )
+          })
+        )
     return (
-      <Box sx={{ mx: "auto", textAlign: "center", py: 5 }}>
+      <Box sx={{ mx: 'auto', textAlign: 'center', py: 5 }}>
         <Typography variant="h4" component="div" sx={{ mb: 3 }}>
           <b>Our Listing</b>
         </Typography>
@@ -97,15 +100,17 @@ export const HomeDisplay = (props) => {
           {ebooks}
         </Grid>
       </Box>
-    );
-  };
+    )
+  }
 
   const ReviewsDisplay = (props) => {
-    const reviews = props.reviews.isLoading ? (
+    const reviews = props.reviews.isLoading
+      ? (
       <div />
-    ) : (
-      props.reviews.content.map((review) => {
-        return (
+        )
+      : (
+          props.reviews.content.map((review) => {
+            return (
           <div key={review._id}>
             <CardActionArea onClick={() => props.handleOpen(review)}>
               <Card sx={{ width: 300 }} variant="outlined">
@@ -125,33 +130,33 @@ export const HomeDisplay = (props) => {
                     align="right"
                     sx={{ mr: 3 }}
                   >
-                    <i>{review.user.firstname + " " + review.user.lastname}</i>
+                    <i>{review.user.firstname + ' ' + review.user.lastname}</i>
                   </Typography>
                 </CardContent>
               </Card>
             </CardActionArea>
           </div>
-        );
-      })
-    );
+            )
+          })
+        )
     return (
       <Box
-        sx={{ mx: "auto", py: 5, textAlign: "center", background: "#F6F6F6" }}
+        sx={{ mx: 'auto', py: 5, textAlign: 'center', background: '#F6F6F6' }}
       >
         <Typography variant="h4" component="div" sx={{ mb: 3 }}>
-          <b>Customers' Feedback</b>
+          <b>Customers&apos; Feedback</b>
         </Typography>
         <Stack
           spacing={5}
-          direction={{ xs: "column", md: "row" }}
+          direction={{ xs: 'column', md: 'row' }}
           justifyContent="center"
           alignItems="center"
         >
           {reviews}
         </Stack>
       </Box>
-    );
-  };
+    )
+  }
 
   return (
     <div>
@@ -163,39 +168,56 @@ export const HomeDisplay = (props) => {
       <EbooksDisplay ebooks={props.ebooks} />
       <ReviewsDisplay reviews={props.reviews} handleOpen={props.handleOpen} />
     </div>
-  );
-};
+  )
+}
 
 const mapStateToProps = (state) => {
   return {
     ebooks: state.ebooks,
-    reviews: state.reviews,
-  };
-};
+    reviews: state.reviews
+  }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchEbooks: () => {
+    dispatch(fetchEbooks())
+  },
+  fetchReviews: () => {
+    dispatch(fetchReviews())
+  }
+})
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       isOpen: false,
-      selectedReview: null,
-    };
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+      selectedReview: null
+    }
+    this.handleOpen = this.handleOpen.bind(this)
+    this.handleClose = this.handleClose.bind(this)
   }
-  handleOpen(review) {
+
+  componentDidMount () {
+    this.props.fetchEbooks()
+    this.props.fetchReviews()
+  }
+
+  handleOpen (review) {
     this.setState({
       isOpen: true,
-      selectedReview: review,
-    });
+      selectedReview: review
+    })
   }
-  handleClose() {
+
+  handleClose () {
     this.setState({
       isOpen: false,
-      selectedReview: null,
-    });
+      selectedReview: null
+    })
   }
-  render() {
+
+  render () {
     return (
       <UserTemplate>
         <HomeDisplay
@@ -207,8 +229,8 @@ class Home extends Component {
           handleClose={this.handleClose}
         />
       </UserTemplate>
-    );
+    )
   }
 }
 
-export const HomePage = connect(mapStateToProps)(Home);
+export const HomePage = connect(mapStateToProps, mapDispatchToProps)(Home)

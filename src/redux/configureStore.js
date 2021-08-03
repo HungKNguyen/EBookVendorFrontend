@@ -1,11 +1,11 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import { Comments } from "./comments";
-import { Ebooks } from "./ebooks";
-import { Orders } from "./orders";
-import { Users } from "./users";
-import { Reviews } from "./reviews";
-import { Sales } from "./sales";
-import thunk from "redux-thunk";
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { Comments } from './comments'
+import { Ebooks } from './ebooks'
+import { Orders } from './orders'
+import { Users } from './users'
+import { Reviews } from './reviews'
+import { Sales } from './sales'
+import thunk from 'redux-thunk'
 
 export const ConfigureStore = () => {
   const store = createStore(
@@ -15,10 +15,10 @@ export const ConfigureStore = () => {
       orders: Orders,
       users: Users,
       reviews: Reviews,
-      sales: Sales,
+      sales: Sales
     }),
     applyMiddleware(thunk)
-  );
+  )
 
-  return store;
-};
+  return store
+}

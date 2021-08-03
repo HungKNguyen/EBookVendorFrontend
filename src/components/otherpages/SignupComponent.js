@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Row } from "reactstrap";
-import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit'
 import {
   TextField,
   Checkbox,
@@ -9,45 +8,48 @@ import {
   Box,
   FormHelperText,
   Button,
-  Typography,
-} from "@material-ui/core";
-import { Home } from "@material-ui/icons";
+  Typography
+} from '@material-ui/core'
+import { Home } from '@material-ui/icons'
 class Signup extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-      firstname: "",
-      lastname: "",
-      email: "",
-      password: "",
-      passwordRetype: "",
+      firstname: '',
+      lastname: '',
+      email: '',
+      password: '',
+      passwordRetype: '',
       agree: false,
       firstnameValid: true,
       lastnameValid: true,
       emailValid: true,
       passwordValid: true,
       passwordRetypeValid: true,
-      agreeValid: true,
-    };
+      agreeValid: true
+    }
   }
-  handleUserInput(e) {
-    const name = e.target.name;
-    const value = e.target.value;
-    this.setState({ [name]: value });
+
+  handleUserInput (e) {
+    const name = e.target.name
+    const value = e.target.value
+    this.setState({ [name]: value })
   }
-  handleUserToggle() {
-    let current = this.state.agree;
-    this.setState({ agree: !current });
+
+  handleUserToggle () {
+    const current = this.state.agree
+    this.setState({ agree: !current })
   }
-  handleUserSubmit() {
+
+  handleUserSubmit () {
     this.setState(
       {
-        firstnameValid: this.validate("firstname"),
-        lastnameValid: this.validate("lastname"),
-        emailValid: this.validate("email"),
-        passwordValid: this.validate("password"),
-        passwordRetypeValid: this.validate("passwordRetype"),
-        agreeValid: this.validate("agree"),
+        firstnameValid: this.validate('firstname'),
+        lastnameValid: this.validate('lastname'),
+        emailValid: this.validate('email'),
+        passwordValid: this.validate('password'),
+        passwordRetypeValid: this.validate('passwordRetype'),
+        agreeValid: this.validate('agree')
       },
       function () {
         if (
@@ -58,48 +60,53 @@ class Signup extends Component {
           this.state.passwordRetypeValid &&
           this.state.agreeValid
         ) {
-          console.log(this.state);
+          console.log(this.state)
         }
       }
-    );
+    )
   }
-  handleFBSignUp() {
-    console.log("Send request for Face Book sign up.");
+
+  handleFBSignUp () {
+    console.log('Send request for Face Book sign up.')
   }
-  handleGOOGSignUp() {
-    console.log("Send request for Google sign up.");
+
+  handleGOOGSignUp () {
+    console.log('Send request for Google sign up.')
   }
-  handleAAPLSignUp() {
-    console.log("Send request for Apple sign up.");
+
+  handleAAPLSignUp () {
+    console.log('Send request for Apple sign up.')
   }
-  validate(name) {
+
+  validate (name) {
     switch (name) {
-      case "firstname":
-        return this.state.firstname !== "";
-      case "lastname":
-        return this.state.lastname !== "";
-      case "email":
+      case 'firstname':
+        return this.state.firstname !== ''
+      case 'lastname':
+        return this.state.lastname !== ''
+      case 'email':
         return this.state.email.match(
           /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-        );
-      case "password":
+        )
+      case 'password':
         return this.state.password.match(
           /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
-        );
-      case "passwordRetype":
-        return this.state.password === this.state.passwordRetype;
-      case "agree":
-        return this.state.agree;
+        )
+      case 'passwordRetype':
+        return this.state.password === this.state.passwordRetype
+      case 'agree':
+        return this.state.agree
     }
   }
-  render() {
+
+  render () {
     return (
       <div>
         <Link to="/home">
           <Button
             variant="text"
             startIcon={<Home />}
-            sx={{ ml: 3, mt: 1, color: "#272727" }}
+            sx={{ ml: 3, mt: 1, color: '#272727' }}
           >
             Home
           </Button>
@@ -115,13 +122,13 @@ class Signup extends Component {
               className="col-12 col-md-6 border-end border-sm-right-none pe-5"
               noValidate
             >
-              <Row className="mb-3">
+              <div className="mb-3 row">
                 <div className="col-6">
                   <TextField
                     name="firstname"
                     label="Firstname"
                     type="text"
-                    inputProps={{ role: "firstname" }}
+                    inputProps={{ role: 'firstname' }}
                     value={this.state.firstname}
                     variant="standard"
                     fullWidth
@@ -129,8 +136,8 @@ class Signup extends Component {
                     error={!this.state.firstnameValid}
                     helperText={
                       this.state.firstnameValid
-                        ? ""
-                        : "Firstname must not be empty"
+                        ? ''
+                        : 'Firstname must not be empty'
                     }
                   />
                 </div>
@@ -139,7 +146,7 @@ class Signup extends Component {
                     label="Lastname"
                     name="lastname"
                     type="text"
-                    inputProps={{ role: "lastname" }}
+                    inputProps={{ role: 'lastname' }}
                     value={this.state.lastname}
                     variant="standard"
                     fullWidth
@@ -147,19 +154,19 @@ class Signup extends Component {
                     error={!this.state.lastnameValid}
                     helperText={
                       this.state.lastnameValid
-                        ? ""
-                        : "Lastname must not be empty"
+                        ? ''
+                        : 'Lastname must not be empty'
                     }
                   />
                 </div>
-              </Row>
-              <Row className="mb-3">
+              </div>
+              <div className="mb-3 row">
                 <div className="col-12">
                   <TextField
                     label="Email"
                     name="email"
                     type="email"
-                    inputProps={{ role: "email" }}
+                    inputProps={{ role: 'email' }}
                     value={this.state.email}
                     variant="standard"
                     fullWidth
@@ -167,19 +174,19 @@ class Signup extends Component {
                     error={!this.state.emailValid}
                     helperText={
                       this.state.emailValid
-                        ? ""
-                        : "Please provide a valid email"
+                        ? ''
+                        : 'Please provide a valid email'
                     }
                   />
                 </div>
-              </Row>
-              <Row className="mb-3">
+              </div>
+              <div className="mb-3 row">
                 <div className="col-12">
                   <TextField
                     label="Password"
                     name="password"
                     type="password"
-                    inputProps={{ role: "password" }}
+                    inputProps={{ role: 'password' }}
                     value={this.state.password}
                     variant="standard"
                     fullWidth
@@ -187,19 +194,19 @@ class Signup extends Component {
                     error={!this.state.passwordValid}
                     helperText={
                       this.state.passwordValid
-                        ? ""
-                        : "Password must include a number, a capital letter, and at least 8 characters"
+                        ? ''
+                        : 'Password must include a number, a capital letter, and at least 8 characters'
                     }
                   />
                 </div>
-              </Row>
-              <Row className="mb-3">
+              </div>
+              <div className="mb-3 row">
                 <div className="col-12">
                   <TextField
                     label="Type your password again"
                     name="passwordRetype"
                     type="password"
-                    inputProps={{ role: "passwordRetype" }}
+                    inputProps={{ role: 'passwordRetype' }}
                     value={this.state.passwordRetype}
                     variant="standard"
                     fullWidth
@@ -207,26 +214,26 @@ class Signup extends Component {
                     error={!this.state.passwordRetypeValid}
                     helperText={
                       this.state.passwordRetypeValid
-                        ? ""
-                        : "Retype password must match"
+                        ? ''
+                        : 'Retype password must match'
                     }
                   />
                 </div>
-              </Row>
-              <Row className="mb-3">
+              </div>
+              <div className="mb-3 row">
                 <FormControlLabel
                   control={
                     <Checkbox
                       name="agree"
                       checked={this.state.agree}
-                      inputProps={{ role: "agree" }}
+                      inputProps={{ role: 'agree' }}
                       onChange={() => this.handleUserToggle()}
                     />
                   }
                   label={
                     <Typography variant="body1">
-                      By signing up, you agree to our{" "}
-                      <a href="#">Terms of Use</a> and{" "}
+                      By signing up, you agree to our{' '}
+                      <a href="#">Terms of Use</a> and{' '}
                       <a href="#">Privacy Policy</a>.
                     </Typography>
                   }
@@ -237,7 +244,7 @@ class Signup extends Component {
                 >
                   You must agree to our agreement
                 </FormHelperText>
-              </Row>
+              </div>
               <div className="m-0" onClick={() => this.handleUserSubmit()}>
                 <MDBBtn
                   outline
@@ -254,7 +261,7 @@ class Signup extends Component {
             <div className="col-12 col-md-6 my-5 text-center">
               <div className="m-0" onClick={() => this.handleFBSignUp()}>
                 <MDBBtn
-                  style={{ backgroundColor: "#3b5998" }}
+                  style={{ backgroundColor: '#3b5998' }}
                   href="#"
                   size="lg"
                   className="col-8"
@@ -265,7 +272,7 @@ class Signup extends Component {
               </div>
               <div className="m-0" onClick={() => this.handleGOOGSignUp()}>
                 <MDBBtn
-                  style={{ backgroundColor: "#dd4b39" }}
+                  style={{ backgroundColor: '#dd4b39' }}
                   href="#"
                   size="lg"
                   className="my-3 col-8"
@@ -276,7 +283,7 @@ class Signup extends Component {
               </div>
               <div className="m-0" onClick={() => this.handleAAPLSignUp()}>
                 <MDBBtn
-                  style={{ backgroundColor: "#000000" }}
+                  style={{ backgroundColor: '#000000' }}
                   href="#"
                   size="lg"
                   className="col-8"
@@ -290,8 +297,8 @@ class Signup extends Component {
         </div>
         <div className="mt-3" />
       </div>
-    );
+    )
   }
 }
 
-export default Signup;
+export default Signup

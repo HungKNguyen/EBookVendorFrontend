@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import {
   alpha,
   AppBar,
@@ -13,65 +13,65 @@ import {
   TextField,
   ThemeProvider,
   Toolbar,
-  Typography,
-} from "@material-ui/core";
-import { Link } from "react-router-dom";
-import { Login, Search } from "@material-ui/icons";
+  Typography
+} from '@material-ui/core'
+import { Link } from 'react-router-dom'
+import { Login, Search } from '@material-ui/icons'
 
 const theme = createTheme({
   palette: {
     black: {
-      main: "#272727",
-      contrastText: "#fff",
+      main: '#272727',
+      contrastText: '#fff'
     },
     white: {
-      main: "#fff",
-    },
-  },
-});
+      main: '#fff'
+    }
+  }
+})
 
-const SearchArea = styled("div")(({ theme }) => ({
-  position: "relative",
+const SearchArea = styled('div')(({ theme }) => ({
+  position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25)
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
-    width: "auto",
-  },
-}));
+    width: 'auto'
+  }
+}))
 
-const SearchIconWrapper = styled("div")(({ theme }) => ({
+const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center'
+}))
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
+  color: 'inherit',
+  '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      width: "20ch",
-    },
-  },
-}));
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: '20ch'
+    }
+  }
+}))
 
 class Header extends Component {
-  render() {
+  render () {
     return (
       <ThemeProvider theme={theme}>
         <Box sx={{ flexGrow: 1 }}>
@@ -88,7 +88,7 @@ class Header extends Component {
                 </SearchIconWrapper>
                 <StyledInputBase
                   placeholder="Search EBooks..."
-                  inputProps={{ name: "search" }}
+                  inputProps={{ name: 'search' }}
                 />
               </SearchArea>
               <Link to="/login">
@@ -100,60 +100,66 @@ class Header extends Component {
           </AppBar>
         </Box>
       </ThemeProvider>
-    );
+    )
   }
 }
 
 class Footer extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       rating: 4,
-      review: "",
-      isOpen: false,
-    };
+      review: '',
+      isOpen: false
+    }
   }
-  handleOpen() {
+
+  handleOpen () {
     this.setState({
-      isOpen: true,
-    });
+      isOpen: true
+    })
   }
-  handleClose() {
+
+  handleClose () {
     this.setState({
-      isOpen: false,
-    });
+      isOpen: false
+    })
   }
-  handleUserInput(e) {
-    const name = e.target.name;
-    const value = e.target.value;
-    this.setState({ [name]: value });
+
+  handleUserInput (e) {
+    const name = e.target.name
+    const value = e.target.value
+    this.setState({ [name]: value })
   }
-  handleRating(newValue) {
+
+  handleRating (newValue) {
     this.setState({
-      rating: newValue,
-    });
+      rating: newValue
+    })
   }
-  handleSubmit() {
-    console.log(this.state);
-    this.handleClose();
+
+  handleSubmit () {
+    console.log(this.state)
+    this.handleClose()
   }
-  render() {
+
+  render () {
     const style = {
-      position: "absolute",
-      top: "40%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
+      position: 'absolute',
+      top: '40%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
       width: 500,
-      background: "#fff",
-      border: "2px solid #272727",
+      background: '#fff',
+      border: '2px solid #272727',
       p: 4,
-      textAlign: "center",
-    };
+      textAlign: 'center'
+    }
     return (
       <ThemeProvider theme={theme}>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static" color="black">
-            <Toolbar sx={{ mx: "auto" }}>
+            <Toolbar sx={{ mx: 'auto' }}>
               <Button
                 variant="text"
                 size="large"
@@ -191,7 +197,7 @@ class Footer extends Component {
           </Stack>
         </Modal>
       </ThemeProvider>
-    );
+    )
   }
 }
 
@@ -202,7 +208,7 @@ const UserTemplate = (props) => {
       {props.children}
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default UserTemplate;
+export default UserTemplate

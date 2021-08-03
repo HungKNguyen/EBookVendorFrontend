@@ -2,7 +2,7 @@
 
 exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
 <div
-  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-rrppy3-MuiGrid-root"
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
 >
   <div
     className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-cyie08-MuiGrid-root"
@@ -17,11 +17,10 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
       </h6>
       <hr
         className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
-        role={undefined}
       />
     </div>
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-7wg87z-MuiGrid-root"
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-l8v5xp-MuiGrid-root"
     >
       <div
         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1tp3ba8-MuiGrid-root"
@@ -138,7 +137,6 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
                 className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
                 disabled={false}
                 onBlur={[Function]}
-                onClick={undefined}
                 onContextMenu={[Function]}
                 onDragLeave={[Function]}
                 onFocus={[Function]}
@@ -241,7 +239,6 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
               className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
               disabled={false}
               onBlur={[Function]}
-              onClick={undefined}
               onContextMenu={[Function]}
               onDragLeave={[Function]}
               onFocus={[Function]}
@@ -284,7 +281,6 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
                 className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
                 disabled={false}
                 onBlur={[Function]}
-                onClick={undefined}
                 onContextMenu={[Function]}
                 onDragLeave={[Function]}
                 onFocus={[Function]}
@@ -306,7 +302,7 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
               className="MuiBox-root css-0"
             >
               <div
-                className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-7wg87z-MuiGrid-root"
+                className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-l8v5xp-MuiGrid-root"
               >
                 <div
                   className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-undefined css-1f064cs-MuiGrid-root"
@@ -320,9 +316,7 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
                       <img
                         alt="Nineteen Eighty-Four"
                         className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-                        sizes={undefined}
                         src="/assets/images/1984.jpg"
-                        srcSet={undefined}
                       />
                     </div>
                   </div>
@@ -360,9 +354,7 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
                       <img
                         alt="The Fault in Our Stars"
                         className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-                        sizes={undefined}
                         src="/assets/images/TFIOS.jpg"
-                        srcSet={undefined}
                       />
                     </div>
                   </div>
@@ -400,9 +392,7 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
                       <img
                         alt="Don Quixote"
                         className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-                        sizes={undefined}
                         src="/assets/images/donquixote.jpg"
-                        srcSet={undefined}
                       />
                     </div>
                   </div>
@@ -440,9 +430,7 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
                       <img
                         alt="Macroeconomics"
                         className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-                        sizes={undefined}
                         src="/assets/images/macro.jpg"
-                        srcSet={undefined}
                       />
                     </div>
                   </div>
@@ -480,9 +468,7 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
                       <img
                         alt="Finance for Executives: Managing for Value Creation"
                         className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-                        sizes={undefined}
                         src="/assets/images/FFE.jpg"
-                        srcSet={undefined}
                       />
                     </div>
                   </div>
@@ -513,7 +499,6 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
                 className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
                 disabled={false}
                 onBlur={[Function]}
-                onClick={undefined}
                 onContextMenu={[Function]}
                 onDragLeave={[Function]}
                 onFocus={[Function]}
@@ -549,7 +534,6 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
                 className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
                 disabled={false}
                 onBlur={[Function]}
-                onClick={undefined}
                 onContextMenu={[Function]}
                 onDragLeave={[Function]}
                 onFocus={[Function]}
@@ -578,7 +562,6 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
     </div>
     <hr
       className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
-      role={undefined}
     />
   </div>
   <div
@@ -599,7 +582,7 @@ exports[`Testing snapshots Admin Dashboard: Loaded 1`] = `
 
 exports[`Testing snapshots Admin Dashboard: Loading 1`] = `
 <div
-  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-rrppy3-MuiGrid-root"
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
 >
   <div
     className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-cyie08-MuiGrid-root"
@@ -614,11 +597,10 @@ exports[`Testing snapshots Admin Dashboard: Loading 1`] = `
       </h6>
       <hr
         className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
-        role={undefined}
       />
     </div>
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-7wg87z-MuiGrid-root"
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-l8v5xp-MuiGrid-root"
     >
       <div
         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1tp3ba8-MuiGrid-root"
@@ -677,7 +659,6 @@ exports[`Testing snapshots Admin Dashboard: Loading 1`] = `
                 className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
                 disabled={false}
                 onBlur={[Function]}
-                onClick={undefined}
                 onContextMenu={[Function]}
                 onDragLeave={[Function]}
                 onFocus={[Function]}
@@ -716,7 +697,6 @@ exports[`Testing snapshots Admin Dashboard: Loading 1`] = `
                 className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-h147x1-MuiButtonBase-root-MuiButton-root"
                 disabled={false}
                 onBlur={[Function]}
-                onClick={undefined}
                 onContextMenu={[Function]}
                 onDragLeave={[Function]}
                 onFocus={[Function]}
@@ -745,7 +725,6 @@ exports[`Testing snapshots Admin Dashboard: Loading 1`] = `
     </div>
     <hr
       className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
-      role={undefined}
     />
   </div>
   <div
@@ -797,10 +776,8 @@ exports[`Testing snapshots Admin Page Template 1`] = `
         <svg
           aria-hidden={true}
           className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          color={undefined}
           data-testid="MenuIcon"
           focusable="false"
-          role={undefined}
           viewBox="0 0 24 24"
         >
           <path
@@ -823,7 +800,6 @@ exports[`Testing snapshots Admin Page Template 1`] = `
           className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
           disabled={false}
           onBlur={[Function]}
-          onClick={undefined}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -844,10 +820,8 @@ exports[`Testing snapshots Admin Page Template 1`] = `
             <svg
               aria-hidden={true}
               className="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeMedium css-11pbyhm-MuiSvgIcon-root"
-              color={undefined}
               data-testid="MailIcon"
               focusable="false"
-              role={undefined}
               viewBox="0 0 24 24"
             >
               <path
@@ -868,7 +842,6 @@ exports[`Testing snapshots Admin Page Template 1`] = `
           className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
           disabled={false}
           onBlur={[Function]}
-          onClick={undefined}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -889,10 +862,8 @@ exports[`Testing snapshots Admin Page Template 1`] = `
             <svg
               aria-hidden={true}
               className="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeMedium css-11pbyhm-MuiSvgIcon-root"
-              color={undefined}
               data-testid="NotificationsIcon"
               focusable="false"
-              role={undefined}
               viewBox="0 0 24 24"
             >
               <path
@@ -913,7 +884,6 @@ exports[`Testing snapshots Admin Page Template 1`] = `
           className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
           disabled={false}
           onBlur={[Function]}
-          onClick={undefined}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -931,10 +901,8 @@ exports[`Testing snapshots Admin Page Template 1`] = `
           <svg
             aria-hidden={true}
             className="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeMedium css-11pbyhm-MuiSvgIcon-root"
-            color={undefined}
             data-testid="AccountCircleIcon"
             focusable="false"
-            role={undefined}
             viewBox="0 0 24 24"
           >
             <path
@@ -972,7 +940,7 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
       </b>
     </div>
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-17y8th3-MuiGrid-root"
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-1qgewj0-MuiGrid-root"
     >
       <div
         className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -981,7 +949,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
           disabled={false}
           onBlur={[Function]}
-          onClick={undefined}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -1001,7 +968,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           >
             <div
               className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
-              src={undefined}
               style={
                 Object {
                   "backgroundImage": "url(\\"/assets/images/1984.jpg\\")",
@@ -1038,7 +1004,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
           disabled={false}
           onBlur={[Function]}
-          onClick={undefined}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -1058,7 +1023,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           >
             <div
               className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
-              src={undefined}
               style={
                 Object {
                   "backgroundImage": "url(\\"/assets/images/TFIOS.jpg\\")",
@@ -1095,7 +1059,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
           disabled={false}
           onBlur={[Function]}
-          onClick={undefined}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -1115,7 +1078,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           >
             <div
               className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
-              src={undefined}
               style={
                 Object {
                   "backgroundImage": "url(\\"/assets/images/donquixote.jpg\\")",
@@ -1152,7 +1114,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
           disabled={false}
           onBlur={[Function]}
-          onClick={undefined}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -1172,7 +1133,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           >
             <div
               className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
-              src={undefined}
               style={
                 Object {
                   "backgroundImage": "url(\\"/assets/images/macro.jpg\\")",
@@ -1209,7 +1169,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           className="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
           disabled={false}
           onBlur={[Function]}
-          onClick={undefined}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -1229,7 +1188,6 @@ exports[`Testing snapshots Home Page: Loaded 1`] = `
           >
             <div
               className="MuiCardMedia-root css-186h6x3-MuiCardMedia-root"
-              src={undefined}
               style={
                 Object {
                   "backgroundImage": "url(\\"/assets/images/FFE.jpg\\")",
@@ -1428,7 +1386,7 @@ exports[`Testing snapshots Home Page: Loading 1`] = `
       </b>
     </div>
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-17y8th3-MuiGrid-root"
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-1qgewj0-MuiGrid-root"
     >
       <div />
     </div>
@@ -1462,7 +1420,6 @@ exports[`Testing snapshots Login Page 1`] = `
       className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1v0zbei-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       onBlur={[Function]}
-      onClick={undefined}
       onContextMenu={[Function]}
       onDragLeave={[Function]}
       onFocus={[Function]}
@@ -1483,10 +1440,8 @@ exports[`Testing snapshots Login Page 1`] = `
         <svg
           aria-hidden={true}
           className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          color={undefined}
           data-testid="HomeIcon"
           focusable="false"
-          role={undefined}
           viewBox="0 0 24 24"
         >
           <path
@@ -1528,8 +1483,6 @@ exports[`Testing snapshots Login Page 1`] = `
           <label
             className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink={false}
-            htmlFor={undefined}
-            id={undefined}
           >
             Email
           </label>
@@ -1538,25 +1491,16 @@ exports[`Testing snapshots Login Page 1`] = `
             onClick={[Function]}
           >
             <input
-              aria-describedby={undefined}
               aria-invalid={false}
-              autoComplete={undefined}
               autoFocus={false}
               className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-              defaultValue={undefined}
               disabled={false}
-              id={undefined}
               name="email"
               onAnimationStart={[Function]}
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={undefined}
-              onKeyUp={undefined}
-              placeholder={undefined}
-              readOnly={undefined}
               required={false}
-              rows={undefined}
               type="email"
               value=""
             />
@@ -1568,8 +1512,6 @@ exports[`Testing snapshots Login Page 1`] = `
           <label
             className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink={false}
-            htmlFor={undefined}
-            id={undefined}
           >
             Password
           </label>
@@ -1578,25 +1520,16 @@ exports[`Testing snapshots Login Page 1`] = `
             onClick={[Function]}
           >
             <input
-              aria-describedby={undefined}
               aria-invalid={false}
-              autoComplete={undefined}
               autoFocus={false}
               className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-              defaultValue={undefined}
               disabled={false}
-              id={undefined}
               name="password"
               onAnimationStart={[Function]}
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={undefined}
-              onKeyUp={undefined}
-              placeholder={undefined}
-              readOnly={undefined}
               required={false}
-              rows={undefined}
               type="password"
               value=""
             />
@@ -1611,7 +1544,6 @@ exports[`Testing snapshots Login Page 1`] = `
             <span
               className="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-ncoufy-MuiButtonBase-root-MuiCheckbox-root"
               onBlur={[Function]}
-              onClick={undefined}
               onContextMenu={[Function]}
               onDragLeave={[Function]}
               onFocus={[Function]}
@@ -1623,33 +1555,21 @@ exports[`Testing snapshots Login Page 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
-              role={undefined}
               tabIndex={null}
-              type={undefined}
             >
               <input
-                autoFocus={undefined}
                 checked={false}
                 className="PrivateSwitchBase-input css-mraihx"
                 data-indeterminate={false}
-                defaultChecked={undefined}
-                disabled={undefined}
-                id={undefined}
                 name="rememberMe"
                 onChange={[Function]}
-                readOnly={undefined}
-                required={undefined}
-                tabIndex={undefined}
                 type="checkbox"
-                value={undefined}
               />
               <svg
                 aria-hidden={true}
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                color={undefined}
                 data-testid="CheckBoxOutlineBlankIcon"
                 focusable="false"
-                role={undefined}
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1680,7 +1600,6 @@ exports[`Testing snapshots Login Page 1`] = `
         >
           <a
             className="ripple ripple-surface btn btn-outline-primary btn-rounded btn-lg col-4"
-            disabled={undefined}
             href="#"
             onClick={[Function]}
             role="button"
@@ -1698,7 +1617,6 @@ exports[`Testing snapshots Login Page 1`] = `
         >
           <a
             className="ripple ripple-surface btn btn-primary btn-lg col-8"
-            disabled={undefined}
             href="#"
             onClick={[Function]}
             role="button"
@@ -1720,7 +1638,6 @@ exports[`Testing snapshots Login Page 1`] = `
         >
           <a
             className="ripple ripple-surface btn btn-primary btn-lg my-3 col-8"
-            disabled={undefined}
             href="#"
             onClick={[Function]}
             role="button"
@@ -1742,7 +1659,6 @@ exports[`Testing snapshots Login Page 1`] = `
         >
           <a
             className="ripple ripple-surface btn btn-primary btn-lg col-8"
-            disabled={undefined}
             href="#"
             onClick={[Function]}
             role="button"
@@ -1777,7 +1693,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
       className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1v0zbei-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       onBlur={[Function]}
-      onClick={undefined}
       onContextMenu={[Function]}
       onDragLeave={[Function]}
       onFocus={[Function]}
@@ -1798,10 +1713,8 @@ exports[`Testing snapshots Sign Up Page 1`] = `
         <svg
           aria-hidden={true}
           className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          color={undefined}
           data-testid="HomeIcon"
           focusable="false"
-          role={undefined}
           viewBox="0 0 24 24"
         >
           <path
@@ -1853,8 +1766,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
               <label
                 className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
-                htmlFor={undefined}
-                id={undefined}
               >
                 Firstname
               </label>
@@ -1863,26 +1774,17 @@ exports[`Testing snapshots Sign Up Page 1`] = `
                 onClick={[Function]}
               >
                 <input
-                  aria-describedby={undefined}
                   aria-invalid={false}
-                  autoComplete={undefined}
                   autoFocus={false}
                   className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  defaultValue={undefined}
                   disabled={false}
-                  id={undefined}
                   name="firstname"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
-                  onKeyDown={undefined}
-                  onKeyUp={undefined}
-                  placeholder={undefined}
-                  readOnly={undefined}
                   required={false}
                   role="firstname"
-                  rows={undefined}
                   type="text"
                   value=""
                 />
@@ -1899,8 +1801,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
               <label
                 className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
-                htmlFor={undefined}
-                id={undefined}
               >
                 Lastname
               </label>
@@ -1909,26 +1809,17 @@ exports[`Testing snapshots Sign Up Page 1`] = `
                 onClick={[Function]}
               >
                 <input
-                  aria-describedby={undefined}
                   aria-invalid={false}
-                  autoComplete={undefined}
                   autoFocus={false}
                   className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  defaultValue={undefined}
                   disabled={false}
-                  id={undefined}
                   name="lastname"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
-                  onKeyDown={undefined}
-                  onKeyUp={undefined}
-                  placeholder={undefined}
-                  readOnly={undefined}
                   required={false}
                   role="lastname"
-                  rows={undefined}
                   type="text"
                   value=""
                 />
@@ -1949,8 +1840,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
               <label
                 className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
-                htmlFor={undefined}
-                id={undefined}
               >
                 Email
               </label>
@@ -1959,26 +1848,17 @@ exports[`Testing snapshots Sign Up Page 1`] = `
                 onClick={[Function]}
               >
                 <input
-                  aria-describedby={undefined}
                   aria-invalid={false}
-                  autoComplete={undefined}
                   autoFocus={false}
                   className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  defaultValue={undefined}
                   disabled={false}
-                  id={undefined}
                   name="email"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
-                  onKeyDown={undefined}
-                  onKeyUp={undefined}
-                  placeholder={undefined}
-                  readOnly={undefined}
                   required={false}
                   role="email"
-                  rows={undefined}
                   type="email"
                   value=""
                 />
@@ -1999,8 +1879,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
               <label
                 className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
-                htmlFor={undefined}
-                id={undefined}
               >
                 Password
               </label>
@@ -2009,26 +1887,17 @@ exports[`Testing snapshots Sign Up Page 1`] = `
                 onClick={[Function]}
               >
                 <input
-                  aria-describedby={undefined}
                   aria-invalid={false}
-                  autoComplete={undefined}
                   autoFocus={false}
                   className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  defaultValue={undefined}
                   disabled={false}
-                  id={undefined}
                   name="password"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
-                  onKeyDown={undefined}
-                  onKeyUp={undefined}
-                  placeholder={undefined}
-                  readOnly={undefined}
                   required={false}
                   role="password"
-                  rows={undefined}
                   type="password"
                   value=""
                 />
@@ -2049,8 +1918,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
               <label
                 className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink={false}
-                htmlFor={undefined}
-                id={undefined}
               >
                 Type your password again
               </label>
@@ -2059,26 +1926,17 @@ exports[`Testing snapshots Sign Up Page 1`] = `
                 onClick={[Function]}
               >
                 <input
-                  aria-describedby={undefined}
                   aria-invalid={false}
-                  autoComplete={undefined}
                   autoFocus={false}
                   className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  defaultValue={undefined}
                   disabled={false}
-                  id={undefined}
                   name="passwordRetype"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
-                  onKeyDown={undefined}
-                  onKeyUp={undefined}
-                  placeholder={undefined}
-                  readOnly={undefined}
                   required={false}
                   role="passwordRetype"
-                  rows={undefined}
                   type="password"
                   value=""
                 />
@@ -2096,7 +1954,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
             <span
               className="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-ncoufy-MuiButtonBase-root-MuiCheckbox-root"
               onBlur={[Function]}
-              onClick={undefined}
               onContextMenu={[Function]}
               onDragLeave={[Function]}
               onFocus={[Function]}
@@ -2108,34 +1965,22 @@ exports[`Testing snapshots Sign Up Page 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
-              role={undefined}
               tabIndex={null}
-              type={undefined}
             >
               <input
-                autoFocus={undefined}
                 checked={false}
                 className="PrivateSwitchBase-input css-mraihx"
                 data-indeterminate={false}
-                defaultChecked={undefined}
-                disabled={undefined}
-                id={undefined}
                 name="agree"
                 onChange={[Function]}
-                readOnly={undefined}
-                required={undefined}
                 role="agree"
-                tabIndex={undefined}
                 type="checkbox"
-                value={undefined}
               />
               <svg
                 aria-hidden={true}
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                color={undefined}
                 data-testid="CheckBoxOutlineBlankIcon"
                 focusable="false"
-                role={undefined}
                 viewBox="0 0 24 24"
               >
                 <path
@@ -2179,7 +2024,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
         >
           <a
             className="ripple ripple-surface btn btn-outline-primary btn-rounded btn-lg col-4"
-            disabled={undefined}
             href="#"
             onClick={[Function]}
             role="submitButton"
@@ -2197,7 +2041,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
         >
           <a
             className="ripple ripple-surface btn btn-primary btn-lg col-8"
-            disabled={undefined}
             href="#"
             onClick={[Function]}
             role="button"
@@ -2219,7 +2062,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
         >
           <a
             className="ripple ripple-surface btn btn-primary btn-lg my-3 col-8"
-            disabled={undefined}
             href="#"
             onClick={[Function]}
             role="button"
@@ -2241,7 +2083,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
         >
           <a
             className="ripple ripple-surface btn btn-primary btn-lg col-8"
-            disabled={undefined}
             href="#"
             onClick={[Function]}
             role="button"
@@ -2297,10 +2138,8 @@ exports[`Testing snapshots User Page Template 1`] = `
             <svg
               aria-hidden={true}
               className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-              color={undefined}
               data-testid="SearchIcon"
               focusable="false"
-              role={undefined}
               viewBox="0 0 24 24"
             >
               <path
@@ -2313,27 +2152,14 @@ exports[`Testing snapshots User Page Template 1`] = `
             onClick={[Function]}
           >
             <input
-              aria-describedby={undefined}
-              aria-invalid={undefined}
-              autoComplete={undefined}
-              autoFocus={undefined}
               className="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
-              defaultValue={undefined}
-              disabled={undefined}
-              id={undefined}
               name="search"
               onAnimationStart={[Function]}
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
-              onKeyDown={undefined}
-              onKeyUp={undefined}
               placeholder="Search EBooks..."
-              readOnly={undefined}
-              required={undefined}
-              rows={undefined}
               type="text"
-              value={undefined}
             />
           </div>
         </div>
@@ -2345,7 +2171,6 @@ exports[`Testing snapshots User Page Template 1`] = `
             className="MuiButton-root MuiButton-outlined MuiButton-outlinedWhite MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-1tl8f8k-MuiButtonBase-root-MuiButton-root"
             disabled={false}
             onBlur={[Function]}
-            onClick={undefined}
             onContextMenu={[Function]}
             onDragLeave={[Function]}
             onFocus={[Function]}
@@ -2366,10 +2191,8 @@ exports[`Testing snapshots User Page Template 1`] = `
               <svg
                 aria-hidden={true}
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                color={undefined}
                 data-testid="LoginIcon"
                 focusable="false"
-                role={undefined}
                 viewBox="0 0 24 24"
               >
                 <path

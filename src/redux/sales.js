@@ -1,10 +1,10 @@
-import * as ActionTypes from "./ActionTypes";
+import * as ActionTypes from './ActionTypes'
 
 export const Sales = (
   state = {
     isLoading: true,
     errMess: null,
-    content: [],
+    content: []
   },
   action
 ) => {
@@ -14,18 +14,18 @@ export const Sales = (
         ...state,
         isLoading: false,
         errMess: null,
-        content: action.payload,
-      };
+        content: action.payload
+      }
     case ActionTypes._GET_SALES_LOADING:
-      return { ...state, isLoading: true, errMess: null, content: [] };
+      return { ...state, isLoading: true, errMess: null, content: [] }
     case ActionTypes._GET_SALES_FAILED:
       return {
         ...state,
         isLoading: false,
         errMess: action.payload,
-        content: [],
-      };
+        content: []
+      }
     default:
-      return state;
+      return state
   }
-};
+}

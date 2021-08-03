@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import {
   Box,
   Typography,
@@ -7,18 +7,18 @@ import {
   Paper,
   Stack,
   Button,
-  Avatar,
-} from "@material-ui/core";
-import { fetchOrders, fetchSales } from "../../redux/ActionCreators";
-import { connect } from "react-redux";
-import AdminTemplate from "../templates/AdminTemplate";
+  Avatar
+} from '@material-ui/core'
+import { fetchOrders, fetchSales } from '../../redux/ActionCreators'
+import { connect } from 'react-redux'
+import AdminTemplate from '../templates/AdminTemplate'
 
 export const DashBoard = (props) => {
   const bull = (
-    <Box component="span" sx={{ display: "inline-block", mx: "8px" }}>
+    <Box component="span" sx={{ display: 'inline-block', mx: '8px' }}>
       •
     </Box>
-  );
+  )
 
   const OrdersList = (props) => {
     if (props.orders.isLoading) {
@@ -26,22 +26,22 @@ export const DashBoard = (props) => {
         <Typography variant="body2" align="center">
           Loading...
         </Typography>
-      );
+      )
     }
     if (props.orders.content.length === 0) {
       return (
         <Typography variant="body2" align="center">
-          You don't have any recent orders
+          You don&apos;t have any recent orders
         </Typography>
-      );
+      )
     }
     const orders = props.orders.content.slice(0, 3).map((order) => {
-      const ebookNames = order.ebooks.map((ebook) => ebook.name).join(", ");
+      const ebookNames = order.ebooks.map((ebook) => ebook.name).join(', ')
       return (
         <Box key={order._id}>
           <Stack direction="row" justifyContent="space-between">
             <Typography fontWeight="fontWeightMedium">
-              {order.user.firstname + " " + order.user.lastname}
+              {order.user.firstname + ' ' + order.user.lastname}
             </Typography>
             <Typography>{order.date}</Typography>
           </Stack>
@@ -51,8 +51,8 @@ export const DashBoard = (props) => {
             {ebookNames}
           </Typography>
         </Box>
-      );
-    });
+      )
+    })
     return (
       <Box>
         <Stack spacing={2} sx={{ mb: 2 }}>
@@ -62,8 +62,8 @@ export const DashBoard = (props) => {
           See all({props.orders.content.length})
         </Button>
       </Box>
-    );
-  };
+    )
+  }
 
   const EbooksList = (props) => {
     if (props.ebooks.isLoading) {
@@ -71,14 +71,14 @@ export const DashBoard = (props) => {
         <Typography variant="body2" align="center">
           Loading...
         </Typography>
-      );
+      )
     }
     if (props.ebooks.content.length === 0) {
       return (
         <Typography variant="body2" align="center">
           No book listed, try adding some :)
         </Typography>
-      );
+      )
     }
     const ebooks = props.ebooks.content.slice(0, 5).map((ebook) => {
       return (
@@ -103,8 +103,8 @@ export const DashBoard = (props) => {
             </Typography>
           </Grid>
         </Grid>
-      );
-    });
+      )
+    })
     return (
       <Box>
         <Grid container spacing={2} mb={2}>
@@ -114,8 +114,8 @@ export const DashBoard = (props) => {
           See all({props.ebooks.content.length})
         </Button>
       </Box>
-    );
-  };
+    )
+  }
 
   const SalesList = (props) => {
     if (props.sales.isLoading) {
@@ -123,14 +123,14 @@ export const DashBoard = (props) => {
         <Typography variant="body2" align="center">
           Loading...
         </Typography>
-      );
+      )
     }
     if (props.sales.content.length === 0) {
       return (
         <Typography variant="body2" align="center">
-          You don't have any sale report yet
+          You don&apos;t have any sale report yet
         </Typography>
-      );
+      )
     }
     const sales = props.sales.content.slice(0, 3).map((sale) => {
       return (
@@ -142,8 +142,8 @@ export const DashBoard = (props) => {
             {sale.sold} ebooks sold
           </Typography>
         </Box>
-      );
-    });
+      )
+    })
     return (
       <React.Fragment>
         <Stack spacing={2} mb={2}>
@@ -153,8 +153,8 @@ export const DashBoard = (props) => {
           See all({props.sales.content.length})
         </Button>
       </React.Fragment>
-    );
-  };
+    )
+  }
 
   // TODO: Need to come up with email object in store first
   const CampaignsList = (props) => {
@@ -162,8 +162,8 @@ export const DashBoard = (props) => {
       <Typography variant="body2" align="center">
         You can write and send email campaigns to users
       </Typography>
-    );
-  };
+    )
+  }
   return (
     <Grid container spacing={2}>
       <Grid item md={9} xs={12}>
@@ -222,44 +222,44 @@ export const DashBoard = (props) => {
           <Typography variant="h6" sx={{ mb: 2 }}>
             Analytics
           </Typography>
-          {/*//TODO: Come up with analytic layout*/}
+          {/* //TODO: Come up with analytic layout */}
         </Paper>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
 const mapStateToProps = (state) => {
   return {
     ebooks: state.ebooks,
     orders: state.orders,
-    sales: state.sales,
-  };
-};
+    sales: state.sales
+  }
+}
 
 const mapDispatchToProps = (dispatch) => ({
   fetchOrders: () => {
-    dispatch(fetchOrders());
+    dispatch(fetchOrders())
   },
   fetchSales: () => {
-    dispatch(fetchSales());
-  },
-});
+    dispatch(fetchSales())
+  }
+})
 
 class AdminComponent extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-      open: false,
-    };
+      open: false
+    }
   }
 
-  componentDidMount() {
-    this.props.fetchOrders();
-    this.props.fetchSales();
+  componentDidMount () {
+    this.props.fetchOrders()
+    this.props.fetchSales()
   }
 
-  render() {
+  render () {
     return (
       <AdminTemplate selectedIndex={0}>
         <DashBoard
@@ -268,11 +268,11 @@ class AdminComponent extends Component {
           sales={this.props.sales}
         />
       </AdminTemplate>
-    );
+    )
   }
 }
 
 export const AdminDashboardPage = connect(
   mapStateToProps,
   mapDispatchToProps
-)(AdminComponent);
+)(AdminComponent)

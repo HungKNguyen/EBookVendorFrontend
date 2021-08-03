@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import {
   styled,
   ThemeProvider,
   createTheme,
-  useTheme,
-} from "@material-ui/core/styles";
+  useTheme
+} from '@material-ui/core/styles'
 import {
   AppBar,
   Badge,
@@ -19,76 +19,76 @@ import {
   Stack,
   Toolbar,
   Typography,
-  useMediaQuery,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import { Link } from "react-router-dom";
+  useMediaQuery
+} from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import MailIcon from '@material-ui/icons/Mail'
+import NotificationsIcon from '@material-ui/icons/Notifications'
+import AccountCircle from '@material-ui/icons/AccountCircle'
+import { Link } from 'react-router-dom'
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
-const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
+const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     flexGrow: 1,
     padding: theme.spacing(3, 15),
-    transition: theme.transitions.create("margin", {
+    transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
+      duration: theme.transitions.duration.leavingScreen
     }),
     marginLeft: `-${drawerWidth}px`,
     ...(open && {
       padding: theme.spacing(3),
-      transition: theme.transitions.create("margin", {
+      transition: theme.transitions.create('margin', {
         easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
+        duration: theme.transitions.duration.enteringScreen
       }),
-      marginLeft: 0,
-    }),
+      marginLeft: 0
+    })
   })
-);
+)
 
 const StyledAppBar = styled(AppBar, {
-  shouldForwardProp: (prop) => prop !== "open",
+  shouldForwardProp: (prop) => prop !== 'open'
 })(({ theme, open }) => ({
-  transition: theme.transitions.create(["margin", "width"], {
+  transition: theme.transitions.create(['margin', 'width'], {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
+    duration: theme.transitions.duration.leavingScreen
   }),
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(["margin", "width"], {
+    transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+      duration: theme.transitions.duration.enteringScreen
+    })
   }),
-  color: "#272727",
-  background: "#fff",
-}));
+  color: '#272727',
+  background: '#fff'
+}))
 
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
+const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
-  justifyContent: "flex-end",
-}));
+  justifyContent: 'flex-end'
+}))
 
 const theme = createTheme({
   palette: {
     background: {
-      default: "#E1E5E9",
-    },
-  },
-});
+      default: '#E1E5E9'
+    }
+  }
+})
 
 const SidebarComponent = (props) => {
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up('sm'))
   return (
     <React.Fragment>
       <StyledAppBar position="fixed" open={props.open}>
@@ -98,7 +98,7 @@ const SidebarComponent = (props) => {
             aria-label="open drawer"
             onClick={props.handleDrawerOpen}
             edge="start"
-            sx={{ mr: 2, ...(props.open && { display: "none" }) }}
+            sx={{ mr: 2, ...(props.open && { display: 'none' }) }}
           >
             <MenuIcon />
           </IconButton>
@@ -126,27 +126,29 @@ const SidebarComponent = (props) => {
         sx={{
           width: drawerWidth,
           flexShrink: 0,
-          "& .MuiDrawer-paper": {
+          '& .MuiDrawer-paper': {
             width: drawerWidth,
-            boxSizing: "border-box",
-            background: "#272727",
-            color: "#FFFFFF",
-          },
+            boxSizing: 'border-box',
+            background: '#272727',
+            color: '#FFFFFF'
+          }
         }}
-        variant={matches ? "persistent" : "temporary"}
+        variant={matches ? 'persistent' : 'temporary'}
         anchor="left"
         open={props.open}
       >
         <DrawerHeader>
           <IconButton
             onClick={props.handleDrawerClose}
-            sx={{ color: "#FFFFFF" }}
+            sx={{ color: '#FFFFFF' }}
           >
-            {theme.direction === "ltr" ? (
+            {theme.direction === 'ltr'
+              ? (
               <ChevronLeftIcon />
-            ) : (
+                )
+              : (
               <ChevronRightIcon />
-            )}
+                )}
           </IconButton>
         </DrawerHeader>
         <Divider variant="middle" />
@@ -157,10 +159,10 @@ const SidebarComponent = (props) => {
             component={Link}
             to="/admin"
             sx={{
-              "&:hover, &:focus": {
-                background: "#424242",
-                color: "#FFFFFF",
-              },
+              '&:hover, &:focus': {
+                background: '#424242',
+                color: '#FFFFFF'
+              }
             }}
           >
             <ListItemText primary="Dashboard" />
@@ -171,10 +173,10 @@ const SidebarComponent = (props) => {
             component={Link}
             to="/admin/ebooks"
             sx={{
-              "&:hover, &:focus": {
-                background: "#424242",
-                color: "#FFFFFF",
-              },
+              '&:hover, &:focus': {
+                background: '#424242',
+                color: '#FFFFFF'
+              }
             }}
           >
             <ListItemText primary="Store Products" />
@@ -185,10 +187,10 @@ const SidebarComponent = (props) => {
             component={Link}
             to="/admin/orders"
             sx={{
-              "&:hover, &:focus": {
-                background: "#424242",
-                color: "#FFFFFF",
-              },
+              '&:hover, &:focus': {
+                background: '#424242',
+                color: '#FFFFFF'
+              }
             }}
           >
             <ListItemText primary="Store Orders" />
@@ -199,10 +201,10 @@ const SidebarComponent = (props) => {
             component={Link}
             to="/admin/analytic"
             sx={{
-              "&:hover, &:focus": {
-                background: "#424242",
-                color: "#FFFFFF",
-              },
+              '&:hover, &:focus': {
+                background: '#424242',
+                color: '#FFFFFF'
+              }
             }}
           >
             <ListItemText primary="Analytics & Reports" />
@@ -213,10 +215,10 @@ const SidebarComponent = (props) => {
             component={Link}
             to="/admin/finance"
             sx={{
-              "&:hover, &:focus": {
-                background: "#424242",
-                color: "#FFFFFF",
-              },
+              '&:hover, &:focus': {
+                background: '#424242',
+                color: '#FFFFFF'
+              }
             }}
           >
             <ListItemText primary="Finances" />
@@ -227,10 +229,10 @@ const SidebarComponent = (props) => {
             component={Link}
             to="/admin/campaign"
             sx={{
-              "&:hover, &:focus": {
-                background: "#424242",
-                color: "#FFFFFF",
-              },
+              '&:hover, &:focus': {
+                background: '#424242',
+                color: '#FFFFFF'
+              }
             }}
           >
             <ListItemText primary="Email Campaigns" />
@@ -239,36 +241,36 @@ const SidebarComponent = (props) => {
         <Divider variant="middle" />
       </Drawer>
     </React.Fragment>
-  );
-};
+  )
+}
 
 class AdminTemplate extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-      open: false,
-    };
-    this.handleDrawerClose = this.handleDrawerClose.bind(this);
-    this.handleDrawerOpen = this.handleDrawerOpen.bind(this);
+      open: false
+    }
+    this.handleDrawerClose = this.handleDrawerClose.bind(this)
+    this.handleDrawerOpen = this.handleDrawerOpen.bind(this)
   }
 
   handleDrawerOpen = () => {
     this.setState({
-      open: true,
-    });
+      open: true
+    })
   };
 
   handleDrawerClose = () => {
     this.setState({
-      open: false,
-    });
+      open: false
+    })
   };
 
-  render() {
+  render () {
     return (
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: 'flex' }}>
           <SidebarComponent
             open={this.state.open}
             handleDrawerOpen={this.handleDrawerOpen}
@@ -281,8 +283,8 @@ class AdminTemplate extends Component {
           </Main>
         </Box>
       </ThemeProvider>
-    );
+    )
   }
 }
 
-export default AdminTemplate;
+export default AdminTemplate
