@@ -25,9 +25,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.js'",
-    "lint-fix": "eslint --fix 'src/**/*.js'",
-    "pre-commit": "react-scripts test --watchAll=false && npm run lint-fix"
+    "lint": "eslint 'src/**/*.{js, jsx}'",
+    "lint-fix": "eslint --fix 'src/**/*.{js, jsx}'",
+    "pre-commit-test": "react-scripts test --watchAll=false"
+  },
+  "lint-staged": {
+    "src/**/*.{js, jsx}": [
+      "eslint . --fix"
+    ]
   },
   "proxy": "http://localhost:3001/",
   "eslintConfig": {
@@ -55,6 +60,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
     "react-test-renderer": "^17.0.2"
   }
 }
