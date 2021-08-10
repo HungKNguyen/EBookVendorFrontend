@@ -25,15 +25,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.{js,jsx}' && stylelint 'src/**/*.css'",
-    "lint-fix": "eslint --fix 'src/**/*.{js,jsx}' && stylelint --fix 'src/**/*.css'",
+    "lint": "eslint --ext .js --ext .js src/ && stylelint src/**/*.css",
+    "lint-fix": "eslint --fix --ext .js --ext .js src/ && stylelint --fix src/**/*.css",
     "pre-commit-test": "react-scripts test --watchAll=false"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "**/*.{js,jsx}": [
       "eslint --fix"
     ],
-    "*.css": [
+    "**/*.css": [
       "stylelint --fix"
     ]
   },
