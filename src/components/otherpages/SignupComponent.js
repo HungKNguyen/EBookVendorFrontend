@@ -74,10 +74,6 @@ class Signup extends Component {
     console.log('Send request for Google sign up.')
   }
 
-  handleAAPLSignUp () {
-    console.log('Send request for Apple sign up.')
-  }
-
   validate (name) {
     switch (name) {
       case 'firstname':
@@ -279,17 +275,6 @@ class Signup extends Component {
                 >
                   <MDBIcon className="me-2" fab icon="google" /> Continue with
                   Google
-                </MDBBtn>
-              </div>
-              <div className="m-0" onClick={() => this.handleAAPLSignUp()}>
-                <MDBBtn
-                  style={{ backgroundColor: '#000000' }}
-                  href="#"
-                  size="lg"
-                  className="col-8"
-                >
-                  <MDBIcon className="me-2" fab icon="apple" /> Continue with
-                  Apple
                 </MDBBtn>
               </div>
             </div>

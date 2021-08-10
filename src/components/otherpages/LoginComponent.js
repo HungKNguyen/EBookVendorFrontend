@@ -43,10 +43,6 @@ class Login extends Component {
     console.log('Send request for Google log in.')
   }
 
-  handleAAPLLogIn () {
-    console.log('Send request for Apple log in.')
-  }
-
   render () {
     return (
       <div>
@@ -128,17 +124,6 @@ class Login extends Component {
                 >
                   <MDBIcon className="me-2" fab icon="google" /> Continue with
                   Google
-                </MDBBtn>
-              </div>
-              <div className="m-0" onClick={() => this.handleAAPLLogIn()}>
-                <MDBBtn
-                  style={{ backgroundColor: '#000000' }}
-                  href="#"
-                  size="lg"
-                  className="col-8"
-                >
-                  <MDBIcon className="me-2" fab icon="apple" /> Continue with
-                  Apple
                 </MDBBtn>
               </div>
             </div>

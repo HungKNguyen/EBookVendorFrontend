@@ -1653,27 +1653,6 @@ exports[`Testing snapshots Login Page 1`] = `
              Continue with Google
           </a>
         </div>
-        <div
-          className="m-0"
-          onClick={[Function]}
-        >
-          <a
-            className="ripple ripple-surface btn btn-primary btn-lg col-8"
-            href="#"
-            onClick={[Function]}
-            role="button"
-            style={
-              Object {
-                "backgroundColor": "#000000",
-              }
-            }
-          >
-            <i
-              className="fab fa-apple me-2"
-            />
-             Continue with Apple
-          </a>
-        </div>
       </div>
     </div>
   </div>
@@ -2075,27 +2054,6 @@ exports[`Testing snapshots Sign Up Page 1`] = `
               className="fab fa-google me-2"
             />
              Continue with Google
-          </a>
-        </div>
-        <div
-          className="m-0"
-          onClick={[Function]}
-        >
-          <a
-            className="ripple ripple-surface btn btn-primary btn-lg col-8"
-            href="#"
-            onClick={[Function]}
-            role="button"
-            style={
-              Object {
-                "backgroundColor": "#000000",
-              }
-            }
-          >
-            <i
-              className="fab fa-apple me-2"
-            />
-             Continue with Apple
           </a>
         </div>
       </div>
