@@ -38,7 +38,7 @@ export const ReviewModal = (props) => {
             {props.content.user.firstname + ' ' + props.content.user.lastname}
           </Typography>
           <Typography variant="body2" sx={{ textAlign: 'left' }}>
-            {props.content.date}
+            {new Date(props.content.updatedAt).toLocaleString('default', { year: 'numeric', month: 'short', day: 'numeric' })}
           </Typography>
         </Stack>
         <Divider />

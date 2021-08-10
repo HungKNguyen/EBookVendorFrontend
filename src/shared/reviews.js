@@ -19,7 +19,7 @@ export const REVIEWS = [
     rating: 4.5,
     review:
       'Always affordable, and makes preparing for the semester that much easier and stress free.',
-    date: 'June 9th 2020'
+    updatedAt: '2021-08-10T12:24:28.781Z'
   },
   {
     _id: '1',
@@ -39,7 +39,7 @@ export const REVIEWS = [
     rating: 5,
     review:
       "I'm thrilled with my purchase. The process was easy and user-friendly. No hassles just took a few minutes to order my book.",
-    date: 'July 8th 2020'
+    updatedAt: '2021-08-10T12:24:28.781Z'
   },
   {
     _id: '2',
@@ -59,6 +59,6 @@ export const REVIEWS = [
     rating: 5,
     review:
       "I've purchased two textbooks now on vitalsource, and both times it has been an easy process (also much cheaper than buying the books outright). I also like that I can buy them for 180 days rather than forever.",
-    date: 'December 23rd 2020'
+    updatedAt: '2021-08-10T12:24:28.781Z'
   }
 ]
