@@ -4,6 +4,7 @@ import { HomePage } from './userpages/HomeComponent'
 import Login from './otherpages/LoginComponent'
 import Signup from './otherpages/SignupComponent'
 import { AdminDashboardPage } from './adminpages/AdminComponent'
+import { ProductsPage } from './adminpages/ProductsComponent'
 
 class Main extends Component {
   render () {
@@ -17,6 +18,7 @@ class Main extends Component {
           <Route path="/home" component={() => <HomePage />} />
           {/* dir adminpages */}
           <Route path="/admin" exact component={() => <AdminDashboardPage />} />
+          <Route path="/products" exact component={() => <ProductsPage />} />
           <Redirect to="/home" />
         </Switch>
       </div>
