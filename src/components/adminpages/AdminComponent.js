@@ -9,7 +9,7 @@ import {
   Button,
   Avatar
 } from '@material-ui/core'
-import { fetchOrders, fetchSales } from '../../redux/ActionCreators'
+import { fetchEbooks, fetchOrders, fetchSales } from '../../redux/ActionCreators'
 import { connect } from 'react-redux'
 import AdminTemplate from '../templates/AdminTemplate'
 
@@ -243,6 +243,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   fetchSales: () => {
     dispatch(fetchSales())
+  },
+  fetchEbooks: () => {
+    dispatch(fetchEbooks())
   }
 })
 
@@ -257,6 +260,7 @@ class AdminComponent extends Component {
   componentDidMount () {
     this.props.fetchOrders()
     this.props.fetchSales()
+    this.props.fetchEbooks()
   }
 
   render () {
