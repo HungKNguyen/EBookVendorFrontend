@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { styled } from '@material-ui/system'
+import { styled, Box } from '@material-ui/system'
 import PropTypes from 'prop-types'
 import { alpha } from '@material-ui/core/styles'
 import Avatar from '@material-ui/core/Avatar'
-import { Box } from '@material-ui/system'
+
 import Paper from '@material-ui/core/Paper'
 import Table from '@material-ui/core/Table'
 import TableContainer from '@material-ui/core/TableContainer'
@@ -18,27 +18,27 @@ import Stack from '@material-ui/core/Stack'
 import Checkbox from '@material-ui/core/Checkbox'
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
-import SearchIcon from "@material-ui/icons/Search"
-import DeleteIcon from "@material-ui/icons/Delete"
+import SearchIcon from '@material-ui/icons/Search'
+import DeleteIcon from '@material-ui/icons/Delete'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import InputBase from '@material-ui/core/InputBase'
-import {connect} from "react-redux"
-import AdminTemplate from "../templates/AdminTemplate"
+import { connect } from 'react-redux'
+import AdminTemplate from '../templates/AdminTemplate'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.white, 0.25)
   },
   marginLeft: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(1),
-    width: 'auto',
-  },
-}));
+    width: 'auto'
+  }
+}))
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -47,8 +47,8 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   pointerEvents: 'none',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
-}));
+  justifyContent: 'center'
+}))
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
@@ -60,14 +60,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
       width: '12ch',
       '&:focus': {
-        width: '20ch',
-      },
-    },
-  },
-}));
+        width: '20ch'
+      }
+    }
+  }
+}))
 
-function TableHeader() {
-
+function TableHeader () {
   return (
     <TableHead>
       <TableRow>
@@ -84,18 +83,19 @@ function TableHeader() {
 }
 
 const TableToolbar = (props) => {
-  const { numSelected, rowCount, onSelectAllClick } = props;
-  
+  const { numSelected, rowCount, onSelectAllClick } = props
+
   return (
     <Toolbar>
-      <Checkbox 
-        color="primary" 
-        indeterminate={numSelected > 0 && numSelected < rowCount} 
-        checked={rowCount > 0 && numSelected === rowCount} 
-        onChange={onSelectAllClick} 
-        sx={{ml: "auto"}}
+      <Checkbox
+        color="primary"
+        indeterminate={numSelected > 0 && numSelected < rowCount}
+        checked={rowCount > 0 && numSelected === rowCount}
+        onChange={onSelectAllClick}
+        sx={{ ml: 'auto' }}
       />
-      {numSelected > 0 ? (
+      {numSelected > 0
+        ? (
         <Typography
           sx={{ flex: '1 1 100%' }}
           color="inherit"
@@ -104,7 +104,8 @@ const TableToolbar = (props) => {
         >
       {numSelected} selected
         </Typography>
-      ) : (
+          )
+        : (
         <Typography
           sx={{ flex: '1 1 100%' }}
           id="tableTitle"
@@ -112,15 +113,17 @@ const TableToolbar = (props) => {
         >
           select all
         </Typography>
-      )}
+          )}
 
-      {numSelected > 0 ? (
+      {numSelected > 0
+        ? (
         <Tooltip title="Delete">
           <IconButton>
             <DeleteIcon />
           </IconButton>
         </Tooltip>
-        ) : (
+          )
+        : (
         <Tooltip title="search">
           <Search>
             <SearchIconWrapper>
@@ -132,7 +135,7 @@ const TableToolbar = (props) => {
             />
           </Search>
         </Tooltip>
-      )}
+          )}
     </Toolbar>
   )
 }
@@ -140,63 +143,63 @@ const TableToolbar = (props) => {
 TableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
   onSelectAllClick: PropTypes.func.isRequired,
-  rowCount: PropTypes.number.isRequired,
-};
+  rowCount: PropTypes.number.isRequired
+}
 
 export const Products = (props) => {
-  const [selected, setSelected] = React.useState([]);
-  const isSelected = (name) => selected.indexOf(name) !== -1;
+  const [selected, setSelected] = React.useState([])
+  const isSelected = (name) => selected.indexOf(name) !== -1
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelecteds = props.ebooks.content.map((n) => n.name);
-      setSelected(newSelecteds);
-      return;
+      const newSelecteds = props.ebooks.content.map((n) => n.name)
+      setSelected(newSelecteds)
+      return
     }
-    setSelected([]);
-  };
+    setSelected([])
+  }
 
   const handleClick = (event, name) => {
-    const selectedIndex = selected.indexOf(name);
-    let newSelected = [];
+    const selectedIndex = selected.indexOf(name)
+    let newSelected = []
 
     if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, name);
+      newSelected = newSelected.concat(selected, name)
     } else if (selectedIndex === 0) {
-      newSelected = newSelected.concat(selected.slice(1));
+      newSelected = newSelected.concat(selected.slice(1))
     } else if (selectedIndex === selected.length - 1) {
-      newSelected = newSelected.concat(selected.slice(0, -1));
+      newSelected = newSelected.concat(selected.slice(0, -1))
     } else if (selectedIndex > 0) {
       newSelected = newSelected.concat(
         selected.slice(0, selectedIndex),
-        selected.slice(selectedIndex + 1),
-      );
+        selected.slice(selectedIndex + 1)
+      )
     }
 
-    setSelected(newSelected);
-  };
+    setSelected(newSelected)
+  }
 
-  function EbooksLists(name, price, status) {
+  function EbooksLists (name, price, status) {
     if (props.ebooks.isLoading) {
-      return(
+      return (
         <Typography>
           Loading...
-        </Typography> 
+        </Typography>
       )
     }
     if (props.ebooks.content.length === 0) {
-      return(
+      return (
         <Typography>
           No book listed, try add something new.
         </Typography>
       )
     }
     const ebooks = props.ebooks.content.map((ebook) => {
-      const isItemSelected = isSelected(ebook.name);
+      const isItemSelected = isSelected(ebook.name)
 
       return (
-        <TableRow 
-          hover 
+        <TableRow
+          hover
           onClick={(event) => handleClick(event, ebook.name)}
           key={ebook.name}
           selected={isItemSelected}
@@ -205,7 +208,7 @@ export const Products = (props) => {
             <Checkbox color="primary" checked={isItemSelected}/>
           </TableCell>
           <TableCell align="center">
-            <Avatar alt={ebook.name} src={ebook.image} sx={{height: 50}} variant="square"/>
+            <Avatar alt={ebook.name} src={ebook.image} sx={{ height: 50 }} variant="square"/>
           </TableCell>
           <TableCell align="center">
             {ebook.name}
@@ -215,14 +218,15 @@ export const Products = (props) => {
           <TableCell align="center">{ebook.sold}</TableCell>
           <TableCell align="center"><MoreHorizIcon/></TableCell>
         </TableRow>
-    )})
+      )
+    })
 
     return (ebooks)
   }
 
   return (
     <Box sx={{ width: '100%', mb: 2 }}>
-      <Stack direction="row" justifyContent="space-between" sx={{pb: 2}}>
+      <Stack direction="row" justifyContent="space-between" sx={{ pb: 2 }}>
         <Typography variant="h3">
           Products
         </Typography>
@@ -230,10 +234,10 @@ export const Products = (props) => {
           +  New Ebook
         </Button>
       </Stack>
-      <Paper sx={{ width: '100%'}}>
+      <Paper sx={{ width: '100%' }}>
         <TableContainer sx={{ maxHeight: 740 }} padding ="normal">
           <TableToolbar
-            numSelected={selected.length} 
+            numSelected={selected.length}
             onSelectAllClick={handleSelectAllClick}
             rowCount={props.ebooks.length}/>
           <Table stickyHeader >
@@ -250,24 +254,24 @@ export const Products = (props) => {
 
 const mapStateToProps = state => {
   return {
-      ebooks: state.ebooks,
+    ebooks: state.ebooks
   }
 }
 
 class ProductsComponent extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       open: false
     }
   }
 
-  render() {
-      return (
+  render () {
+    return (
           <AdminTemplate selectedIndex={1}>
               <Products ebooks={this.props.ebooks}/>
           </AdminTemplate>
-      );
+    )
   }
 }
-export const ProductsPage = connect(mapStateToProps)(ProductsComponent);
+export const ProductsPage = connect(mapStateToProps)(ProductsComponent)
