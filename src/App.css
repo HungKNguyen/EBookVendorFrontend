@@ -20,12 +20,15 @@
   .border-xs-left-none {
     border-left: none !important;
   }
+
   .border-xs-right-none {
     border-right: none !important;
   }
+
   .border-xs-top-none {
     border-top: none !important;
   }
+
   .border-xs-bottom-none {
     border-bottom: none !important;
   }
@@ -35,12 +38,15 @@
   .border-sm-left-none {
     border-left: none !important;
   }
+
   .border-sm-right-none {
     border-right: none !important;
   }
+
   .border-sm-top-none {
     border-top: none !important;
   }
+
   .border-sm-bottom-none {
     border-bottom: none !important;
   }
@@ -50,12 +56,15 @@
   .border-md-left-none {
     border-left: none !important;
   }
+
   .border-md-right-none {
     border-right: none !important;
   }
+
   .border-md-top-none {
     border-top: none !important;
   }
+
   .border-md-bottom-none {
     border-bottom: none !important;
   }
@@ -65,12 +74,15 @@
   .border-lg-left-none {
     border-left: none !important;
   }
+
   .border-lg-right-none {
     border-right: none !important;
   }
+
   .border-lg-top-none {
     border-top: none !important;
   }
+
   .border-lg-bottom-none {
     border-bottom: none !important;
   }

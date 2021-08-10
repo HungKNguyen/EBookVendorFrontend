@@ -25,16 +25,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.{js, jsx}' && stylelint 'src/**/*.css",
-    "lint-fix": "eslint --fix 'src/**/*.{js, jsx}' && stylelint --fix 'src/**/*.css",
+    "lint": "eslint 'src/**/*.{js,jsx}' && stylelint 'src/**/*.css'",
+    "lint-fix": "eslint --fix 'src/**/*.{js,jsx}' && stylelint --fix 'src/**/*.css'",
     "pre-commit-test": "react-scripts test --watchAll=false"
   },
   "lint-staged": {
-    "src/**/*.{js, jsx}": [
-      "eslint . --fix"
+    "*.{js,jsx}": [
+      "eslint --fix"
     ],
-    "src/**/*.css": [
-      "stylelint . --fix"
+    "*.css": [
+      "stylelint --fix"
     ]
   },
   "proxy": "http://localhost:3001/",
