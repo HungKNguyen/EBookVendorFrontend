@@ -22,6 +22,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import DeleteIcon from '@material-ui/icons/Delete'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import InputBase from '@material-ui/core/InputBase'
+import { fetchEbooks } from '../../redux/ActionCreators'
 import { connect } from 'react-redux'
 import AdminTemplate from '../templates/AdminTemplate'
 
@@ -66,7 +67,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   }
 }))
 
-function TableHeader () {
+function ProductsTableHeader () {
   return (
     <TableHead>
       <TableRow>
@@ -82,7 +83,7 @@ function TableHeader () {
   )
 }
 
-const TableToolbar = (props) => {
+const ProductsTableToolbar = (props) => {
   const { numSelected, rowCount, onSelectAllClick } = props
 
   return (
@@ -92,7 +93,7 @@ const TableToolbar = (props) => {
         indeterminate={numSelected > 0 && numSelected < rowCount}
         checked={rowCount > 0 && numSelected === rowCount}
         onChange={onSelectAllClick}
-        sx={{ ml: 'auto' }}
+        align="relative"
       />
       {numSelected > 0
         ? (
@@ -140,7 +141,7 @@ const TableToolbar = (props) => {
   )
 }
 
-TableToolbar.propTypes = {
+ProductsTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
   onSelectAllClick: PropTypes.func.isRequired,
   rowCount: PropTypes.number.isRequired
@@ -179,7 +180,7 @@ export const Products = (props) => {
     setSelected(newSelected)
   }
 
-  function EbooksLists (name, price, status) {
+  function EbooksLists (name, price) {
     if (props.ebooks.isLoading) {
       return (
         <Typography>
@@ -198,14 +199,15 @@ export const Products = (props) => {
       const isItemSelected = isSelected(ebook.name)
 
       return (
-        <TableRow
-          hover
-          onClick={(event) => handleClick(event, ebook.name)}
-          key={ebook.name}
-          selected={isItemSelected}
-        >
+        <TableRow key={ebook.name}>
           <TableCell align="center">
-            <Checkbox color="primary" checked={isItemSelected}/>
+            <Checkbox
+              color="primary" checked={isItemSelected}
+              hover
+              onClick={(event) => handleClick(event, ebook.name)}
+              key={ebook.name}
+              selected={isItemSelected}
+            />
           </TableCell>
           <TableCell align="center">
             <Avatar alt={ebook.name} src={ebook.image} sx={{ height: 50 }} variant="square"/>
@@ -236,12 +238,12 @@ export const Products = (props) => {
       </Stack>
       <Paper sx={{ width: '100%' }}>
         <TableContainer sx={{ maxHeight: 740 }} padding ="normal">
-          <TableToolbar
+          <ProductsTableToolbar
             numSelected={selected.length}
             onSelectAllClick={handleSelectAllClick}
-            rowCount={props.ebooks.length}/>
+            rowCount={props.ebooks.content.length}/>
           <Table stickyHeader >
-            <TableHeader/>
+            <ProductsTableHeader/>
             <TableBody>
               <EbooksLists/>
             </TableBody>
@@ -258,12 +260,22 @@ const mapStateToProps = state => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => ({
+  fetchEbooks: () => {
+    dispatch(fetchEbooks())
+  }
+})
+
 class ProductsComponent extends Component {
   constructor (props) {
     super(props)
     this.state = {
       open: false
     }
+  }
+
+  componentDidMount () {
+    this.props.fetchEbooks()
   }
 
   render () {
@@ -274,4 +286,4 @@ class ProductsComponent extends Component {
     )
   }
 }
-export const ProductsPage = connect(mapStateToProps)(ProductsComponent)
+export const ProductsPage = connect(mapStateToProps, mapDispatchToProps)(ProductsComponent)

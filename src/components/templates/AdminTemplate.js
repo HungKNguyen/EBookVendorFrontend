@@ -183,7 +183,7 @@ const SidebarComponent = (props) => {
             selected={props.selectedIndex === 1}
             key={1}
             component={Link}
-            to="/admin/ebooks"
+            to="/products"
             sx={{
               '&:hover, &:focus': {
                 background: '#424242',
@@ -197,7 +197,7 @@ const SidebarComponent = (props) => {
             selected={props.selectedIndex === 2}
             key={2}
             component={Link}
-            to="/admin/orders"
+            to="/orders"
             sx={{
               '&:hover, &:focus': {
                 background: '#424242',
