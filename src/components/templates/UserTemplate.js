@@ -82,6 +82,8 @@ class Footer extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      isNew: true,
+      reviewId: '',
       rating: 4.5,
       review: '',
       isOpen: false
@@ -91,11 +93,64 @@ class Footer extends Component {
     this.handleUserInput = this.handleUserInput.bind(this)
     this.handleRating = this.handleRating.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
+  }
+
+  async handleSubmit () {
+    try {
+      let response
+      if (this.state.isNew) {
+        response = await instance.post('/api/reviews', { rating: this.state.rating, review: this.state.review })
+      } else {
+        response = await instance.put('/api/reviews', {
+          rating: this.state.rating,
+          review: this.state.review,
+          reviewId: this.state.reviewId
+        })
+      }
+      toast.success(response.data.message)
+      this.handleClose()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async handleDelete () {
+    try {
+      const response = await instance.delete('/api/reviews', {
+        data: {
+          reviewId: this.state.reviewId
+        }
+      })
+      toast.success(response.data.message)
+      this.setState({
+        isNew: true,
+        reviewId: '',
+        rating: 4.5,
+        review: ''
+      })
+      this.handleClose()
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   handleOpen () {
     if (localStorage.getItem('user')) {
-      this.setState({ isOpen: true })
+      instance.get('/api/reviews/user')
+        .then((response) => {
+          if (response.data) {
+            this.setState({
+              isOpen: true,
+              isNew: false,
+              reviewId: response.data._id,
+              rating: response.data.rating,
+              review: response.data.review
+            })
+          } else {
+            this.setState({ isOpen: true })
+          }
+        })
     } else {
       history.push('/login')
       toast.error('You need to be logged in to continue')
@@ -118,11 +173,6 @@ class Footer extends Component {
     this.setState({
       rating: newValue
     })
-  }
-
-  handleSubmit () {
-    this.props.submitReview(this.state.rating, this.state.review)
-    this.handleClose()
   }
 
   render () {
@@ -167,16 +217,19 @@ class Footer extends Component {
               name="review"
               onChange={(event) => this.handleUserInput(event)}
             />
-            <Stack direction="row" justifyContent="space-between">
-              <Button variant="outlined" color='button' onClick={this.handleSubmit}>
-                Submit
-              </Button>
-              <Rating
+            <Rating
                 size="large"
                 value={this.state.rating}
                 precision={0.5}
                 onChange={(event, newValue) => this.handleRating(newValue)}
-              />
+            />
+            <Stack direction="row" justifyContent="space-between">
+              <Button variant="contained" color='button' onClick={this.handleSubmit}>
+                {this.state.isNew ? 'Submit' : 'Modify'}
+              </Button>
+              <Button variant="contained" color='error' disabled={this.state.isNew} onClick={this.handleDelete}>
+                Delete
+              </Button>
             </Stack>
           </Stack>
         </Modal>
@@ -188,12 +241,10 @@ class Footer extends Component {
 export class UserTemplate extends Component {
   constructor (props) {
     super(props)
-    const profile = JSON.parse(localStorage.getItem('user'))
     this.state = {
-      profile: profile
+      profile: JSON.parse(localStorage.getItem('user'))
     }
     this.logOut = this.logOut.bind(this)
-    this.submitReview = this.submitReview.bind(this)
   }
 
   async logOut () {
@@ -209,22 +260,12 @@ export class UserTemplate extends Component {
     }
   }
 
-  async submitReview (rating, review) {
-    try {
-      const response = await instance.post('/api/reviews', { rating: rating, review: review })
-      console.log(response)
-      toast.success(response.data.message)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
   render () {
     return (
         <div>
           <Header profile={this.state.profile} logOut={this.logOut}/>
           {this.props.children}
-          <Footer submitReview={this.submitReview}/>
+          <Footer />
         </div>
     )
   }

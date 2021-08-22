@@ -43,7 +43,7 @@ export class FacebookLoginBtn extends Component {
                     }}
                     disabled={renderProps.isDisabled}
                     onClick={renderProps.onClick}
-                    variant='outlined'
+                    variant='contained'
                     size='large'
                     startIcon={<FacebookIcon/>}
                 >

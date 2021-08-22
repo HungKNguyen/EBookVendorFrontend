@@ -10,13 +10,13 @@ import {
   Stack,
   Rating,
   Modal,
-  Divider
+  Divider, Link
 } from '@material-ui/core'
 import { UserTemplate } from '../templates/UserTemplate'
 import { instance } from '../../axiosConfig'
 import { toast } from 'react-toastify'
 
-export const ReviewModal = (props) => {
+const ReviewModal = (props) => {
   const style = {
     position: 'absolute',
     top: '40%',
@@ -50,42 +50,42 @@ export const ReviewModal = (props) => {
   )
 }
 
-export const HomeDisplay = (props) => {
-  const EbooksDisplay = (props) => {
-    const ebooks = props.ebooks.map((ebook) => {
-      return (
+const EbooksDisplay = (props) => {
+  const ebooks = props.ebooks.map((ebook) => {
+    return (
         <Grid item key={ebook._id}>
-          <CardActionArea>
+          <CardActionArea component={Link} href={`/browse/${ebook._id}`} >
             <Card sx={{ width: 200 }} variant="outlined">
               <CardMedia
-                sx={{ height: 300 }}
-                image={ebook.image}
-                title={ebook.name}
+                  sx={{ height: 300 }}
+                  image={ebook.image}
+                  title={ebook.name}
               />
               <CardContent>
                 <Typography
-                  gutterBottom
-                  variant="body1"
-                  component="div"
-                  noWrap
+                    gutterBottom
+                    variant="body1"
+                    component="div"
+                    noWrap
+                    align='left'
                 >
                   <b>{ebook.name}</b>
                 </Typography>
                 <Typography
-                  variant="subtitle2"
-                  color="text.secondary"
-                  align="left"
-                  noWrap
+                    variant="subtitle2"
+                    color="text.secondary"
+                    align="left"
+                    noWrap
                 >
-                  {ebook.author}
+                  by {ebook.author}
                 </Typography>
               </CardContent>
             </Card>
           </CardActionArea>
         </Grid>
-      )
-    })
-    return (
+    )
+  })
+  return (
       <Box sx={{ mx: 'auto', textAlign: 'center', py: 5 }}>
         <Typography variant="h4" component="div" sx={{ mb: 3 }}>
           <b>Our Listing</b>
@@ -94,12 +94,12 @@ export const HomeDisplay = (props) => {
           {ebooks}
         </Grid>
       </Box>
-    )
-  }
+  )
+}
 
-  const ReviewsDisplay = (props) => {
-    const reviews = props.reviews.map((review) => {
-      return (
+const ReviewsDisplay = (props) => {
+  const reviews = props.reviews.map((review) => {
+    return (
         <Box key={review._id}>
           <CardActionArea onClick={() => props.handleOpen(review)}>
             <Card variant="outlined">
@@ -126,27 +126,28 @@ export const HomeDisplay = (props) => {
             </Card>
           </CardActionArea>
         </Box>
-      )
-    })
-    return (
+    )
+  })
+  return (
       <Box
-        sx={{ mx: 'auto', py: 5, textAlign: 'center', background: '#F6F6F6' }}
+          sx={{ mx: 'auto', py: 5, textAlign: 'center', background: '#F6F6F6' }}
       >
         <Typography variant="h4" component="div" sx={{ mb: 3 }}>
           <b>Customers&apos; Feedback</b>
         </Typography>
         <Stack
-          spacing={5}
-          direction={{ xs: 'column', md: 'row' }}
-          justifyContent="center"
-          alignItems="center"
+            spacing={5}
+            direction={{ xs: 'column', md: 'row' }}
+            justifyContent="center"
+            alignItems="center"
         >
           {reviews}
         </Stack>
       </Box>
-    )
-  }
+  )
+}
 
+const HomeDisplay = (props) => {
   return (
     <Box>
       <ReviewModal
@@ -177,7 +178,7 @@ export class Home extends Component {
     try {
       const ebooksResponse = await instance.get('/api/ebooks/featured')
       const reviewsResponse = await instance.get('/api/reviews/featured')
-      this.setState({ ebooks: ebooksResponse.data, reviews: reviewsResponse.data })
+      return { ebooks: ebooksResponse.data, reviews: reviewsResponse.data }
     } catch (error) {
       console.log(error)
       if (error.response) {
@@ -188,6 +189,7 @@ export class Home extends Component {
 
   componentDidMount () {
     this.getData()
+      .then(data => this.setState(data))
   }
 
   handleOpen (review) {

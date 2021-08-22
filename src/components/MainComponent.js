@@ -7,6 +7,7 @@ import { AdminDashboard } from './adminpages/AdminComponent'
 import { Notfound } from './otherpages/NotFoundComponent'
 import { Forbidden } from './otherpages/ForbiddenComponent'
 import { AdminProtectedRoute } from './ultilities/ProtectedRoutes'
+import { EBook } from './userpages/EBookComponent'
 
 export class Main extends Component {
   render () {
@@ -17,6 +18,7 @@ export class Main extends Component {
         </Route>
         {/* dir userpages */}
         <Route path="/home" component={() => <Home />} />
+        <Route path='/browse/:ebookId' component={({ match }) => <EBook ebookId={match.params.ebookId}/>}/>
         {/* dir adminpages */}
         <AdminProtectedRoute path="/admin" exact component={() => <AdminDashboard />} />
         {/* dir otherpages */}

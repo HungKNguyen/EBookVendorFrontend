@@ -10,18 +10,13 @@ import axios from 'axios'
 export const history = createBrowserHistory()
 class App extends Component {
   async getUserStart () {
-    try {
-      const response = await axios.create({ withCredentials: true }).get('/api/users/profile')
-      localStorage.setItem('user', JSON.stringify(response.data))
-    } catch (error) {
-      console.log(error)
-      localStorage.removeItem('user')
-    }
+    return await axios.create({ withCredentials: true }).get('/api/users/profile')
   }
 
-  constructor (props) {
-    super(props)
+  componentDidMount () {
     this.getUserStart()
+      .then((response) => localStorage.setItem('user', JSON.stringify(response.data)))
+      .catch(() => localStorage.removeItem('user'))
   }
 
   render () {

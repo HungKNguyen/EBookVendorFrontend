@@ -46,7 +46,7 @@ export class GoogleLoginBtn extends Component {
                     }}
                     disabled={renderProps.disabled}
                     onClick={renderProps.onClick}
-                    variant='outlined'
+                    variant='contained'
                     size='large'
                     startIcon={<GoogleIcon/>}
                 >

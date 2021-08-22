@@ -260,10 +260,9 @@ const SidebarComponent = (props) => {
 export class AdminTemplate extends Component {
   constructor (props) {
     super(props)
-    const profile = JSON.parse(localStorage.getItem('user'))
     this.state = {
       open: false,
-      profile: profile
+      profile: JSON.parse(localStorage.getItem('user'))
     }
     this.handleDrawerClose = this.handleDrawerClose.bind(this)
     this.handleDrawerOpen = this.handleDrawerOpen.bind(this)

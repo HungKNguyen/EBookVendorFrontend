@@ -13,24 +13,23 @@ import { AdminTemplate } from '../templates/AdminTemplate'
 import { instance } from '../../axiosConfig'
 import { toast } from 'react-toastify'
 
-export const DashBoard = (props) => {
-  const bull = (
+const bull = (
     <Box component="span" sx={{ display: 'inline-block', mx: '8px' }}>
       •
     </Box>
-  )
+)
 
-  const OrdersList = (props) => {
-    if (props.orders.length === 0) {
-      return (
+const OrdersList = (props) => {
+  if (props.orders.length === 0) {
+    return (
         <Typography variant="body2" align="center">
           You don&apos;t have any recent orders
         </Typography>
-      )
-    }
-    const orders = props.orders.map((order) => {
-      const ebookNames = order.ebooks.map((ebook) => ebook.name).join(', ')
-      return (
+    )
+  }
+  const orders = props.orders.map((order) => {
+    const ebookNames = order.ebooks.map((ebook) => ebook.name).join(', ')
+    return (
         <Box key={order._id}>
           <Stack direction="row" justifyContent="space-between">
             <Typography fontWeight="fontWeightMedium">
@@ -44,32 +43,32 @@ export const DashBoard = (props) => {
             {ebookNames}
           </Typography>
         </Box>
-      )
-    })
-    return (
+    )
+  })
+  return (
       <Stack spacing={2} sx={{ mb: 2 }}>
         {orders}
       </Stack>
-    )
-  }
+  )
+}
 
-  const EbooksList = (props) => {
-    if (props.ebooks.length === 0) {
-      return (
+const EbooksList = (props) => {
+  if (props.ebooks.length === 0) {
+    return (
         <Typography variant="body2" align="center">
           No book listed, try adding some :)
         </Typography>
-      )
-    }
-    const ebooks = props.ebooks.map((ebook) => {
-      return (
+    )
+  }
+  const ebooks = props.ebooks.map((ebook) => {
+    return (
         <Grid container item key={ebook._id}>
           <Grid item lg={2} xs={12}>
             <Avatar
-              alt={ebook.name}
-              src={ebook.image}
-              variant="square"
-              sx={{ width: 50, height: 80 }}
+                alt={ebook.name}
+                src={ebook.image}
+                variant="square"
+                sx={{ width: 50, height: 80 }}
             />
           </Grid>
           <Grid item lg={10} xs={12}>
@@ -84,25 +83,25 @@ export const DashBoard = (props) => {
             </Typography>
           </Grid>
         </Grid>
-      )
-    })
-    return (
+    )
+  })
+  return (
       <Grid container spacing={2} mb={2}>
         {ebooks}
       </Grid>
-    )
-  }
+  )
+}
 
-  const SalesList = (props) => {
-    if (props.sales.length === 0) {
-      return (
+const SalesList = (props) => {
+  if (props.sales.length === 0) {
+    return (
         <Typography variant="body2" align="center">
           You don&apos;t have any sale report yet
         </Typography>
-      )
-    }
-    const sales = props.sales.map((sale) => {
-      return (
+    )
+  }
+  const sales = props.sales.map((sale) => {
+    return (
         <Box key={sale._id}>
           <Typography fontWeight="fontWeightMedium">{sale.date}</Typography>
           <Typography color="text.secondary" noWrap>
@@ -111,24 +110,25 @@ export const DashBoard = (props) => {
             {sale.sold} ebooks sold
           </Typography>
         </Box>
-      )
-    })
-    return (
+    )
+  })
+  return (
       <Stack spacing={2} mb={2}>
         {sales}
       </Stack>
-    )
-  }
+  )
+}
 
-  // TODO: Need to come up with email object in store first
-  const CampaignsList = (props) => {
-    return (
+// TODO: Need to come up with email object in store first
+const CampaignsList = (props) => {
+  return (
       <Typography variant="body2" align="center">
         You can write and send email campaigns to users
       </Typography>
-    )
-  }
+  )
+}
 
+export const DashBoard = (props) => {
   return (
     <Grid container spacing={2}>
       <Grid item md={9} xs={12}>
@@ -219,7 +219,7 @@ export class AdminDashboard extends Component {
       console.log(orderResponse)
       const salesResponse = await instance.get('/api/orders/admin/summary')
       console.log(salesResponse)
-      this.setState({ ebooks: ebooksResponse.data, orders: orderResponse.data, sales: salesResponse.data })
+      return { ebooks: ebooksResponse.data, orders: orderResponse.data, sales: salesResponse.data }
     } catch (error) {
       console.log(error)
       toast.error(error.response.data.message)
@@ -228,6 +228,7 @@ export class AdminDashboard extends Component {
 
   componentDidMount () {
     this.getData()
+      .then(data => this.setState(data))
   }
 
   render () {
