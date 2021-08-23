@@ -204,7 +204,6 @@ export class AdminDashboard extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      open: false,
       ebooks: [],
       orders: [],
       sales: []
@@ -214,15 +213,14 @@ export class AdminDashboard extends Component {
   async getData () {
     try {
       const ebooksResponse = await instance.get('/api/ebooks/bestseller')
-      console.log(ebooksResponse)
       const orderResponse = await instance.get('/api/orders/admin/recent')
-      console.log(orderResponse)
       const salesResponse = await instance.get('/api/orders/admin/summary')
-      console.log(salesResponse)
       return { ebooks: ebooksResponse.data, orders: orderResponse.data, sales: salesResponse.data }
     } catch (error) {
       console.log(error)
-      toast.error(error.response.data.message)
+      if (error.response) {
+        toast.error(error.response.data.message)
+      }
     }
   }
 
@@ -234,11 +232,7 @@ export class AdminDashboard extends Component {
   render () {
     return (
       <AdminTemplate selectedIndex={0}>
-        <DashBoard
-          ebooks={this.state.ebooks}
-          orders={this.state.orders}
-          sales={this.state.sales}
-        />
+        <DashBoard {...this.state}/>
       </AdminTemplate>
     )
   }

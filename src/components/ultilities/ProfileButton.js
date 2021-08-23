@@ -1,13 +1,17 @@
-import { Avatar, Button, ListItemIcon, Menu, MenuItem, Link } from '@material-ui/core'
-import { AccountCircle, Dashboard, Login, Logout, Favorite, Book, KeyboardArrowDown, Web } from '@material-ui/icons'
+import { Avatar, Button, ListItemIcon, Menu, MenuItem, Link, Badge } from '@material-ui/core'
+import { AccountCircle, Dashboard, Login, Logout, Favorite, Book, KeyboardArrowDown, Web, ShoppingCart } from '@material-ui/icons'
 import React from 'react'
 import { GeneratedAvatar } from './GeneratedAvatar'
 
 export const ProfileButton = (props) => {
   if (props.profile) {
     const icon = props.profile.image
-      ? <Avatar src={props.profile.image} sx={{ width: 25, height: 25 }} />
-      : <GeneratedAvatar name={props.profile.firstname + ' ' + props.profile.lastname} sx={{ width: 25, height: 25 }} />
+      ? <Badge badgeContent={props.profile.cart.length} variant="dot" overlap="circular" color='error'>
+            <Avatar src={props.profile.image} sx={{ width: 25, height: 25 }} />
+        </Badge>
+      : <Badge badgeContent={props.profile.cart.length} variant="dot" overlap="circular" color='error'>
+            <GeneratedAvatar name={props.profile.firstname + ' ' + props.profile.lastname} sx={{ width: 25, height: 25 }} />
+        </Badge>
     const adminMenuItem = props.profile.admin
       ? <div>
             <MenuItem component={Link} href="/home">
@@ -37,7 +41,14 @@ export const ProfileButton = (props) => {
                     </ListItemIcon>
                     Profile
                 </MenuItem>
-                {adminMenuItem}
+                <MenuItem component={Link} href="/profile/cart">
+                    <ListItemIcon>
+                        <Badge badgeContent={props.profile.cart.length} color='error'>
+                            <ShoppingCart fontSize='small' />
+                        </Badge>
+                    </ListItemIcon>
+                    My Cart
+                </MenuItem>
                 <MenuItem component={Link} href="/profile/favorite">
                     <ListItemIcon>
                         <Favorite fontSize='small' />
@@ -50,6 +61,7 @@ export const ProfileButton = (props) => {
                     </ListItemIcon>
                     My Ebook
                 </MenuItem>
+                {adminMenuItem}
                 <MenuItem onClick={props.logOut}>
                     <ListItemIcon>
                         <Logout fontSize='small' />

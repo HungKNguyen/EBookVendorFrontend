@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.min.css'
 import axios from 'axios'
 
 export const history = createBrowserHistory()
+
 class App extends Component {
   async getUserStart () {
     return await axios.create({ withCredentials: true }).get('/api/users/profile')

@@ -8,6 +8,7 @@ import { Notfound } from './otherpages/NotFoundComponent'
 import { Forbidden } from './otherpages/ForbiddenComponent'
 import { AdminProtectedRoute } from './ultilities/ProtectedRoutes'
 import { EBook } from './userpages/EBookComponent'
+import { Cart } from './userpages/CartPage'
 
 export class Main extends Component {
   render () {
@@ -19,6 +20,7 @@ export class Main extends Component {
         {/* dir userpages */}
         <Route path="/home" component={() => <Home />} />
         <Route path='/browse/:ebookId' component={({ match }) => <EBook ebookId={match.params.ebookId}/>}/>
+        <Route path='/profile/cart' component={() => <Cart />}/>
         {/* dir adminpages */}
         <AdminProtectedRoute path="/admin" exact component={() => <AdminDashboard />} />
         {/* dir otherpages */}

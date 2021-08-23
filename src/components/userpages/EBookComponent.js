@@ -663,6 +663,9 @@ export class EBook extends Component {
       localStorage.setItem('user', JSON.stringify(newProfile))
     } catch (error) {
       console.log(error)
+      if (error.response) {
+        toast.error(error.response.data.message)
+      }
     }
   }
 
@@ -678,6 +681,9 @@ export class EBook extends Component {
       localStorage.setItem('user', JSON.stringify(newProfile))
     } catch (error) {
       console.log(error)
+      if (error.response) {
+        toast.error(error.response.data.message)
+      }
     }
   }
 
@@ -695,6 +701,9 @@ export class EBook extends Component {
       localStorage.setItem('user', JSON.stringify(newProfile))
     } catch (error) {
       console.log(error)
+      if (error.response) {
+        toast.error(error.response.data.message)
+      }
     }
   }
 
@@ -708,6 +717,9 @@ export class EBook extends Component {
       toast.success(response.data.message)
     } catch (error) {
       console.log(error)
+      if (error.response) {
+        toast.error(error.response.data.message)
+      }
     }
   }
 
@@ -722,6 +734,9 @@ export class EBook extends Component {
       this.getComments(0, true)
     } catch (error) {
       console.log(error)
+      if (error.response) {
+        toast.error(error.response.data.message)
+      }
     }
   }
 
@@ -741,6 +756,9 @@ export class EBook extends Component {
       this.getComments(0, true)
     } catch (error) {
       console.log(error)
+      if (error.response) {
+        toast.error(error.response.data.message)
+      }
     }
   }
 
