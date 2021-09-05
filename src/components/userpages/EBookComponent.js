@@ -63,7 +63,7 @@ const EBookListing = (props) => {
             <i>by {props.ebook.author}</i>
           </Typography>
           <Typography>
-            <b>Price:</b> ${Number(props.ebook.price).toFixed(2)}
+            <b>Price:</b> ${Number(props.ebook.price / 100).toFixed(2)}
           </Typography>
           <Typography>
             Description: {props.ebook.description}

@@ -17,6 +17,7 @@ import { history } from '../../App'
 import { FacebookLoginBtn } from '../ultilities/FacebookLoginBtn'
 import { GoogleLoginBtn } from '../ultilities/GoogleLoginBtn'
 import { useTheme } from '@material-ui/core/styles'
+import { toast } from 'react-toastify'
 
 export const LoginDisplay = (props) => {
   const theme = useTheme()
@@ -127,6 +128,9 @@ export class Login extends Component {
       localStorage.setItem('user', JSON.stringify(response.data))
       history.push('/home')
     } catch (error) {
+      if (error.message) {
+        toast.error(error.message)
+      }
       console.log(error)
     }
   }

@@ -15,7 +15,7 @@ const CartList = (props) => {
   }
   const list = props.cart.map((ebook) => {
     return (
-        <Stack direction='row' justifyContent='space-between' key={ebook._id}>
+        <Stack direction='row' justifyContent='space-between' key={ebook._id} marginBottom={3}>
           <Grid container>
             <Grid item md={2} xs={12}>
               <Card sx={{ maxHeight: 200, maxWidth: 128 }}>
@@ -44,7 +44,7 @@ const CartList = (props) => {
             </Grid>
           </Grid>
           <Typography>
-            ${Number(ebook.price).toFixed(2)}
+            ${Number(ebook.price / 100).toFixed(2)}
           </Typography>
         </Stack>
     )
@@ -66,7 +66,7 @@ const CartDisplay = (props) => {
           My Cart
         </Typography>
         <Button color='primary' variant='contained' startIcon={<PaymentIcon />}>
-          Check out - ${Number(totalPrice).toFixed(2)}
+          Check out - ${Number(totalPrice / 100).toFixed(2)}
         </Button>
       </Stack>
       <Box>
@@ -81,7 +81,7 @@ const CartDisplay = (props) => {
               </Typography>
             </Stack>
           </Paper>
-          <Box marginY={3} paddingX={3}>
+          <Box marginTop={3} paddingX={3}>
             <CartList {...props}/>
           </Box>
           <Paper variant='outlined' square sx={{ background: '#272727', color: '#ffffff', paddingX: 3 }}>
@@ -90,7 +90,7 @@ const CartDisplay = (props) => {
                 Total Cost:
               </Typography>
               <Typography variant='h6'>
-                ${Number(totalPrice).toFixed(2)}
+                ${Number(totalPrice / 100).toFixed(2)}
               </Typography>
             </Stack>
           </Paper>

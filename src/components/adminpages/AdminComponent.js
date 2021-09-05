@@ -79,7 +79,7 @@ const EbooksList = (props) => {
               {ebook.sold} copies sold
             </Typography>
             <Typography color="text.secondary">
-              ${Number(ebook.price).toFixed(2)}
+              ${Number(ebook.price / 100).toFixed(2)}
             </Typography>
           </Grid>
         </Grid>
