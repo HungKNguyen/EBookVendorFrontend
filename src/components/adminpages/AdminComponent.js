@@ -9,35 +9,27 @@ import {
   Button,
   Avatar
 } from '@material-ui/core'
-import { fetchEbooks, fetchOrders, fetchSales } from '../../redux/ActionCreators'
-import { connect } from 'react-redux'
-import AdminTemplate from '../templates/AdminTemplate'
+import { AdminTemplate } from '../templates/AdminTemplate'
+import { instance } from '../../axiosConfig'
+import { toast } from 'react-toastify'
 
-export const DashBoard = (props) => {
-  const bull = (
+const bull = (
     <Box component="span" sx={{ display: 'inline-block', mx: '8px' }}>
       •
     </Box>
-  )
+)
 
-  const OrdersList = (props) => {
-    if (props.orders.isLoading) {
-      return (
-        <Typography variant="body2" align="center">
-          Loading...
-        </Typography>
-      )
-    }
-    if (props.orders.content.length === 0) {
-      return (
+const OrdersList = (props) => {
+  if (props.orders.length === 0) {
+    return (
         <Typography variant="body2" align="center">
           You don&apos;t have any recent orders
         </Typography>
-      )
-    }
-    const orders = props.orders.content.slice(0, 3).map((order) => {
-      const ebookNames = order.ebooks.map((ebook) => ebook.name).join(', ')
-      return (
+    )
+  }
+  const orders = props.orders.map((order) => {
+    const ebookNames = order.ebooks.map((ebook) => ebook.name).join(', ')
+    return (
         <Box key={order._id}>
           <Stack direction="row" justifyContent="space-between">
             <Typography fontWeight="fontWeightMedium">
@@ -51,44 +43,32 @@ export const DashBoard = (props) => {
             {ebookNames}
           </Typography>
         </Box>
-      )
-    })
-    return (
-      <Box>
-        <Stack spacing={2} sx={{ mb: 2 }}>
-          {orders}
-        </Stack>
-        <Button variant="text" disableRipple sx={{ padding: 0 }}>
-          See all({props.orders.content.length})
-        </Button>
-      </Box>
     )
-  }
+  })
+  return (
+      <Stack spacing={2} sx={{ mb: 2 }}>
+        {orders}
+      </Stack>
+  )
+}
 
-  const EbooksList = (props) => {
-    if (props.ebooks.isLoading) {
-      return (
-        <Typography variant="body2" align="center">
-          Loading...
-        </Typography>
-      )
-    }
-    if (props.ebooks.content.length === 0) {
-      return (
+const EbooksList = (props) => {
+  if (props.ebooks.length === 0) {
+    return (
         <Typography variant="body2" align="center">
           No book listed, try adding some :)
         </Typography>
-      )
-    }
-    const ebooks = props.ebooks.content.slice(0, 5).map((ebook) => {
-      return (
+    )
+  }
+  const ebooks = props.ebooks.map((ebook) => {
+    return (
         <Grid container item key={ebook._id}>
           <Grid item lg={2} xs={12}>
             <Avatar
-              alt={ebook.name}
-              src={ebook.image}
-              variant="square"
-              sx={{ width: 50, height: 80 }}
+                alt={ebook.name}
+                src={ebook.image}
+                variant="square"
+                sx={{ width: 50, height: 80 }}
             />
           </Grid>
           <Grid item lg={10} xs={12}>
@@ -99,41 +79,29 @@ export const DashBoard = (props) => {
               {ebook.sold} copies sold
             </Typography>
             <Typography color="text.secondary">
-              ${Number(ebook.price).toFixed(2)}
+              ${Number(ebook.price / 100).toFixed(2)}
             </Typography>
           </Grid>
         </Grid>
-      )
-    })
-    return (
-      <Box>
-        <Grid container spacing={2} mb={2}>
-          {ebooks}
-        </Grid>
-        <Button variant="text" disableRipple sx={{ padding: 0 }}>
-          See all({props.ebooks.content.length})
-        </Button>
-      </Box>
     )
-  }
+  })
+  return (
+      <Grid container spacing={2} mb={2}>
+        {ebooks}
+      </Grid>
+  )
+}
 
-  const SalesList = (props) => {
-    if (props.sales.isLoading) {
-      return (
-        <Typography variant="body2" align="center">
-          Loading...
-        </Typography>
-      )
-    }
-    if (props.sales.content.length === 0) {
-      return (
+const SalesList = (props) => {
+  if (props.sales.length === 0) {
+    return (
         <Typography variant="body2" align="center">
           You don&apos;t have any sale report yet
         </Typography>
-      )
-    }
-    const sales = props.sales.content.slice(0, 3).map((sale) => {
-      return (
+    )
+  }
+  const sales = props.sales.map((sale) => {
+    return (
         <Box key={sale._id}>
           <Typography fontWeight="fontWeightMedium">{sale.date}</Typography>
           <Typography color="text.secondary" noWrap>
@@ -142,28 +110,25 @@ export const DashBoard = (props) => {
             {sale.sold} ebooks sold
           </Typography>
         </Box>
-      )
-    })
-    return (
-      <React.Fragment>
-        <Stack spacing={2} mb={2}>
-          {sales}
-        </Stack>
-        <Button variant="text" disableRipple sx={{ padding: 0 }}>
-          See all({props.sales.content.length})
-        </Button>
-      </React.Fragment>
     )
-  }
+  })
+  return (
+      <Stack spacing={2} mb={2}>
+        {sales}
+      </Stack>
+  )
+}
 
-  // TODO: Need to come up with email object in store first
-  const CampaignsList = (props) => {
-    return (
+// TODO: Need to come up with email object in store first
+const CampaignsList = (props) => {
+  return (
       <Typography variant="body2" align="center">
         You can write and send email campaigns to users
       </Typography>
-    )
-  }
+  )
+}
+
+export const DashBoard = (props) => {
   return (
     <Grid container spacing={2}>
       <Grid item md={9} xs={12}>
@@ -179,12 +144,18 @@ export const DashBoard = (props) => {
                   Recent Orders
                 </Typography>
                 <OrdersList orders={props.orders} />
+                <Button variant="container" disableRipple sx={{ padding: 0 }}>
+                  See more
+                </Button>
               </Paper>
               <Paper sx={{ padding: 2 }}>
                 <Typography variant="h6" sx={{ mb: 2 }}>
                   Monthly Sales
                 </Typography>
                 <SalesList sales={props.sales} />
+                <Button variant="container" disableRipple sx={{ padding: 0 }}>
+                  See more
+                </Button>
               </Paper>
             </Stack>
           </Grid>
@@ -195,22 +166,22 @@ export const DashBoard = (props) => {
                   <Typography variant="h6" sx={{ flexGrow: 1 }}>
                     Ebooks Sold
                   </Typography>
-                  <Button variant="text" disableRipple sx={{ padding: 0 }}>
-                    Add new ebook
-                  </Button>
                 </Stack>
                 <EbooksList ebooks={props.ebooks} />
+                <Button variant="container" color='black' disableRipple sx={{ padding: 0 }}>
+                  See more
+                </Button>
               </Paper>
               <Paper sx={{ padding: 2 }}>
                 <Stack direction="row" sx={{ mb: 2 }}>
                   <Typography variant="h6" sx={{ flexGrow: 1 }}>
                     Latest Email Campaign
                   </Typography>
-                  <Button variant="text" disableRipple sx={{ padding: 0 }}>
-                    Create new
-                  </Button>
                 </Stack>
                 <CampaignsList />
+                <Button variant="container" disableRipple sx={{ padding: 0 }}>
+                  See more
+                </Button>
               </Paper>
             </Stack>
           </Grid>
@@ -229,54 +200,40 @@ export const DashBoard = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    ebooks: state.ebooks,
-    orders: state.orders,
-    sales: state.sales
-  }
-}
-
-const mapDispatchToProps = (dispatch) => ({
-  fetchOrders: () => {
-    dispatch(fetchOrders())
-  },
-  fetchSales: () => {
-    dispatch(fetchSales())
-  },
-  fetchEbooks: () => {
-    dispatch(fetchEbooks())
-  }
-})
-
-class AdminComponent extends Component {
+export class AdminDashboard extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      open: false
+      ebooks: [],
+      orders: [],
+      sales: []
+    }
+  }
+
+  async getData () {
+    try {
+      const ebooksResponse = await instance.get('/api/ebooks/bestseller')
+      const orderResponse = await instance.get('/api/orders/admin/recent')
+      const salesResponse = await instance.get('/api/orders/admin/summary')
+      return { ebooks: ebooksResponse.data, orders: orderResponse.data, sales: salesResponse.data }
+    } catch (error) {
+      console.log(error)
+      if (error.response) {
+        toast.error(error.response.data.message)
+      }
     }
   }
 
   componentDidMount () {
-    this.props.fetchOrders()
-    this.props.fetchSales()
-    this.props.fetchEbooks()
+    this.getData()
+      .then(data => this.setState(data))
   }
 
   render () {
     return (
       <AdminTemplate selectedIndex={0}>
-        <DashBoard
-          ebooks={this.props.ebooks}
-          orders={this.props.orders}
-          sales={this.props.sales}
-        />
+        <DashBoard {...this.state}/>
       </AdminTemplate>
     )
   }
 }
-
-export const AdminDashboardPage = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AdminComponent)

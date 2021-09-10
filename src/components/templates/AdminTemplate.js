@@ -7,7 +7,6 @@ import {
 } from '@material-ui/core/styles'
 import {
   AppBar,
-  Badge,
   Box,
   CssBaseline,
   Divider,
@@ -16,18 +15,18 @@ import {
   List,
   ListItemButton,
   ListItemText,
-  Stack,
   Toolbar,
   Typography,
-  useMediaQuery
+  useMediaQuery,
+  Link
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-import MailIcon from '@material-ui/icons/Mail'
-import NotificationsIcon from '@material-ui/icons/Notifications'
-import AccountCircle from '@material-ui/icons/AccountCircle'
-import { Link } from 'react-router-dom'
+import { ProfileButton } from '../ultilities/ProfileButton'
+import { instance } from '../../axiosConfig'
+import { toast } from 'react-toastify'
+import { history } from '../../App'
 
 const drawerWidth = 240
 
@@ -94,6 +93,14 @@ const theme = createTheme({
   palette: {
     background: {
       default: '#E1E5E9'
+    },
+    black: {
+      main: '#272727',
+      contrastText: '#fff'
+    },
+    white: {
+      main: '#fff',
+      contrastText: '#272727'
     }
   }
 })
@@ -101,6 +108,13 @@ const theme = createTheme({
 const SidebarComponent = (props) => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('sm'))
+  const [anchor, setAnchor] = React.useState(null)
+  const handleClick = (event) => {
+    setAnchor(event.currentTarget)
+  }
+  const handleClose = () => {
+    setAnchor(null)
+  }
   return (
     <React.Fragment>
       <StyledAppBar position="fixed" open={props.open}>
@@ -117,21 +131,8 @@ const SidebarComponent = (props) => {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             EBookVendor Administration
           </Typography>
-          <Stack direction="row" spacing={3} mx={2}>
-            <IconButton>
-              <Badge badgeContent={4} color="error">
-                <MailIcon color="action" />
-              </Badge>
-            </IconButton>
-            <IconButton>
-              <Badge badgeContent={4} color="error">
-                <NotificationsIcon color="action" />
-              </Badge>
-            </IconButton>
-            <IconButton>
-              <AccountCircle color="action" />
-            </IconButton>
-          </Stack>
+          <ProfileButton profile={props.profile} anchor={anchor} logOut={props.logOut}
+                         handleClick={handleClick} handleClose={handleClose} color='black'/>
         </Toolbar>
       </StyledAppBar>
       <Drawer
@@ -163,13 +164,13 @@ const SidebarComponent = (props) => {
                 )}
           </IconButton>
         </DrawerHeader>
-        <Divider variant="middle" />
+        <Divider variant="middle" color='white' />
         <List>
           <ListItemButton
             selected={props.selectedIndex === 0}
             key={0}
             component={Link}
-            to="/admin"
+            href="/admin"
             sx={{
               '&:hover, &:focus': {
                 background: '#424242',
@@ -183,7 +184,7 @@ const SidebarComponent = (props) => {
             selected={props.selectedIndex === 1}
             key={1}
             component={Link}
-            to="/admin/ebooks"
+            href="/admin/ebooks"
             sx={{
               '&:hover, &:focus': {
                 background: '#424242',
@@ -197,7 +198,7 @@ const SidebarComponent = (props) => {
             selected={props.selectedIndex === 2}
             key={2}
             component={Link}
-            to="/admin/orders"
+            href="/admin/orders"
             sx={{
               '&:hover, &:focus': {
                 background: '#424242',
@@ -211,7 +212,7 @@ const SidebarComponent = (props) => {
             selected={props.selectedIndex === 3}
             key={3}
             component={Link}
-            to="/admin/analytic"
+            href="/admin/analytic"
             sx={{
               '&:hover, &:focus': {
                 background: '#424242',
@@ -225,7 +226,7 @@ const SidebarComponent = (props) => {
             selected={props.selectedIndex === 4}
             key={4}
             component={Link}
-            to="/admin/finance"
+            href="/admin/finance"
             sx={{
               '&:hover, &:focus': {
                 background: '#424242',
@@ -239,7 +240,7 @@ const SidebarComponent = (props) => {
             selected={props.selectedIndex === 5}
             key={5}
             component={Link}
-            to="/admin/campaign"
+            href="/admin/campaign"
             sx={{
               '&:hover, &:focus': {
                 background: '#424242',
@@ -250,20 +251,35 @@ const SidebarComponent = (props) => {
             <ListItemText primary="Email Campaigns" />
           </ListItemButton>
         </List>
-        <Divider variant="middle" />
+        <Divider variant="middle" color='white' />
       </Drawer>
     </React.Fragment>
   )
 }
 
-class AdminTemplate extends Component {
+export class AdminTemplate extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      open: false
+      open: false,
+      profile: JSON.parse(localStorage.getItem('user'))
     }
     this.handleDrawerClose = this.handleDrawerClose.bind(this)
     this.handleDrawerOpen = this.handleDrawerOpen.bind(this)
+    this.logOut = this.logOut.bind(this)
+  }
+
+  async logOut () {
+    try {
+      const response = await instance.get('/api/logout')
+      console.log(response)
+      localStorage.removeItem('user')
+      this.setState({ profile: null })
+      history.push('/home')
+      toast.success(response.data.message)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   handleDrawerOpen = () => {
@@ -285,6 +301,8 @@ class AdminTemplate extends Component {
         <Box sx={{ display: 'flex' }}>
           <SidebarComponent
             open={this.state.open}
+            profile={this.state.profile}
+            logOut = {this.logOut}
             handleDrawerOpen={this.handleDrawerOpen}
             handleDrawerClose={this.handleDrawerClose}
             selectedIndex={this.props.selectedIndex}
@@ -298,5 +316,3 @@ class AdminTemplate extends Component {
     )
   }
 }
-
-export default AdminTemplate

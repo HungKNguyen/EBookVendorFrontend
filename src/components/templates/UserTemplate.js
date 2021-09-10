@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 import {
-  alpha,
   AppBar,
   Box,
   Button,
   createTheme,
-  InputBase,
   Modal,
   Rating,
   Stack,
-  styled,
   TextField,
   ThemeProvider,
   Toolbar,
-  Typography
+  Typography,
+  Link
 } from '@material-ui/core'
-import { Link } from 'react-router-dom'
-import { Login, Search } from '@material-ui/icons'
+import { SearchBar } from '../ultilities/SearchBar'
+import { ProfileButton } from '../ultilities/ProfileButton'
+import { instance } from '../../axiosConfig'
+import { toast } from 'react-toastify'
+import { history } from '../../App'
 
 const theme = createTheme({
   palette: {
@@ -25,77 +26,50 @@ const theme = createTheme({
       contrastText: '#fff'
     },
     white: {
-      main: '#fff'
+      main: '#fff',
+      contrastText: '#272727'
+    },
+    primary: {
+      main: '#fff',
+      contrastText: '#272727'
+    },
+    button: {
+      main: '#3873CA',
+      contrastText: '#fff'
     }
   }
 })
 
-const SearchArea = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25)
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto'
-  }
-}))
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center'
-}))
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch'
-    }
-  }
-}))
-
 class Header extends Component {
+  constructor (props) {
+    super(props)
+    this.state = { anchor: null }
+    this.handleClick = this.handleClick.bind(this)
+    this.handleClose = this.handleClose.bind(this)
+  }
+
+  handleClick = (event) => {
+    this.setState({ anchor: event.currentTarget })
+  }
+
+  handleClose = () => {
+    this.setState({ anchor: null })
+  }
+
   render () {
     return (
       <ThemeProvider theme={theme}>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static" color="black">
-            <Toolbar className="px-md-5">
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                <Link to="/home" className="text-white">
+            <Toolbar>
+              <Link href="/home" underline='none' sx={{ flexGrow: 1 }}>
+                <Typography variant='h6'>
                   EBookVendor
-                </Link>
-              </Typography>
-              <SearchArea>
-                <SearchIconWrapper>
-                  <Search />
-                </SearchIconWrapper>
-                <StyledInputBase
-                  placeholder="Search EBooks..."
-                  inputProps={{ name: 'search' }}
-                />
-              </SearchArea>
-              <Link to="/login">
-                <Button color="white" variant="outlined" startIcon={<Login />}>
-                  Login
-                </Button>
+                </Typography>
               </Link>
+              <SearchBar placeholder='Search Ebook...' inputProps={{ name: 'search' }}/>
+              <ProfileButton profile={this.props.profile} anchor={this.state.anchor} logOut={this.props.logOut}
+                             handleClick={this.handleClick} handleClose={this.handleClose} color='white'/>
             </Toolbar>
           </AppBar>
         </Box>
@@ -108,16 +82,79 @@ class Footer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      rating: 4,
+      isNew: true,
+      reviewId: '',
+      rating: 4.5,
       review: '',
       isOpen: false
+    }
+    this.handleOpen = this.handleOpen.bind(this)
+    this.handleClose = this.handleClose.bind(this)
+    this.handleUserInput = this.handleUserInput.bind(this)
+    this.handleRating = this.handleRating.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
+  }
+
+  async handleSubmit () {
+    try {
+      let response
+      if (this.state.isNew) {
+        response = await instance.post('/api/reviews', { rating: this.state.rating, review: this.state.review })
+      } else {
+        response = await instance.put('/api/reviews', {
+          rating: this.state.rating,
+          review: this.state.review,
+          reviewId: this.state.reviewId
+        })
+      }
+      toast.success(response.data.message)
+      this.handleClose()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async handleDelete () {
+    try {
+      const response = await instance.delete('/api/reviews', {
+        data: {
+          reviewId: this.state.reviewId
+        }
+      })
+      toast.success(response.data.message)
+      this.setState({
+        isNew: true,
+        reviewId: '',
+        rating: 4.5,
+        review: ''
+      })
+      this.handleClose()
+    } catch (error) {
+      console.log(error)
     }
   }
 
   handleOpen () {
-    this.setState({
-      isOpen: true
-    })
+    if (localStorage.getItem('user')) {
+      instance.get('/api/reviews/user')
+        .then((response) => {
+          if (response.data) {
+            this.setState({
+              isOpen: true,
+              isNew: false,
+              reviewId: response.data._id,
+              rating: response.data.rating,
+              review: response.data.review
+            })
+          } else {
+            this.setState({ isOpen: true })
+          }
+        })
+    } else {
+      history.push('/login')
+      toast.error('You need to be logged in to continue')
+    }
   }
 
   handleClose () {
@@ -136,11 +173,6 @@ class Footer extends Component {
     this.setState({
       rating: newValue
     })
-  }
-
-  handleSubmit () {
-    console.log(this.state)
-    this.handleClose()
   }
 
   render () {
@@ -164,35 +196,40 @@ class Footer extends Component {
                 variant="text"
                 size="large"
                 color="white"
-                onClick={() => this.handleOpen()}
+                onClick={this.handleOpen}
               >
                 Write us a review
               </Button>
             </Toolbar>
           </AppBar>
         </Box>
-        <Modal open={this.state.isOpen} onClose={() => this.handleClose()}>
+        <Modal open={this.state.isOpen} onClose={this.handleClose}>
           <Stack spacing={2} sx={style}>
             <Typography variant="h5">Write a review</Typography>
             <TextField
               label="Multiline"
               multiline
               rows={4}
+              color='black'
               fullWidth
               variant="filled"
               value={this.state.review}
               name="review"
               onChange={(event) => this.handleUserInput(event)}
             />
-            <Stack direction="row" justifyContent="space-between">
-              <Button variant="contained" onClick={() => this.handleSubmit()}>
-                Submit
-              </Button>
-              <Rating
+            <Rating
                 size="large"
                 value={this.state.rating}
+                precision={0.5}
                 onChange={(event, newValue) => this.handleRating(newValue)}
-              />
+            />
+            <Stack direction="row" justifyContent="space-between">
+              <Button variant="contained" color='button' onClick={this.handleSubmit}>
+                {this.state.isNew ? 'Submit' : 'Modify'}
+              </Button>
+              <Button variant="contained" color='error' disabled={this.state.isNew} onClick={this.handleDelete}>
+                Delete
+              </Button>
             </Stack>
           </Stack>
         </Modal>
@@ -201,14 +238,35 @@ class Footer extends Component {
   }
 }
 
-const UserTemplate = (props) => {
-  return (
-    <div>
-      <Header />
-      {props.children}
-      <Footer />
-    </div>
-  )
-}
+export class UserTemplate extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      profile: JSON.parse(localStorage.getItem('user'))
+    }
+    this.logOut = this.logOut.bind(this)
+  }
 
-export default UserTemplate
+  async logOut () {
+    try {
+      const response = await instance.get('/api/logout')
+      console.log(response)
+      localStorage.removeItem('user')
+      this.setState({ profile: null })
+      history.push('/home')
+      toast.success(response.data.message)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  render () {
+    return (
+        <div>
+          <Header profile={this.state.profile} logOut={this.logOut}/>
+          {this.props.children}
+          <Footer />
+        </div>
+    )
+  }
+}

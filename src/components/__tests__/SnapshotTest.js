@@ -2,17 +2,15 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { EBOOKS } from '../../shared/ebooks'
 import { ORDERS } from '../../shared/orders'
-// import { COMMENTS } from '../../shared/comments'
 import { REVIEWS } from '../../shared/reviews'
 import { SALES } from '../../shared/sales'
-// import { USERS } from '../../shared/users'
 import { HomeDisplay } from '../userpages/HomeComponent'
 import { DashBoard } from '../adminpages/AdminComponent'
 import { StaticRouter } from 'react-router-dom'
 import UserTemplate from '../templates/UserTemplate'
 import AdminTemplate from '../templates/AdminTemplate'
-import Login from '../otherpages/LoginComponent'
-import Signup from '../otherpages/SignupComponent'
+import { LoginDisplay } from '../otherpages/LoginComponent'
+import { SignupDisplay } from '../otherpages/SignupComponent'
 
 // Mock Data General Function
 const mockData = (loading, content) => ({
@@ -30,12 +28,12 @@ const staticRender = (component) => {
 
 describe('Testing snapshots', () => {
   test('Login Page', () => {
-    const component = staticRender(<Login />)
+    const component = staticRender(<LoginDisplay />)
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
   test('Sign Up Page', () => {
-    const component = staticRender(<Signup />)
+    const component = staticRender(<SignupDisplay />)
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
